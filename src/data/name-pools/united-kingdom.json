@@ -1,0 +1,597 @@
+{
+  "country": "United Kingdom",
+  "generated_at": "2026-05-08T17:59:41.314Z",
+  "model": "anthropic/claude-haiku-4.5",
+  "count": 84,
+  "names": [
+    {
+      "name": "William",
+      "origin": "Germanic, introduced to England via Norman conquest",
+      "meaning": "Resolute protector, from will and helm",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Elizabeth",
+      "origin": "Hebrew, popularized by Tudor and Victorian royalty",
+      "meaning": "God's oath or devoted to God",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "James",
+      "origin": "Hebrew via Latin and Norman French, royal Scottish and English name",
+      "meaning": "Supplanter or he who supplants",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Margaret",
+      "origin": "Greek, brought to Britain via Christian tradition",
+      "meaning": "Pearl or precious gem",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Edward",
+      "origin": "Old English royal lineage, Anglo-Saxon roots",
+      "meaning": "Wealthy guardian or prosperous protector",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Catherine",
+      "origin": "Greek, strengthened by royal and saint traditions",
+      "meaning": "Pure one or chaste",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Henry",
+      "origin": "Germanic, established via Norman monarchs",
+      "meaning": "Estate ruler or home ruler",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Anne",
+      "origin": "Hebrew, popularized by Tudor royalty",
+      "meaning": "Grace or favour",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Robert",
+      "origin": "Germanic, deeply rooted in Anglo-Norman tradition",
+      "meaning": "Bright fame or shining glory",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Victoria",
+      "origin": "Latin, iconic from the 19th-century British monarch",
+      "meaning": "Victory or conqueror",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Charles",
+      "origin": "Germanic via Norman French, royal house name",
+      "meaning": "Free man or strong man",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Florence",
+      "origin": "Latin, Victorian era adoption",
+      "meaning": "Blooming or flourishing",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "George",
+      "origin": "Greek, British royal and saint tradition",
+      "meaning": "Farmer or earth worker",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Dorothy",
+      "origin": "Greek, popular in early 20th-century Britain",
+      "meaning": "God's gift",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Thomas",
+      "origin": "Aramaic via Greek, apostolic Christian tradition",
+      "meaning": "Twin",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Eleanor",
+      "origin": "Occitan, brought by medieval Norman queens",
+      "meaning": "Bright light or shining star",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "John",
+      "origin": "Hebrew, ubiquitous across English-speaking Britain",
+      "meaning": "God is gracious",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Beatrice",
+      "origin": "Latin, Victorian literary and classical revival",
+      "meaning": "She brings happiness or blessed",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "David",
+      "origin": "Hebrew, biblical tradition widely adopted in Britain",
+      "meaning": "Beloved one",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Rebecca",
+      "origin": "Hebrew, biblical name modernized in 19th-century Britain",
+      "meaning": "To bind or captivate",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Michael",
+      "origin": "Hebrew, archangel venerated across Christian tradition",
+      "meaning": "Who is like God",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Pamela",
+      "origin": "Greek literary coinage, adopted 20th-century Britain",
+      "meaning": "All sweetness or honey",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Richard",
+      "origin": "Germanic, firmly established via royal lineage",
+      "meaning": "Brave ruler or powerful leader",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Susan",
+      "origin": "Hebrew, popular mid-20th-century British name",
+      "meaning": "Lily or graceful lily",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Peter",
+      "origin": "Greek, apostolic Christian tradition",
+      "meaning": "Rock or stone",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Jennifer",
+      "origin": "Cornish Welsh origin, popularized post-1950s",
+      "meaning": "Fair one or white wave",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Andrew",
+      "origin": "Greek, apostolic and Scottish patronal tradition",
+      "meaning": "Strong and manly",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Karen",
+      "origin": "Scandinavian, popularized mid-20th-century Britain",
+      "meaning": "Pure one",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Christopher",
+      "origin": "Greek, Christian martyr tradition",
+      "meaning": "Christ bearer",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Lisa",
+      "origin": "Hebrew via Italian diminutive, post-war British adoption",
+      "meaning": "God's oath",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Stephen",
+      "origin": "Greek, early Christian martyr tradition",
+      "meaning": "Crown or wreath",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Michelle",
+      "origin": "Hebrew via French, popularized late 20th-century",
+      "meaning": "Who is like God",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Paul",
+      "origin": "Latin, apostolic Christian tradition",
+      "meaning": "Small or humble",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Sarah",
+      "origin": "Hebrew, biblical and continuously popular",
+      "meaning": "Princess or noblewoman",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Martin",
+      "origin": "Latin, Christian martyr saint tradition",
+      "meaning": "Of Mars or warrior",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Jessica",
+      "origin": "Hebrew literary invention popularized 20th century",
+      "meaning": "Rich one or God beholds",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Kevin",
+      "origin": "Irish-Gaelic adoption in Britain, saint tradition",
+      "meaning": "Handsome or kind birth",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Emily",
+      "origin": "Latin, Victorian literary adoption",
+      "meaning": "Rival or industrious",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ian",
+      "origin": "Scottish Gaelic form of John, deeply rooted north Britain",
+      "meaning": "God is gracious",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Aiden",
+      "origin": "Irish/Gaelic",
+      "meaning": "little fire",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Alexander",
+      "origin": "Greek",
+      "meaning": "defender of men",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Alfie",
+      "origin": "Old English",
+      "meaning": "wise counsellor",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Amelia",
+      "origin": "Germanic",
+      "meaning": "work, industrious",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Ava",
+      "origin": "Latin",
+      "meaning": "birdlike",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Callum",
+      "origin": "Scottish/Gaelic",
+      "meaning": "dove",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Charlotte",
+      "origin": "French",
+      "meaning": "free woman",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Connor",
+      "origin": "Irish",
+      "meaning": "lover of hounds",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Daisy",
+      "origin": "Old English",
+      "meaning": "day's eye",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Ella",
+      "origin": "Germanic",
+      "meaning": "all, completely",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Erin",
+      "origin": "Irish",
+      "meaning": "Ireland",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Finn",
+      "origin": "Irish/Norse",
+      "meaning": "fair-haired",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Freya",
+      "origin": "Norse",
+      "meaning": "noble lady, goddess of love",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Holly",
+      "origin": "Old English",
+      "meaning": "holly tree",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Isla",
+      "origin": "Scottish",
+      "meaning": "island",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Lily",
+      "origin": "Latin",
+      "meaning": "pure, lily flower",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Lucas",
+      "origin": "Latin",
+      "meaning": "light, illumination",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Maisie",
+      "origin": "Scottish",
+      "meaning": "pearl",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Max",
+      "origin": "Latin",
+      "meaning": "greatest",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Mila",
+      "origin": "Slavic",
+      "meaning": "gracious, dear",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Oliver",
+      "origin": "Latin",
+      "meaning": "olive tree",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Olivia",
+      "origin": "Latin",
+      "meaning": "olive tree",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Poppy",
+      "origin": "Latin",
+      "meaning": "poppy flower",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ruby",
+      "origin": "Latin",
+      "meaning": "red gemstone",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Willow",
+      "origin": "Old English",
+      "meaning": "willow tree",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Archie",
+      "origin": "Germanic",
+      "meaning": "genuine, bold",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Bea",
+      "origin": "Latin",
+      "meaning": "she who brings happiness",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Brody",
+      "origin": "Scottish",
+      "meaning": "broad eye, ditch",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Cara",
+      "origin": "Irish",
+      "meaning": "friend, beloved",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Dexter",
+      "origin": "Latin",
+      "meaning": "right-handed, skillful",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Edith",
+      "origin": "Old English",
+      "meaning": "prosperous in war",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Elsie",
+      "origin": "Hebrew/Scottish",
+      "meaning": "pledged to God",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Felix",
+      "origin": "Latin",
+      "meaning": "happy, fortunate",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Gemma",
+      "origin": "Italian",
+      "meaning": "precious gem",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Hugo",
+      "origin": "Germanic",
+      "meaning": "mind, intellect",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Iris",
+      "origin": "Greek",
+      "meaning": "rainbow, messenger",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Jasmine",
+      "origin": "Persian",
+      "meaning": "jasmine flower",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Joel",
+      "origin": "Hebrew",
+      "meaning": "Jehovah is God",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Lottie",
+      "origin": "French",
+      "meaning": "free woman",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Luna",
+      "origin": "Latin",
+      "meaning": "moon",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Niamh",
+      "origin": "Irish",
+      "meaning": "bright, radiant",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Reuben",
+      "origin": "Hebrew",
+      "meaning": "behold, a son",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Theo",
+      "origin": "Greek",
+      "meaning": "gift of God",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Tom",
+      "origin": "Aramaic",
+      "meaning": "twin",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Violet",
+      "origin": "Latin",
+      "meaning": "violet flower",
+      "gender": "F",
+      "era": "classical"
+    }
+  ],
+  "last_seeded_at": "2026-05-08T18:05:36.082Z"
+}

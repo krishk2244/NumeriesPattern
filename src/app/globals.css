@@ -1,26 +1,216 @@
 @import "tailwindcss";
 
+/*
+ * NUMERIS — Rolex Green palette.
+ * Token names are kept from the original Noir build so component code doesn't
+ * need to be touched. "gold-*" now holds Rolex Green, "noir-*" holds paper
+ * white scale, and "cream"/"champagne" hold dark text colors.
+ */
+
+@theme {
+  /* "Gold" namespace = Rolex Green scale */
+  --color-gold-50: #E6F0EA;
+  --color-gold-100: #C5DCC9;
+  --color-gold-200: #8FBE9A;
+  --color-gold-400: #006341;
+  --color-gold-600: #00432B;
+  --color-gold-800: #002D1C;
+  --color-gold-900: #001A10;
+
+  /* Gilt namespace = warm champagne gold (Rolex crown / gold-bezel tone) */
+  --color-gilt-100: #F0E6D2;
+  --color-gilt-200: #DBC09A;
+  --color-gilt-400: #B5965E;
+  --color-gilt-600: #8C6F3D;
+  --color-gilt-800: #5C4724;
+
+  /* "Noir" namespace = paper white / warm neutral scale */
+  --color-noir-50: #FFFFFF;
+  --color-noir-100: #F9F7F0;
+  --color-noir-200: #F4F1E9;
+  --color-noir-500: #8B8B85;
+  --color-noir-700: #4A4D45;
+  --color-noir-800: #1A1A18;
+  --color-noir-900: #0F0F0D;
+
+  --color-cream: #0F1410;
+  --color-champagne: #4A4D45;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-gold: 0 0 40px rgba(0, 99, 65, 0.06), 0 1px 0 rgba(0, 99, 65, 0.08) inset;
+  --shadow-card: 0 24px 48px rgba(0, 0, 0, 0.06), 0 1px 0 rgba(0, 99, 65, 0.06) inset;
+
+  --animate-gold-pulse: goldPulse 3s ease-in-out infinite;
+  --animate-float-up: floatUp 8s ease-in-out infinite;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand accent (Rolex Green) */
+  --gold-primary: #006341;
+  --gold-hover: #007A52;
+  --gold-glow: rgba(0, 99, 65, 0.18);
+
+  /* Secondary accent (Champagne Gilt) — used sparingly for jewelry moments */
+  --gilt-primary: #B5965E;
+  --gilt-deep: #8C6F3D;
+  --gilt-soft: #DBC09A;
+  --gilt-glow: rgba(181, 150, 94, 0.28);
+
+  /* Tertiary tones for depth */
+  --emerald-deep: #003D24;
+  --emerald-soft: #00513D;
+  --ivory: #EDE5D2;
+
+  /* Surfaces (paper) — page is light cream, card is pure white for lift */
+  --noir-base: #F4F1E9;
+  --noir-card: #FFFFFF;
+  --noir-elevated: #F9F7F0;
+  --noir-border: rgba(0, 99, 65, 0.14);
+  --noir-border-hov: rgba(0, 99, 65, 0.4);
+  --gilt-border: rgba(181, 150, 94, 0.28);
+
+  /* Text */
+  --cream: #0F1410;
+  --champagne: #4A4D45;
+
+  /* Spacing & Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Shadows — soft paper-style */
+  --shadow-gold: 0 0 40px rgba(0, 99, 65, 0.06), 0 1px 0 rgba(0, 99, 65, 0.08) inset;
+  --shadow-card: 0 24px 48px rgba(0, 0, 0, 0.06), 0 1px 0 rgba(0, 99, 65, 0.06) inset;
+
+  --transition: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--noir-base);
+  color: var(--cream);
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Display Headings — Cormorant Garamond */
+.heading-hero {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6.5vw, 80px);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+}
+
+.heading-xl {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+.heading-lg {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 400;
+}
+
+/* UI Text — Montserrat */
+.label-gold {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+}
+
+.body-cream {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--champagne);
+  opacity: 0.9;
+}
+
+/* Monospace — JetBrains Mono */
+.number-display {
+  font-family: var(--font-mono);
+  font-size: 72px;
+  font-weight: 400;
+  color: var(--gold-primary);
+  letter-spacing: -0.03em;
+}
+
+.number-small {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  color: var(--gold-primary);
+}
+
+@keyframes goldPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 99, 65, 0.08);
+  }
+  50% {
+    box-shadow: 0 0 36px rgba(0, 99, 65, 0.18);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+}
+
+.animate-gold-pulse {
+  animation: goldPulse 3s ease-in-out infinite;
+}
+
+.animate-float-up {
+  animation: floatUp 8s ease-in-out infinite;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Smooth scrolling for the hero CTA jump */
+html {
+  scroll-behavior: smooth;
 }

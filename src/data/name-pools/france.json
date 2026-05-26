@@ -1,0 +1,597 @@
+{
+  "country": "France",
+  "generated_at": "2026-05-08T17:59:42.046Z",
+  "model": "anthropic/claude-haiku-4.5",
+  "count": 84,
+  "names": [
+    {
+      "name": "Marie",
+      "origin": "Latin Mariam, widespread in Christian Europe via the Virgin Mary",
+      "meaning": "beloved or of the sea",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Jean",
+      "origin": "Hebrew Yochanan via Latin Joannes, extremely common in French tradition",
+      "meaning": "God is gracious",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Pierre",
+      "origin": "Latin Petrus, foundational to French naming since medieval times",
+      "meaning": "rock or stone",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Anne",
+      "origin": "Hebrew Hannah, mother of Mary in Christian tradition",
+      "meaning": "grace or favor",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Philippe",
+      "origin": "Greek Philippos, royal and aristocratic in France",
+      "meaning": "lover of horses",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Marguerite",
+      "origin": "Latin margarita via Greek, popular in medieval France",
+      "meaning": "pearl",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Claude",
+      "origin": "Latin Claudius, used across genders in French tradition",
+      "meaning": "lame or limping, later reinterpreted as noble",
+      "gender": "U",
+      "era": "classical"
+    },
+    {
+      "name": "Isabelle",
+      "origin": "Hebrew Elisheba via Spanish, fashionable from medieval period onward",
+      "meaning": "devoted to God",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Michel",
+      "origin": "Hebrew Mikha'el, archangel name deeply rooted in French culture",
+      "meaning": "who is like God",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Louise",
+      "origin": "Germanic Ludwig via Old High German, royal feminine form",
+      "meaning": "famous warrior",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Jacques",
+      "origin": "Hebrew Jacob via Latin and Old French, extremely common",
+      "meaning": "he who supplants",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Catherine",
+      "origin": "Greek Aikaterina, widespread across medieval Europe",
+      "meaning": "pure",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Olivier",
+      "origin": "Latin Olivarius, medieval French origin possibly from olive tree",
+      "meaning": "olive tree or olive planter",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Francoise",
+      "origin": "Latin Franciscus, national and gendered form of Frank",
+      "meaning": "free or French",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Benoit",
+      "origin": "Latin Benedictus, religious and classical French tradition",
+      "meaning": "blessed",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Therese",
+      "origin": "Greek Theresia, medieval saint cult popularity",
+      "meaning": "summer or harvest",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Nicolas",
+      "origin": "Greek Nikolaos, saint name popular throughout French history",
+      "meaning": "victory of the people",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Veronique",
+      "origin": "Latin Vera Iconica, religious French tradition from Saint Veronica",
+      "meaning": "true image",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Christophe",
+      "origin": "Greek Christophoros, religious and classical French form",
+      "meaning": "bearer of Christ",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Sylvie",
+      "origin": "Latin Silvius, classical forest or woodland association",
+      "meaning": "from the forest",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Bernard",
+      "origin": "Germanic Bernhard, noble and medieval French tradition",
+      "meaning": "brave as a bear",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Monique",
+      "origin": "Latin Monika, 20th-century popular feminine form",
+      "meaning": "advisor or counselor",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Laurent",
+      "origin": "Latin Laurentius, saint name and modern French standard",
+      "meaning": "from Laurentum",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Dominique",
+      "origin": "Latin Dominicus, unisex French form meaning of the Lord",
+      "meaning": "of the Lord or belonging to God",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Valerie",
+      "origin": "Latin Valerius, 20th-century popular feminine adoption",
+      "meaning": "strong and valiant",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Vincent",
+      "origin": "Latin Vincentius, classical saint name modernized in 20th century",
+      "meaning": "conquering",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Christine",
+      "origin": "Greek Christiana, widespread 20th-century feminine form",
+      "meaning": "follower of Christ",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Stephane",
+      "origin": "Greek Stephanos, classical modernized with diaeresis in French",
+      "meaning": "crown or wreath",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Pascale",
+      "origin": "Latin Paschalis, related to Easter and religious tradition",
+      "meaning": "of Passover or Easter",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Fabrice",
+      "origin": "Latin Fabricius, classical Roman name used in modern France",
+      "meaning": "craftsman",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Sophie",
+      "origin": "Greek Sophia, classical wisdom concept revived as modern favorite",
+      "meaning": "wisdom",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Thomas",
+      "origin": "Aramaic Toma, biblical name popularized in contemporary France",
+      "meaning": "twin",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Amelie",
+      "origin": "Germanic Amalia, contemporary revival of classical Germanic tradition",
+      "meaning": "work or industrious",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Lucas",
+      "origin": "Latin Lucius, contemporary international popularity in France",
+      "meaning": "from Lucania or light-giving",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Lea",
+      "origin": "Hebrew Leah, contemporary biblical name shortened to modern form",
+      "meaning": "weary or gazelle",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Nathan",
+      "origin": "Hebrew, contemporary biblical name popular across European nations",
+      "meaning": "he gave",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Clara",
+      "origin": "Latin Clarus, contemporary revival of classical name meaning bright",
+      "meaning": "clear or bright",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Hugo",
+      "origin": "Germanic Hugh, contemporary popularity of classical medieval form",
+      "meaning": "mind or intellect",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Chloe",
+      "origin": "Greek Chloe, contemporary biblical and poetic revival",
+      "meaning": "green shoot or blooming",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Adrien",
+      "origin": "Latin",
+      "meaning": "from Hadria",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Alice",
+      "origin": "Germanic",
+      "meaning": "noble",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Antoine",
+      "origin": "Latin",
+      "meaning": "priceless one",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Arthur",
+      "origin": "Celtic",
+      "meaning": "bear, strength",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Baptiste",
+      "origin": "Greek",
+      "meaning": "one who baptizes",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Camille",
+      "origin": "Latin",
+      "meaning": "attendant, helper",
+      "gender": "U",
+      "era": "classical"
+    },
+    {
+      "name": "Celine",
+      "origin": "Latin",
+      "meaning": "heavenly",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Clement",
+      "origin": "Latin",
+      "meaning": "merciful, mild",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Elise",
+      "origin": "Hebrew/French",
+      "meaning": "pledged to God",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Emma",
+      "origin": "Germanic",
+      "meaning": "whole, universal",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Etienne",
+      "origin": "Greek",
+      "meaning": "crown, garland",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Gabriel",
+      "origin": "Hebrew",
+      "meaning": "God is my strength",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Henri",
+      "origin": "Germanic",
+      "meaning": "ruler of the home",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Jeanne",
+      "origin": "Hebrew/French",
+      "meaning": "God is gracious",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Julien",
+      "origin": "Latin",
+      "meaning": "youthful",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Juliette",
+      "origin": "Latin",
+      "meaning": "youthful",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Leo",
+      "origin": "Latin",
+      "meaning": "lion",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Manon",
+      "origin": "Hebrew",
+      "meaning": "bitter, beloved",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Margot",
+      "origin": "Greek",
+      "meaning": "pearl",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Mathieu",
+      "origin": "Hebrew",
+      "meaning": "gift of God",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Maxime",
+      "origin": "Latin",
+      "meaning": "greatest",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Pauline",
+      "origin": "Latin",
+      "meaning": "small, humble",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Quentin",
+      "origin": "Latin",
+      "meaning": "fifth",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Raphael",
+      "origin": "Hebrew",
+      "meaning": "God has healed",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Sebastien",
+      "origin": "Greek",
+      "meaning": "venerable, revered",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Aimee",
+      "origin": "French",
+      "meaning": "beloved",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Bastien",
+      "origin": "Greek",
+      "meaning": "venerable",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Beatrice",
+      "origin": "Latin",
+      "meaning": "she who brings happiness",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Charles",
+      "origin": "Germanic",
+      "meaning": "free man",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Damien",
+      "origin": "Greek",
+      "meaning": "to tame",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "David",
+      "origin": "Hebrew",
+      "meaning": "beloved",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Eric",
+      "origin": "Norse",
+      "meaning": "eternal ruler",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Estelle",
+      "origin": "Latin",
+      "meaning": "star",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Florence",
+      "origin": "Latin",
+      "meaning": "flourishing",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Gilles",
+      "origin": "Greek",
+      "meaning": "youthful, kid",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Helene",
+      "origin": "Greek",
+      "meaning": "shining light",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Inès",
+      "origin": "Portuguese/Spanish",
+      "meaning": "pure, holy",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Ines",
+      "origin": "Portuguese/Spanish",
+      "meaning": "pure, holy",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Marc",
+      "origin": "Latin",
+      "meaning": "warlike, of Mars",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Nathalie",
+      "origin": "Latin",
+      "meaning": "birth of the Lord",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Noemie",
+      "origin": "Hebrew",
+      "meaning": "pleasant, lovely",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Remi",
+      "origin": "Latin",
+      "meaning": "oarsman",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Theo",
+      "origin": "Greek",
+      "meaning": "gift of God",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Yann",
+      "origin": "Breton/Hebrew",
+      "meaning": "God is gracious",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Zoe",
+      "origin": "Greek",
+      "meaning": "life",
+      "gender": "F",
+      "era": "modern"
+    }
+  ],
+  "last_seeded_at": "2026-05-08T18:05:36.083Z"
+}

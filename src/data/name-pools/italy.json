@@ -1,0 +1,604 @@
+{
+  "country": "Italy",
+  "generated_at": "2026-05-08T17:59:42.109Z",
+  "model": "anthropic/claude-haiku-4.5",
+  "count": 85,
+  "names": [
+    {
+      "name": "Marco",
+      "origin": "Latin, derived from Martius (of Mars the god of war)",
+      "meaning": "Dedicated to Mars, symbolizing strength and warfare",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Giovanni",
+      "origin": "Italian form of Hebrew Yohanan via Latin Ioannes",
+      "meaning": "God is gracious, expressing divine favor",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Antonio",
+      "origin": "Latin Antonius, of uncertain Etruscan or Roman origin",
+      "meaning": "Worthy of praise and honor",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Giuseppe",
+      "origin": "Italian form of Hebrew Yosef via Latin Josephus",
+      "meaning": "God will increase, expressing prosperity and growth",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Francesco",
+      "origin": "Italian form of Latin Franciscus, meaning of the Franks",
+      "meaning": "Free man, symbol of liberty and virtue",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Luca",
+      "origin": "Latin Lucanus, from Lucania in southern Italy",
+      "meaning": "From Lucania or bringing light and clarity",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Andrea",
+      "origin": "Greek Andreas, derived from andros (man)",
+      "meaning": "Strong and manly, representing masculine virtue",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Paolo",
+      "origin": "Italian form of Latin Paulus, meaning small",
+      "meaning": "Humble and modest, symbolizing simplicity",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Riccardo",
+      "origin": "Germanic Richard via Italian, from ric (ruler) and hard (hardy)",
+      "meaning": "Powerful ruler, symbolizing strength and leadership",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Michele",
+      "origin": "Italian form of Hebrew Michael via Greek",
+      "meaning": "Who is like God, expressing divine power",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Giorgio",
+      "origin": "Italian form of Greek Georgios, from georgos (farmer)",
+      "meaning": "Farmer or earth-worker, symbolizing labor and cultivation",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Matteo",
+      "origin": "Italian form of Hebrew Mattiyahu via Greek Matthaeus",
+      "meaning": "Gift of God, expressing divine blessing",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Davide",
+      "origin": "Italian form of Hebrew David, meaning beloved",
+      "meaning": "Beloved one, expressing affection and favor",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Filippo",
+      "origin": "Italian form of Greek Philippos, from philos (friend) and hippos (horse)",
+      "meaning": "Lover of horses, symbolizing nobility and skill",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Carlo",
+      "origin": "Italian form of Germanic Charles, from carl (man)",
+      "meaning": "Free man or manly person, expressing autonomy",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Vincenzo",
+      "origin": "Italian form of Latin Vincentius, from vincere (to conquer)",
+      "meaning": "Conqueror, symbolizing victory and triumph",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Stefano",
+      "origin": "Italian form of Greek Stephanos, from stephanos (crown)",
+      "meaning": "Crowned one, expressing honor and dignity",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Massimo",
+      "origin": "Italian form of Latin Maximus, meaning greatest",
+      "meaning": "The greatest, symbolizing excellence and superiority",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Fabio",
+      "origin": "Latin Fabius, from faba (bean), name of Roman patrician family",
+      "meaning": "Farmer or of the Fabius clan, expressing cultivation",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Bruno",
+      "origin": "Germanic Brueno, from brun (brown)",
+      "meaning": "Brown-haired one, describing physical appearance",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Rosa",
+      "origin": "Latin rosa, the flower name",
+      "meaning": "Rose, symbolizing beauty, love, and purity",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Maria",
+      "origin": "Italian form of Hebrew Miriam via Latin",
+      "meaning": "Of the sea or beloved, expressing grace and mystery",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Anna",
+      "origin": "Italian form of Hebrew Hannah, meaning grace",
+      "meaning": "Grace and favor, symbolizing kindness and blessing",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Francesca",
+      "origin": "Italian feminine form of Francesco, meaning of the Franks",
+      "meaning": "Free woman, expressing liberty and independence",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Caterina",
+      "origin": "Italian form of Greek Katharos via Latin Catharina, meaning pure",
+      "meaning": "Pure and clear, symbolizing virtue and clarity",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Giulia",
+      "origin": "Italian feminine form of Julius, from Latin Iulius",
+      "meaning": "Youthful one, symbolizing vitality and freshness",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Lucia",
+      "origin": "Italian form of Latin Lucia, from lux (light)",
+      "meaning": "Light-bringer, symbolizing illumination and clarity",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Alessandra",
+      "origin": "Italian feminine form of Alexander, from Greek (defender of men)",
+      "meaning": "Defender, expressing strength and protection",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Elisabetta",
+      "origin": "Italian form of Hebrew Elisheba via Greek Elisabeth",
+      "meaning": "God is my oath, expressing divine covenant",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Silvia",
+      "origin": "Latin Silvia, from silva (forest)",
+      "meaning": "Of the forest, symbolizing nature and wilderness",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Martina",
+      "origin": "Italian feminine form of Latin Martinus (of Mars)",
+      "meaning": "Warlike one or dedicated to Mars",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Cristina",
+      "origin": "Italian feminine form of Latin Christinus (of Christ)",
+      "meaning": "Follower of Christ, expressing Christian faith",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Daniela",
+      "origin": "Italian feminine form of Daniel, from Hebrew (God is my judge)",
+      "meaning": "God is my judge, expressing divine justice",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Valentina",
+      "origin": "Italian feminine form of Latin Valentinus, from valens (strong)",
+      "meaning": "Strong and vigorous, symbolizing health and vitality",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Federica",
+      "origin": "Italian feminine form of Germanic Frederick, from frid (peace) and ric (ruler)",
+      "meaning": "Peaceful ruler, symbolizing harmony and leadership",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Veronica",
+      "origin": "Latin name, possibly from vera (true) and icon (image)",
+      "meaning": "True image, referencing Saint Veronica of Christian tradition",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Rafaella",
+      "origin": "Italian feminine form of Hebrew Raphael via Italian (God heals)",
+      "meaning": "God heals, expressing divine healing and wholeness",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Bianca",
+      "origin": "Italian feminine form of Latin Biancus, meaning white",
+      "meaning": "White or pure, symbolizing innocence and clarity",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Leonardo",
+      "origin": "Late Latin Leonardus, from leo (lion) and hardus (hardy)",
+      "meaning": "Bold lion, symbolizing courage and strength",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Tommaso",
+      "origin": "Italian form of Aramaic Thomas, meaning twin",
+      "meaning": "Twin, expressing duality and connection",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Alberto",
+      "origin": "Germanic",
+      "meaning": "noble, bright",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Alice",
+      "origin": "Germanic",
+      "meaning": "noble",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Angelo",
+      "origin": "Greek",
+      "meaning": "messenger, angel",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Beatrice",
+      "origin": "Latin",
+      "meaning": "she who brings happiness",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Camilla",
+      "origin": "Latin",
+      "meaning": "attendant in religious service",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Chiara",
+      "origin": "Latin",
+      "meaning": "bright, clear",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Diego",
+      "origin": "Spanish/Italian",
+      "meaning": "supplanter",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Domenico",
+      "origin": "Latin",
+      "meaning": "belonging to the Lord",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Eleonora",
+      "origin": "Greek",
+      "meaning": "compassion, light",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Elena",
+      "origin": "Greek",
+      "meaning": "shining light",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Enrico",
+      "origin": "Germanic",
+      "meaning": "ruler of the home",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Federico",
+      "origin": "Germanic",
+      "meaning": "peaceful ruler",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Gabriele",
+      "origin": "Hebrew",
+      "meaning": "God is my strength",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Gianluca",
+      "origin": "Italian",
+      "meaning": "God is gracious & light",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Giada",
+      "origin": "Italian",
+      "meaning": "jade gemstone",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Ilaria",
+      "origin": "Latin",
+      "meaning": "cheerful, joyful",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Lorenzo",
+      "origin": "Latin",
+      "meaning": "from Laurentum",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Luigi",
+      "origin": "Germanic",
+      "meaning": "famous warrior",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Manuela",
+      "origin": "Hebrew",
+      "meaning": "God is with us",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Mattia",
+      "origin": "Hebrew",
+      "meaning": "gift of God",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Nicola",
+      "origin": "Greek",
+      "meaning": "victory of the people",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Pietro",
+      "origin": "Greek",
+      "meaning": "rock, stone",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Roberto",
+      "origin": "Germanic",
+      "meaning": "bright fame",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Serena",
+      "origin": "Latin",
+      "meaning": "tranquil, serene",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Vittoria",
+      "origin": "Latin",
+      "meaning": "victory",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Alba",
+      "origin": "Latin",
+      "meaning": "dawn, white",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Aldo",
+      "origin": "Germanic",
+      "meaning": "old, wise",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Cesare",
+      "origin": "Latin",
+      "meaning": "long-haired, head of hair",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Cristian",
+      "origin": "Latin",
+      "meaning": "follower of Christ",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Diana",
+      "origin": "Latin",
+      "meaning": "divine, the moon goddess",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Edoardo",
+      "origin": "Germanic",
+      "meaning": "wealthy guardian",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Emiliano",
+      "origin": "Latin",
+      "meaning": "rival, eager",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Fabrizio",
+      "origin": "Latin",
+      "meaning": "craftsman",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Flavia",
+      "origin": "Latin",
+      "meaning": "golden, blonde",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Greta",
+      "origin": "Germanic",
+      "meaning": "pearl",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Iacopo",
+      "origin": "Hebrew",
+      "meaning": "supplanter",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Letizia",
+      "origin": "Latin",
+      "meaning": "joy, gladness",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Luigia",
+      "origin": "Germanic",
+      "meaning": "famous warrior",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Marta",
+      "origin": "Aramaic",
+      "meaning": "lady, mistress",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Nina",
+      "origin": "Spanish/Italian",
+      "meaning": "little girl",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Renato",
+      "origin": "Latin",
+      "meaning": "reborn",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Salvatore",
+      "origin": "Latin",
+      "meaning": "savior",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Sara",
+      "origin": "Hebrew",
+      "meaning": "princess",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Sofia",
+      "origin": "Greek",
+      "meaning": "wisdom",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Valeria",
+      "origin": "Latin",
+      "meaning": "strength, valor",
+      "gender": "F",
+      "era": "classical"
+    }
+  ],
+  "last_seeded_at": "2026-05-08T18:05:36.083Z"
+}

@@ -1,0 +1,590 @@
+{
+  "country": "United States",
+  "generated_at": "2026-05-08T17:59:41.245Z",
+  "model": "anthropic/claude-haiku-4.5",
+  "count": 83,
+  "names": [
+    {
+      "name": "William",
+      "origin": "Germanic royal tradition brought by English colonists; became foundational in early American naming.",
+      "meaning": "Resolute protector; from 'will' (desire) and 'helm' (helmet).",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Elizabeth",
+      "origin": "Hebrew biblical name popularized in England and colonial America; associated with Queen Elizabeth I.",
+      "meaning": "God's oath or consecration.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "James",
+      "origin": "Hebrew origin via Latin and English; biblical apostle name adopted widely in colonial America.",
+      "meaning": "Supplanter; from Jacob.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Margaret",
+      "origin": "Greek name meaning pearl; adopted in Germanic and English traditions; common in colonial families.",
+      "meaning": "Pearl.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "John",
+      "origin": "Hebrew biblical name; became the most common American male name from colonial times onward.",
+      "meaning": "God's gracious gift.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Mary",
+      "origin": "Hebrew biblical name; most popular American female name for centuries.",
+      "meaning": "Of the sea or beloved.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Thomas",
+      "origin": "Aramaic biblical apostle name; widespread in colonial and early American tradition.",
+      "meaning": "Twin.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Catherine",
+      "origin": "Greek origin via Latin; widespread in English and European American families.",
+      "meaning": "Pure.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Charles",
+      "origin": "Germanic royal name; popular among American colonial elite and nobility.",
+      "meaning": "Free man.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Anne",
+      "origin": "Hebrew biblical name; English variant of Anna; common in colonial America.",
+      "meaning": "Grace or favor.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Robert",
+      "origin": "Germanic name; widespread in English tradition and adopted throughout colonial America.",
+      "meaning": "Bright fame.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Sarah",
+      "origin": "Hebrew biblical matriarch name; popular in Puritan and colonial American families.",
+      "meaning": "Princess.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Michael",
+      "origin": "Hebrew archangel name; became popular in American tradition in 20th century.",
+      "meaning": "Who is like God.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Jennifer",
+      "origin": "Cornish-English literary creation popularized by Arthurian legend; became extremely popular mid-20th century.",
+      "meaning": "Fair one; maiden.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "David",
+      "origin": "Hebrew biblical king; widespread in American tradition.",
+      "meaning": "Beloved.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Susan",
+      "origin": "Hebrew origin via Latin; English form; popularized in mid-20th century America.",
+      "meaning": "Lily.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Richard",
+      "origin": "Germanic royal name; common throughout English and American history.",
+      "meaning": "Brave ruler.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Patricia",
+      "origin": "Latin origin; feminine form of Patrick; popularized in early 20th century America.",
+      "meaning": "Noble.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Joseph",
+      "origin": "Hebrew biblical name; popular in colonial American tradition, especially Catholic families.",
+      "meaning": "God will increase.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Barbara",
+      "origin": "Greek origin meaning foreign; popularized in early 20th century American culture.",
+      "meaning": "Foreign or strange.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Christopher",
+      "origin": "Greek origin; saint's name; became prominent in American tradition in late 20th century.",
+      "meaning": "Bearer of Christ.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Jessica",
+      "origin": "Hebrew origin via Shakespeare's Merchant of Venice; popularized in late 20th century.",
+      "meaning": "God beholds.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Daniel",
+      "origin": "Hebrew biblical prophet name; steady popularity throughout American history.",
+      "meaning": "God is my judge.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ashley",
+      "origin": "English place name meaning ash tree grove; became unisex and then predominantly female in late 20th century.",
+      "meaning": "Ash tree meadow.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Matthew",
+      "origin": "Hebrew biblical apostle; popularized in American tradition especially in late 20th century.",
+      "meaning": "Gift of God.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Amanda",
+      "origin": "Latin origin; means worthy of love; created or popularized in 18th century; became very popular in 1980s America.",
+      "meaning": "Worthy of love.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Andrew",
+      "origin": "Greek origin; biblical apostle; increasingly popular in American tradition from 20th century onward.",
+      "meaning": "Strong and manly.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Brittany",
+      "origin": "English regional name derived from Brittany, France; popularized in 1990s America.",
+      "meaning": "From Brittany; the Britons.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Brandon",
+      "origin": "English place name and surname; became popular as given name in late 20th century America.",
+      "meaning": "Beacon hill or sword hill.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Nicole",
+      "origin": "Greek origin via French; feminine form of Nicholas; popularized in late 20th century.",
+      "meaning": "Victory of the people.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Kyle",
+      "origin": "Scottish Gaelic origin; place name; popularized as given name in late 20th century America.",
+      "meaning": "Narrow strait or channel.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Alexis",
+      "origin": "Greek origin; unisex name popularized in 1990s and 2000s American culture.",
+      "meaning": "Defender; helper.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Tyler",
+      "origin": "English occupational surname; became popular given name in late 20th century America.",
+      "meaning": "Tile maker or tile layer.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Rachel",
+      "origin": "Hebrew biblical name; experienced renewed popularity in late 20th century America.",
+      "meaning": "Ewe; innocent or lamb.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Justin",
+      "origin": "Latin origin; derived from Justus; popularized in late 20th century.",
+      "meaning": "Just; fair; righteous.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Victoria",
+      "origin": "Latin origin; feminine of Victor; popularized by Queen Victoria; resurging in 21st century.",
+      "meaning": "Victory.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Zachary",
+      "origin": "Hebrew biblical name; variant of Zechariah; popularized in late 20th century America.",
+      "meaning": "God remembers.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Sophia",
+      "origin": "Greek origin meaning wisdom; surged in popularity in 2000s-2010s America.",
+      "meaning": "Wisdom.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ethan",
+      "origin": "Hebrew biblical name meaning firm and strong; became top popular name in 2000s America.",
+      "meaning": "Strong; firm.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Olivia",
+      "origin": "Latin origin possibly derived from 'oliva' (olive); popularized by Shakespeare; top name in 2010s America.",
+      "meaning": "Olive tree.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Aaron",
+      "origin": "Hebrew",
+      "meaning": "exalted, lofty",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Ava",
+      "origin": "Latin/Germanic",
+      "meaning": "birdlike, life",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Benjamin",
+      "origin": "Hebrew",
+      "meaning": "son of the right hand",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Caleb",
+      "origin": "Hebrew",
+      "meaning": "devoted, whole-hearted",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Carter",
+      "origin": "Old English",
+      "meaning": "cart driver",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Chloe",
+      "origin": "Greek",
+      "meaning": "young green shoot",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Dylan",
+      "origin": "Welsh",
+      "meaning": "great wave",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Emma",
+      "origin": "Germanic",
+      "meaning": "whole, universal",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Grace",
+      "origin": "Latin",
+      "meaning": "charm, blessing",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Hannah",
+      "origin": "Hebrew",
+      "meaning": "grace, favor",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Harper",
+      "origin": "Old English",
+      "meaning": "harp player",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Henry",
+      "origin": "Germanic",
+      "meaning": "ruler of the home",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Isaac",
+      "origin": "Hebrew",
+      "meaning": "he will laugh",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Isabella",
+      "origin": "Hebrew/Italian",
+      "meaning": "devoted to God",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Jack",
+      "origin": "English",
+      "meaning": "God is gracious",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Jacob",
+      "origin": "Hebrew",
+      "meaning": "supplanter, follower",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Jordan",
+      "origin": "Hebrew",
+      "meaning": "flowing down",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Logan",
+      "origin": "Scottish",
+      "meaning": "little hollow",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Madison",
+      "origin": "Old English",
+      "meaning": "son of Maud",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Mason",
+      "origin": "Old English",
+      "meaning": "stoneworker",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Mia",
+      "origin": "Italian/Scandinavian",
+      "meaning": "mine, beloved",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Noah",
+      "origin": "Hebrew",
+      "meaning": "rest, comfort",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Owen",
+      "origin": "Welsh",
+      "meaning": "young warrior",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Riley",
+      "origin": "Irish",
+      "meaning": "courageous",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Zoe",
+      "origin": "Greek",
+      "meaning": "life",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Alice",
+      "origin": "Germanic",
+      "meaning": "noble",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Alyssa",
+      "origin": "Greek",
+      "meaning": "rational, noble",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Avery",
+      "origin": "Old English",
+      "meaning": "ruler of elves",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Brian",
+      "origin": "Celtic",
+      "meaning": "high, noble",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Brooke",
+      "origin": "Old English",
+      "meaning": "small stream",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Cameron",
+      "origin": "Scottish",
+      "meaning": "crooked nose",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Chase",
+      "origin": "French",
+      "meaning": "huntsman",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Eric",
+      "origin": "Norse",
+      "meaning": "eternal ruler",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Faith",
+      "origin": "Latin",
+      "meaning": "belief, trust",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Gabriel",
+      "origin": "Hebrew",
+      "meaning": "God is my strength",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Hailey",
+      "origin": "Old English",
+      "meaning": "hay meadow",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Hunter",
+      "origin": "Old English",
+      "meaning": "hunter",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Julia",
+      "origin": "Latin",
+      "meaning": "youthful",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Kayla",
+      "origin": "Hebrew",
+      "meaning": "crown of laurels",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Kevin",
+      "origin": "Irish",
+      "meaning": "handsome, gentle",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Madeline",
+      "origin": "Hebrew",
+      "meaning": "from Magdala",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Nathan",
+      "origin": "Hebrew",
+      "meaning": "gift, given",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Quinn",
+      "origin": "Irish",
+      "meaning": "wisdom, intelligence",
+      "gender": "U",
+      "era": "contemporary"
+    }
+  ],
+  "last_seeded_at": "2026-05-08T18:05:36.080Z"
+}
