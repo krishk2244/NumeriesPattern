@@ -1,13 +1,16 @@
 /**
- * Build per-country name pools.
+ * Build per-country name pools using OpenAI directly.
  *
- * For each country, calls the model multiple times with growing exclusion
- * lists, accumulates unique names, and writes src/data/name-pools/<slug>.json.
+ * For each country, runs multiple passes with growing exclusion lists,
+ * accumulates unique names, and writes src/data/name-pools/<slug>.json.
  *
- * Run with: npm run build:pools
+ * Idempotent: seeds the exclusion list with the existing pool so reruns
+ * EXPAND rather than overwrite.
  *
- * Idempotent: if a pool already exists, the script seeds the exclusion list
- * with its names so reruns expand the pool rather than overwriting it.
+ * Run with:
+ *   npx tsx --env-file=.env.local scripts/build-name-pools.ts
+ * or:
+ *   npm run build:pools
  */
 
 import OpenAI from 'openai'
@@ -25,25 +28,21 @@ const COUNTRIES = [
   'Japan',
 ] as const
 
-const PASSES_PER_COUNTRY = 3
-const NAMES_PER_PASS = 40
-const MODEL = 'anthropic/claude-haiku-4.5'
-const MAX_OUTPUT_TOKENS = 3500
+const PASSES_PER_COUNTRY = 5
+const NAMES_PER_PASS = 50
+const MODEL = 'gpt-4o-mini'
+const MAX_OUTPUT_TOKENS = 3000
+// Exclude list cap — sending 200+ names becomes prompt-bloat. The 100 most
+// recently added are the strongest dedupe signal anyway.
+const EXCLUDE_CAP = 100
 
-const apiKey = process.env.OPENROUTER_API_KEY
+const apiKey = process.env.OPENAI_API_KEY
 if (!apiKey) {
-  console.error('OPENROUTER_API_KEY not set. Run with --env-file=.env.local.')
+  console.error('OPENAI_API_KEY not set. Run with --env-file=.env.local.')
   process.exit(1)
 }
 
-const client = new OpenAI({
-  apiKey,
-  baseURL: 'https://openrouter.ai/api/v1',
-  defaultHeaders: {
-    'HTTP-Referer': process.env.OPENROUTER_REFERER ?? 'http://localhost:3000',
-    'X-Title': 'NUMERIS-build',
-  },
-})
+const client = new OpenAI({ apiKey, timeout: 60_000, maxRetries: 1 })
 
 const NameSchema = z.object({
   name: z.string(),
@@ -68,11 +67,11 @@ For each name provide:
 - gender: "M" for masculine, "F" for feminine, or "U" for unisex
 - era: "classical" (pre-20th century), "modern" (20th century classics), or "contemporary" (current popular)
 
-DIVERSITY: vary across gender, era, region, sub-tradition, etymology, and length (4–9 letters typical). For India that means mixing Sanskrit, Hindi, Tamil, Bengali, Punjabi, Marathi roots. For Nigeria, mix Yoruba, Igbo, Hausa. For Japan, mix kanji-derived names from different reading patterns. Avoid biasing toward any one letter pattern — names should naturally span many starting letters.
+DIVERSITY: vary across gender, era, region, sub-tradition, etymology, and length (3-12 letters typical, but include some short and some long). For India that means mixing Sanskrit, Hindi, Tamil, Bengali, Punjabi, Marathi, Telugu, Malayalam, Gujarati, Kannada roots. For Nigeria, mix Yoruba, Igbo, Hausa. For Japan, mix kanji-derived names from different reading patterns and eras. Cover all starting letters of the alphabet — do not cluster on A-K.
 
 AUTHENTICITY: only real names actually used in the country today or historically. No fictional-only names, no portmanteaus, no spelling variants of the same name (Aaliyah and Aliyah count as the same).
 
-OUTPUT: JSON only, no prose around it.`
+OUTPUT: JSON object with shape {"names": [...]}. No prose, no markdown.`
 
 const POOL_DIR = path.join(process.cwd(), 'src/data/name-pools')
 
@@ -96,9 +95,10 @@ async function callModel(
   country: string,
   excludeNames: string[]
 ): Promise<PoolName[]> {
+  const exclusionList = excludeNames.slice(-EXCLUDE_CAP)
   const exclusion =
-    excludeNames.length > 0
-      ? `\n\nDo NOT include any of these names (already in the pool): ${excludeNames.join(', ')}`
+    exclusionList.length > 0
+      ? `\n\nDo NOT include any of these names (already collected): ${exclusionList.join(', ')}`
       : ''
 
   const completion = await client.chat.completions.parse({
@@ -108,14 +108,14 @@ async function callModel(
       { role: 'system', content: SYSTEM_PROMPT },
       {
         role: 'user',
-        content: `Country: ${country}\nGenerate ${NAMES_PER_PASS} distinct, authentic ${country} first names with broad coverage across gender, era, and naming sub-traditions.${exclusion}`,
+        content: `Country: ${country}\nGenerate ${NAMES_PER_PASS} distinct, authentic ${country} first names with broad coverage across gender, era, sub-traditions, and starting letters.${exclusion}`,
       },
     ],
     response_format: zodResponseFormat(PoolSchema, 'name_pool'),
   })
 
   const data = completion.choices[0]?.message.parsed
-  if (!data) throw new Error('No data parsed')
+  if (!data) throw new Error('No structured output')
   return data.names
 }
 
@@ -148,6 +148,8 @@ async function buildCountry(country: string): Promise<void> {
       break
     }
     process.stdout.write(`+${added} `)
+    // Bail out early if a pass adds nothing — model is repeating itself
+    if (added === 0) break
   }
 
   fs.mkdirSync(POOL_DIR, { recursive: true })
@@ -173,7 +175,7 @@ async function buildCountry(country: string): Promise<void> {
 
 async function main(): Promise<void> {
   console.log(
-    `Building name pools (${PASSES_PER_COUNTRY} passes × ${NAMES_PER_PASS} names, model: ${MODEL})\n`
+    `Building name pools via ${MODEL} (${PASSES_PER_COUNTRY} passes × ${NAMES_PER_PASS} names per country)\n`
   )
 
   for (const country of COUNTRIES) {
@@ -187,8 +189,6 @@ async function main(): Promise<void> {
   }
 
   console.log()
-
-  // Summary
   let total = 0
   for (const country of COUNTRIES) {
     const slug = slugify(country)

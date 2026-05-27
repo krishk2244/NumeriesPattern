@@ -3,91 +3,1301 @@
   "source": "hand-curated",
   "count": 84,
   "names": [
-    { "name": "Lumera", "archetype": "coined", "rationale": "Latin root for light — refined, modern, neutral across industries", "pronunciation_hint": "loo-MEH-ruh", "industries": ["tech", "design", "wellness", "fashion"], "vibes": ["refined", "minimal", "modern"] },
-    { "name": "Vesta", "archetype": "classical", "rationale": "Roman goddess of hearth and home, ancient gravitas", "pronunciation_hint": "VES-tuh", "industries": ["hospitality", "real-estate", "wellness"], "vibes": ["classical", "warm", "refined"] },
-    { "name": "Astra", "archetype": "classical", "rationale": "Latin for stars, evocative of ambition", "pronunciation_hint": "AHS-truh", "industries": ["tech", "media", "consulting"], "vibes": ["bold", "modern", "premium"] },
-    { "name": "Solis", "archetype": "classical", "rationale": "Latin genitive of sun, warm and authoritative", "pronunciation_hint": "SOH-lis", "industries": ["finance", "wellness", "design"], "vibes": ["warm", "refined", "premium"] },
-    { "name": "Atria", "archetype": "abstract", "rationale": "Plural of atrium, suggests openness and central gathering", "pronunciation_hint": "AY-tree-uh", "industries": ["real-estate", "design", "hospitality"], "vibes": ["refined", "modern"] },
-    { "name": "Nova", "archetype": "classical", "rationale": "Latin for new — universal, sharp", "pronunciation_hint": "NOH-vuh", "industries": ["tech", "media", "fintech"], "vibes": ["modern", "bold"] },
-    { "name": "Lyra", "archetype": "classical", "rationale": "Constellation, ancient lyre, poetic", "pronunciation_hint": "LY-ruh", "industries": ["media", "art", "design"], "vibes": ["refined", "classical"] },
-    { "name": "Vela", "archetype": "classical", "rationale": "Latin for sails, motion forward", "pronunciation_hint": "VAY-luh", "industries": ["consulting", "finance", "tech"], "vibes": ["minimal", "modern"] },
-    { "name": "Aurelia", "archetype": "classical", "rationale": "Golden one in Latin, prestige", "pronunciation_hint": "aw-REH-lee-uh", "industries": ["fashion", "hospitality", "design"], "vibes": ["premium", "classical", "refined"] },
-    { "name": "Verum", "archetype": "abstract", "rationale": "Latin for true — minimal, principled", "pronunciation_hint": "VEH-room", "industries": ["consulting", "finance", "wellness"], "vibes": ["minimal", "refined"] },
-    { "name": "Anima", "archetype": "abstract", "rationale": "Latin for soul, suggests depth", "pronunciation_hint": "AH-nee-muh", "industries": ["wellness", "art", "media"], "vibes": ["mystic", "warm"] },
-    { "name": "Apex", "archetype": "abstract", "rationale": "Latin for peak — competitive, sharp", "pronunciation_hint": "AY-peks", "industries": ["finance", "consulting", "fintech"], "vibes": ["bold", "premium"] },
-    { "name": "Vertex", "archetype": "abstract", "rationale": "Latin for highest point, mathematical clarity", "pronunciation_hint": "VUR-teks", "industries": ["tech", "fintech", "consulting"], "vibes": ["modern", "bold"] },
-    { "name": "Acumen", "archetype": "abstract", "rationale": "Latin for sharpness of mind", "pronunciation_hint": "AK-yoo-men", "industries": ["consulting", "finance", "education"], "vibes": ["refined", "premium"] },
-    { "name": "Tempus", "archetype": "classical", "rationale": "Latin for time, timeless gravitas", "pronunciation_hint": "TEM-pus", "industries": ["consulting", "finance", "hospitality"], "vibes": ["classical", "refined"] },
-    { "name": "Sanctum", "archetype": "classical", "rationale": "Latin for sacred place", "pronunciation_hint": "SANK-tum", "industries": ["wellness", "hospitality", "real-estate"], "vibes": ["mystic", "refined"] },
-    { "name": "Cordis", "archetype": "abstract", "rationale": "Latin for of-the-heart", "pronunciation_hint": "KOR-dis", "industries": ["wellness", "hospitality", "media"], "vibes": ["warm", "refined"] },
-    { "name": "Lucent", "archetype": "abstract", "rationale": "English from Latin for shining", "pronunciation_hint": "LOO-sent", "industries": ["tech", "design", "wellness"], "vibes": ["minimal", "refined"] },
-    { "name": "Veritas", "archetype": "classical", "rationale": "Latin for truth, weighty", "pronunciation_hint": "VEH-ri-tahs", "industries": ["consulting", "finance", "education"], "vibes": ["classical", "premium"] },
-    { "name": "Nimbus", "archetype": "abstract", "rationale": "Latin for rain cloud, halo, atmospheric", "pronunciation_hint": "NIM-bus", "industries": ["tech", "design", "media"], "vibes": ["modern", "playful"] },
-    { "name": "Aetheria", "archetype": "coined", "rationale": "Coined from aether, ethereal premium feel", "pronunciation_hint": "ay-THEER-ee-uh", "industries": ["fashion", "wellness", "design"], "vibes": ["mystic", "premium"] },
-    { "name": "Auralis", "archetype": "coined", "rationale": "Coined from aural, sound-focused or sensory", "pronunciation_hint": "aw-RAH-lis", "industries": ["media", "tech", "design"], "vibes": ["modern", "refined"] },
-    { "name": "Stellr", "archetype": "coined", "rationale": "Compressed from stellar — punchy, tech-forward", "pronunciation_hint": "STEL-er", "industries": ["tech", "fintech", "media"], "vibes": ["modern", "bold"] },
-    { "name": "Brava", "archetype": "coined", "rationale": "Italian exclamation, celebratory", "pronunciation_hint": "BRAH-vuh", "industries": ["fashion", "media", "hospitality"], "vibes": ["bold", "warm"] },
-    { "name": "Linnea", "archetype": "founder", "rationale": "Scandinavian feminine name, naturalist nod", "pronunciation_hint": "lih-NAY-uh", "industries": ["wellness", "design", "fashion"], "vibes": ["refined", "minimal"] },
-    { "name": "Drifa", "archetype": "coined", "rationale": "Old Norse for snow drift, weatherproof feel", "pronunciation_hint": "DREE-fuh", "industries": ["fashion", "manufacturing", "design"], "vibes": ["minimal", "classical"] },
-    { "name": "Trove", "archetype": "abstract", "rationale": "English for hidden collection of value", "pronunciation_hint": "TROHV", "industries": ["retail", "art", "media"], "vibes": ["playful", "warm"] },
-    { "name": "Veo", "archetype": "coined", "rationale": "Spanish for I see — sharp, modern, single-syllable", "pronunciation_hint": "VAY-oh", "industries": ["tech", "media", "design"], "vibes": ["minimal", "modern"] },
-    { "name": "Nuvera", "archetype": "coined", "rationale": "Coined from nuove vie — new ways", "pronunciation_hint": "noo-VEH-ruh", "industries": ["consulting", "fintech", "tech"], "vibes": ["modern", "refined"] },
-    { "name": "Solenne", "archetype": "coined", "rationale": "French-inflected take on solemn / sun", "pronunciation_hint": "soh-LEN", "industries": ["fashion", "wellness", "hospitality"], "vibes": ["refined", "warm"] },
-    { "name": "BluePath", "archetype": "compound", "rationale": "Direction with calm, navigation-friendly", "pronunciation_hint": "BLOO-path", "industries": ["consulting", "fintech", "education"], "vibes": ["minimal", "modern"] },
-    { "name": "IronGate", "archetype": "compound", "rationale": "Strength and threshold imagery", "pronunciation_hint": "EYE-urn-gate", "industries": ["finance", "real-estate", "manufacturing"], "vibes": ["bold", "classical"] },
-    { "name": "SilverSphere", "archetype": "compound", "rationale": "Precious + global scope", "pronunciation_hint": "SIL-ver-sfeer", "industries": ["finance", "fintech", "consulting"], "vibes": ["premium", "modern"] },
-    { "name": "NorthForge", "archetype": "compound", "rationale": "Directional craftsmanship", "pronunciation_hint": "NORTH-forj", "industries": ["manufacturing", "tech", "design"], "vibes": ["bold", "refined"] },
-    { "name": "RiverHall", "archetype": "compound", "rationale": "Flowing gathering place", "pronunciation_hint": "RIV-er-hawl", "industries": ["hospitality", "real-estate", "education"], "vibes": ["warm", "classical"] },
-    { "name": "BrightHouse", "archetype": "compound", "rationale": "Clarity and home, optimistic", "pronunciation_hint": "BRYTE-howss", "industries": ["real-estate", "education", "wellness"], "vibes": ["warm", "modern"] },
-    { "name": "StarBound", "archetype": "compound", "rationale": "Aspirational, motion", "pronunciation_hint": "STAR-bownd", "industries": ["media", "tech", "art"], "vibes": ["bold", "playful"] },
-    { "name": "OakWell", "archetype": "compound", "rationale": "Strong root + fresh water imagery", "pronunciation_hint": "OHK-wel", "industries": ["wellness", "food", "real-estate"], "vibes": ["classical", "warm"] },
-    { "name": "CedarStone", "archetype": "compound", "rationale": "Natural materials, permanence", "pronunciation_hint": "SEE-dur-stohn", "industries": ["real-estate", "manufacturing", "design"], "vibes": ["classical", "refined"] },
-    { "name": "DeepBloom", "archetype": "compound", "rationale": "Sustained flourishing", "pronunciation_hint": "DEEP-bloom", "industries": ["wellness", "fashion", "food"], "vibes": ["warm", "playful"] },
-    { "name": "AmberMill", "archetype": "compound", "rationale": "Warm color + traditional craft", "pronunciation_hint": "AM-bur-mil", "industries": ["food", "design", "manufacturing"], "vibes": ["warm", "classical"] },
-    { "name": "FieldNote", "archetype": "compound", "rationale": "Observational, journal-like", "pronunciation_hint": "FEELD-noht", "industries": ["media", "education", "consulting"], "vibes": ["minimal", "refined"] },
-    { "name": "StonePath", "archetype": "compound", "rationale": "Solid direction", "pronunciation_hint": "STOHN-path", "industries": ["consulting", "real-estate", "wellness"], "vibes": ["classical", "minimal"] },
-    { "name": "GoldLeaf", "archetype": "compound", "rationale": "Precious + delicate craftsmanship", "pronunciation_hint": "GOHLD-leef", "industries": ["fashion", "art", "design"], "vibes": ["premium", "classical"] },
-    { "name": "CopperHill", "archetype": "compound", "rationale": "Warm metal + terrain", "pronunciation_hint": "KOP-ur-hil", "industries": ["manufacturing", "design", "food"], "vibes": ["warm", "classical"] },
-    { "name": "Hartwell", "archetype": "founder", "rationale": "Anglo surname with deer-by-spring etymology", "pronunciation_hint": "HART-wel", "industries": ["consulting", "finance", "real-estate"], "vibes": ["classical", "refined"] },
-    { "name": "Cartwright", "archetype": "founder", "rationale": "Anglo trade surname, craftsmanship signal", "pronunciation_hint": "KART-rite", "industries": ["manufacturing", "consulting", "real-estate"], "vibes": ["classical", "warm"] },
-    { "name": "Whitfield", "archetype": "founder", "rationale": "Anglo surname, refined countryside feel", "pronunciation_hint": "WIT-feeld", "industries": ["consulting", "finance", "real-estate"], "vibes": ["classical", "refined"] },
-    { "name": "Ashworth", "archetype": "founder", "rationale": "Anglo surname with naturalist quality", "pronunciation_hint": "ASH-wurth", "industries": ["wellness", "design", "real-estate"], "vibes": ["minimal", "refined"] },
-    { "name": "Brookmore", "archetype": "founder", "rationale": "Compound surname feel — water + meadow", "pronunciation_hint": "BROOK-mor", "industries": ["real-estate", "hospitality", "consulting"], "vibes": ["warm", "refined"] },
-    { "name": "Larkin", "archetype": "founder", "rationale": "Irish surname, light and lyrical", "pronunciation_hint": "LAR-kin", "industries": ["media", "art", "design"], "vibes": ["warm", "playful"] },
-    { "name": "Stradford", "archetype": "founder", "rationale": "Anglo surname with cultural weight", "pronunciation_hint": "STRAD-furd", "industries": ["education", "media", "consulting"], "vibes": ["classical", "premium"] },
-    { "name": "Holloway", "archetype": "founder", "rationale": "Anglo surname / hollow road", "pronunciation_hint": "HOL-uh-way", "industries": ["real-estate", "consulting", "manufacturing"], "vibes": ["classical", "warm"] },
-    { "name": "Sinclair", "archetype": "founder", "rationale": "Norman surname, refined heritage", "pronunciation_hint": "SIN-klair", "industries": ["finance", "consulting", "hospitality"], "vibes": ["premium", "refined"] },
-    { "name": "Beaumont", "archetype": "founder", "rationale": "French-origin surname, mountain beauty", "pronunciation_hint": "BOH-mont", "industries": ["hospitality", "real-estate", "finance"], "vibes": ["premium", "classical"] },
-    { "name": "Cavendish", "archetype": "founder", "rationale": "Anglo aristocratic surname", "pronunciation_hint": "KAV-en-dish", "industries": ["finance", "consulting", "education"], "vibes": ["premium", "classical"] },
-    { "name": "Linwood", "archetype": "founder", "rationale": "Anglo placename surname, calm", "pronunciation_hint": "LIN-wood", "industries": ["real-estate", "wellness", "design"], "vibes": ["warm", "refined"] },
-    { "name": "Marbury", "archetype": "founder", "rationale": "Anglo placename, weighty heritage", "pronunciation_hint": "MAR-buh-ree", "industries": ["consulting", "education", "real-estate"], "vibes": ["classical", "refined"] },
-    { "name": "Penrose", "archetype": "founder", "rationale": "Cornish surname with mathematical recognition", "pronunciation_hint": "PEN-rohz", "industries": ["education", "tech", "consulting"], "vibes": ["classical", "refined"] },
-    { "name": "The Aldwych", "archetype": "place", "rationale": "London locale, theatrical heritage", "pronunciation_hint": "AHLD-witch", "industries": ["media", "art", "hospitality"], "vibes": ["classical", "premium"] },
-    { "name": "Bloomsbury", "archetype": "place", "rationale": "London literary district", "pronunciation_hint": "BLOOMZ-bree", "industries": ["education", "media", "art"], "vibes": ["classical", "refined"] },
-    { "name": "Camden Forge", "archetype": "place", "rationale": "London neighborhood + craftsmanship", "pronunciation_hint": "KAM-den FORJ", "industries": ["manufacturing", "design", "media"], "vibes": ["bold", "warm"] },
-    { "name": "Brera", "archetype": "place", "rationale": "Milan design district", "pronunciation_hint": "BREH-rah", "industries": ["fashion", "design", "art"], "vibes": ["refined", "modern"] },
-    { "name": "Marais", "archetype": "place", "rationale": "Parisian district, refined gallery culture", "pronunciation_hint": "mah-RAY", "industries": ["fashion", "art", "hospitality"], "vibes": ["premium", "refined"] },
-    { "name": "North Loop", "archetype": "place", "rationale": "Urban neighborhood feel, transit", "pronunciation_hint": "NORTH LOOP", "industries": ["real-estate", "hospitality", "food"], "vibes": ["modern", "warm"] },
-    { "name": "Highgate", "archetype": "place", "rationale": "London village, hilltop quiet", "pronunciation_hint": "HY-gayt", "industries": ["real-estate", "education", "consulting"], "vibes": ["classical", "refined"] },
-    { "name": "Lumera & Co", "archetype": "compound", "rationale": "Latin light + house signature", "pronunciation_hint": "loo-MEH-ruh AND koh", "industries": ["fashion", "design", "consulting"], "vibes": ["premium", "refined"] },
-    { "name": "Apex Forge", "archetype": "compound", "rationale": "Peak craftsmanship", "pronunciation_hint": "AY-peks FORJ", "industries": ["manufacturing", "tech", "design"], "vibes": ["bold", "premium"] },
-    { "name": "Lyra House", "archetype": "compound", "rationale": "Constellation + house typology", "pronunciation_hint": "LY-ruh HOWSS", "industries": ["fashion", "media", "design"], "vibes": ["refined", "premium"] },
-    { "name": "Atlas Studio", "archetype": "compound", "rationale": "Mythic + creative workshop", "pronunciation_hint": "AT-las STOO-dee-oh", "industries": ["design", "art", "media"], "vibes": ["bold", "modern"] },
-    { "name": "Solis Group", "archetype": "compound", "rationale": "Sun + collective", "pronunciation_hint": "SOH-lis GROOP", "industries": ["finance", "consulting", "real-estate"], "vibes": ["premium", "classical"] },
-    { "name": "Vela Capital", "archetype": "compound", "rationale": "Latin sails + finance vocabulary", "pronunciation_hint": "VAY-luh KAP-ih-tul", "industries": ["finance", "fintech", "consulting"], "vibes": ["premium", "modern"] },
-    { "name": "Nova Foundry", "archetype": "compound", "rationale": "New + maker workshop", "pronunciation_hint": "NOH-vuh FOWN-dree", "industries": ["manufacturing", "tech", "design"], "vibes": ["bold", "modern"] },
-    { "name": "Orion Works", "archetype": "compound", "rationale": "Constellation + manufacturing register", "pronunciation_hint": "oh-RY-on WURKS", "industries": ["manufacturing", "tech", "design"], "vibes": ["bold", "classical"] },
-    { "name": "Astra Labs", "archetype": "compound", "rationale": "Stars + scientific register", "pronunciation_hint": "AHS-truh LABZ", "industries": ["tech", "education", "consulting"], "vibes": ["modern", "premium"] },
-    { "name": "Vesta Atelier", "archetype": "compound", "rationale": "Hearth + workshop", "pronunciation_hint": "VES-tuh AT-uh-lee-ay", "industries": ["fashion", "design", "hospitality"], "vibes": ["premium", "refined"] },
-    { "name": "Tempus Bureau", "archetype": "compound", "rationale": "Time + agency, editorial", "pronunciation_hint": "TEM-pus BYUR-oh", "industries": ["media", "consulting", "art"], "vibes": ["refined", "classical"] },
-    { "name": "Sanctum Press", "archetype": "compound", "rationale": "Sacred space + publishing", "pronunciation_hint": "SANK-tum PRES", "industries": ["media", "art", "education"], "vibes": ["mystic", "refined"] },
-    { "name": "True North", "archetype": "descriptive", "rationale": "Directional honesty, sturdy", "pronunciation_hint": "TROO NORTH", "industries": ["consulting", "finance", "wellness"], "vibes": ["minimal", "bold"] },
-    { "name": "First Bench", "archetype": "descriptive", "rationale": "Workshop seating, craft-first identity", "pronunciation_hint": "FURST BENCH", "industries": ["manufacturing", "design", "education"], "vibes": ["minimal", "warm"] },
-    { "name": "Quiet Hours", "archetype": "descriptive", "rationale": "Sustained focus, calm", "pronunciation_hint": "KWY-et OWRZ", "industries": ["wellness", "media", "design"], "vibes": ["minimal", "refined"] },
-    { "name": "Slow Press", "archetype": "descriptive", "rationale": "Deliberate craft pace, editorial", "pronunciation_hint": "SLOH PRES", "industries": ["media", "food", "art"], "vibes": ["minimal", "warm"] },
-    { "name": "Brass Tacks", "archetype": "descriptive", "rationale": "Idiom for fundamentals, no-nonsense", "pronunciation_hint": "BRAS TAKS", "industries": ["consulting", "finance", "manufacturing"], "vibes": ["bold", "minimal"] },
-    { "name": "Open Field", "archetype": "descriptive", "rationale": "Possibility, exploration", "pronunciation_hint": "OH-pen FEELD", "industries": ["consulting", "education", "tech"], "vibes": ["minimal", "modern"] },
-    { "name": "The Common Set", "archetype": "descriptive", "rationale": "Shared assembly, community focus", "pronunciation_hint": "thuh KAH-mun SET", "industries": ["media", "art", "design"], "vibes": ["minimal", "playful"] },
-    { "name": "Forward Stack", "archetype": "descriptive", "rationale": "Tech-stack metaphor + forward motion", "pronunciation_hint": "FOR-wurd STAK", "industries": ["tech", "fintech", "consulting"], "vibes": ["modern", "bold"] }
+    {
+      "name": "Lumera Group",
+      "archetype": "coined",
+      "rationale": "Latin root for light — refined, modern, neutral across industries",
+      "pronunciation_hint": "loo-MEH-ruh",
+      "industries": [
+        "tech",
+        "design",
+        "wellness",
+        "fashion"
+      ],
+      "vibes": [
+        "refined",
+        "minimal",
+        "modern"
+      ]
+    },
+    {
+      "name": "Vesta Capital",
+      "archetype": "classical",
+      "rationale": "Roman goddess of hearth and home, ancient gravitas",
+      "pronunciation_hint": "VES-tuh",
+      "industries": [
+        "hospitality",
+        "real-estate",
+        "wellness"
+      ],
+      "vibes": [
+        "classical",
+        "warm",
+        "refined"
+      ]
+    },
+    {
+      "name": "Astra Works",
+      "archetype": "classical",
+      "rationale": "Latin for stars, evocative of ambition",
+      "pronunciation_hint": "AHS-truh",
+      "industries": [
+        "tech",
+        "media",
+        "consulting"
+      ],
+      "vibes": [
+        "bold",
+        "modern",
+        "premium"
+      ]
+    },
+    {
+      "name": "Solis Group",
+      "archetype": "classical",
+      "rationale": "Latin genitive of sun, warm and authoritative",
+      "pronunciation_hint": "SOH-lis",
+      "industries": [
+        "finance",
+        "wellness",
+        "design"
+      ],
+      "vibes": [
+        "warm",
+        "refined",
+        "premium"
+      ]
+    },
+    {
+      "name": "Atria House",
+      "archetype": "abstract",
+      "rationale": "Plural of atrium, suggests openness and central gathering",
+      "pronunciation_hint": "AY-tree-uh",
+      "industries": [
+        "real-estate",
+        "design",
+        "hospitality"
+      ],
+      "vibes": [
+        "refined",
+        "modern"
+      ]
+    },
+    {
+      "name": "Nova Holdings",
+      "archetype": "classical",
+      "rationale": "Latin for new — universal, sharp",
+      "pronunciation_hint": "NOH-vuh",
+      "industries": [
+        "tech",
+        "media",
+        "fintech"
+      ],
+      "vibes": [
+        "modern",
+        "bold"
+      ]
+    },
+    {
+      "name": "Lyra Studio",
+      "archetype": "classical",
+      "rationale": "Constellation, ancient lyre, poetic",
+      "pronunciation_hint": "LY-ruh",
+      "industries": [
+        "media",
+        "art",
+        "design"
+      ],
+      "vibes": [
+        "refined",
+        "classical"
+      ]
+    },
+    {
+      "name": "Vela Capital",
+      "archetype": "classical",
+      "rationale": "Latin for sails, motion forward",
+      "pronunciation_hint": "VAY-luh",
+      "industries": [
+        "consulting",
+        "finance",
+        "tech"
+      ],
+      "vibes": [
+        "minimal",
+        "modern"
+      ]
+    },
+    {
+      "name": "Aurelia House",
+      "archetype": "classical",
+      "rationale": "Golden one in Latin, prestige",
+      "pronunciation_hint": "aw-REH-lee-uh",
+      "industries": [
+        "fashion",
+        "hospitality",
+        "design"
+      ],
+      "vibes": [
+        "premium",
+        "classical",
+        "refined"
+      ]
+    },
+    {
+      "name": "Verum",
+      "archetype": "abstract",
+      "rationale": "Latin for true — minimal, principled",
+      "pronunciation_hint": "VEH-room",
+      "industries": [
+        "consulting",
+        "finance",
+        "wellness"
+      ],
+      "vibes": [
+        "minimal",
+        "refined"
+      ]
+    },
+    {
+      "name": "Anima",
+      "archetype": "abstract",
+      "rationale": "Latin for soul, suggests depth",
+      "pronunciation_hint": "AH-nee-muh",
+      "industries": [
+        "wellness",
+        "art",
+        "media"
+      ],
+      "vibes": [
+        "mystic",
+        "warm"
+      ]
+    },
+    {
+      "name": "Apex",
+      "archetype": "abstract",
+      "rationale": "Latin for peak — competitive, sharp",
+      "pronunciation_hint": "AY-peks",
+      "industries": [
+        "finance",
+        "consulting",
+        "fintech"
+      ],
+      "vibes": [
+        "bold",
+        "premium"
+      ]
+    },
+    {
+      "name": "Vertex",
+      "archetype": "abstract",
+      "rationale": "Latin for highest point, mathematical clarity",
+      "pronunciation_hint": "VUR-teks",
+      "industries": [
+        "tech",
+        "fintech",
+        "consulting"
+      ],
+      "vibes": [
+        "modern",
+        "bold"
+      ]
+    },
+    {
+      "name": "Acumen",
+      "archetype": "abstract",
+      "rationale": "Latin for sharpness of mind",
+      "pronunciation_hint": "AK-yoo-men",
+      "industries": [
+        "consulting",
+        "finance",
+        "education"
+      ],
+      "vibes": [
+        "refined",
+        "premium"
+      ]
+    },
+    {
+      "name": "Tempus",
+      "archetype": "classical",
+      "rationale": "Latin for time, timeless gravitas",
+      "pronunciation_hint": "TEM-pus",
+      "industries": [
+        "consulting",
+        "finance",
+        "hospitality"
+      ],
+      "vibes": [
+        "classical",
+        "refined"
+      ]
+    },
+    {
+      "name": "Sanctum",
+      "archetype": "classical",
+      "rationale": "Latin for sacred place",
+      "pronunciation_hint": "SANK-tum",
+      "industries": [
+        "wellness",
+        "hospitality",
+        "real-estate"
+      ],
+      "vibes": [
+        "mystic",
+        "refined"
+      ]
+    },
+    {
+      "name": "Cordis",
+      "archetype": "abstract",
+      "rationale": "Latin for of-the-heart",
+      "pronunciation_hint": "KOR-dis",
+      "industries": [
+        "wellness",
+        "hospitality",
+        "media"
+      ],
+      "vibes": [
+        "warm",
+        "refined"
+      ]
+    },
+    {
+      "name": "Lucent",
+      "archetype": "abstract",
+      "rationale": "English from Latin for shining",
+      "pronunciation_hint": "LOO-sent",
+      "industries": [
+        "tech",
+        "design",
+        "wellness"
+      ],
+      "vibes": [
+        "minimal",
+        "refined"
+      ]
+    },
+    {
+      "name": "Veritas",
+      "archetype": "classical",
+      "rationale": "Latin for truth, weighty",
+      "pronunciation_hint": "VEH-ri-tahs",
+      "industries": [
+        "consulting",
+        "finance",
+        "education"
+      ],
+      "vibes": [
+        "classical",
+        "premium"
+      ]
+    },
+    {
+      "name": "Nimbus",
+      "archetype": "abstract",
+      "rationale": "Latin for rain cloud, halo, atmospheric",
+      "pronunciation_hint": "NIM-bus",
+      "industries": [
+        "tech",
+        "design",
+        "media"
+      ],
+      "vibes": [
+        "modern",
+        "playful"
+      ]
+    },
+    {
+      "name": "Aetheria",
+      "archetype": "coined",
+      "rationale": "Coined from aether, ethereal premium feel",
+      "pronunciation_hint": "ay-THEER-ee-uh",
+      "industries": [
+        "fashion",
+        "wellness",
+        "design"
+      ],
+      "vibes": [
+        "mystic",
+        "premium"
+      ]
+    },
+    {
+      "name": "Auralis",
+      "archetype": "coined",
+      "rationale": "Coined from aural, sound-focused or sensory",
+      "pronunciation_hint": "aw-RAH-lis",
+      "industries": [
+        "media",
+        "tech",
+        "design"
+      ],
+      "vibes": [
+        "modern",
+        "refined"
+      ]
+    },
+    {
+      "name": "Stellr",
+      "archetype": "coined",
+      "rationale": "Compressed from stellar — punchy, tech-forward",
+      "pronunciation_hint": "STEL-er",
+      "industries": [
+        "tech",
+        "fintech",
+        "media"
+      ],
+      "vibes": [
+        "modern",
+        "bold"
+      ]
+    },
+    {
+      "name": "Brava",
+      "archetype": "coined",
+      "rationale": "Italian exclamation, celebratory",
+      "pronunciation_hint": "BRAH-vuh",
+      "industries": [
+        "fashion",
+        "media",
+        "hospitality"
+      ],
+      "vibes": [
+        "bold",
+        "warm"
+      ]
+    },
+    {
+      "name": "Linnea Atelier",
+      "archetype": "founder",
+      "rationale": "Scandinavian feminine name, naturalist nod",
+      "pronunciation_hint": "lih-NAY-uh",
+      "industries": [
+        "wellness",
+        "design",
+        "fashion"
+      ],
+      "vibes": [
+        "refined",
+        "minimal"
+      ]
+    },
+    {
+      "name": "Drifa",
+      "archetype": "coined",
+      "rationale": "Old Norse for snow drift, weatherproof feel",
+      "pronunciation_hint": "DREE-fuh",
+      "industries": [
+        "fashion",
+        "manufacturing",
+        "design"
+      ],
+      "vibes": [
+        "minimal",
+        "classical"
+      ]
+    },
+    {
+      "name": "Trove",
+      "archetype": "abstract",
+      "rationale": "English for hidden collection of value",
+      "pronunciation_hint": "TROHV",
+      "industries": [
+        "retail",
+        "art",
+        "media"
+      ],
+      "vibes": [
+        "playful",
+        "warm"
+      ]
+    },
+    {
+      "name": "Veo",
+      "archetype": "coined",
+      "rationale": "Spanish for I see — sharp, modern, single-syllable",
+      "pronunciation_hint": "VAY-oh",
+      "industries": [
+        "tech",
+        "media",
+        "design"
+      ],
+      "vibes": [
+        "minimal",
+        "modern"
+      ]
+    },
+    {
+      "name": "Nuvera",
+      "archetype": "coined",
+      "rationale": "Coined from nuove vie — new ways",
+      "pronunciation_hint": "noo-VEH-ruh",
+      "industries": [
+        "consulting",
+        "fintech",
+        "tech"
+      ],
+      "vibes": [
+        "modern",
+        "refined"
+      ]
+    },
+    {
+      "name": "Solenne Studio",
+      "archetype": "coined",
+      "rationale": "French-inflected take on solemn / sun",
+      "pronunciation_hint": "soh-LEN",
+      "industries": [
+        "fashion",
+        "wellness",
+        "hospitality"
+      ],
+      "vibes": [
+        "refined",
+        "warm"
+      ]
+    },
+    {
+      "name": "BluePath",
+      "archetype": "compound",
+      "rationale": "Direction with calm, navigation-friendly",
+      "pronunciation_hint": "BLOO-path",
+      "industries": [
+        "consulting",
+        "fintech",
+        "education"
+      ],
+      "vibes": [
+        "minimal",
+        "modern"
+      ]
+    },
+    {
+      "name": "IronGate",
+      "archetype": "compound",
+      "rationale": "Strength and threshold imagery",
+      "pronunciation_hint": "EYE-urn-gate",
+      "industries": [
+        "finance",
+        "real-estate",
+        "manufacturing"
+      ],
+      "vibes": [
+        "bold",
+        "classical"
+      ]
+    },
+    {
+      "name": "SilverSphere",
+      "archetype": "compound",
+      "rationale": "Precious + global scope",
+      "pronunciation_hint": "SIL-ver-sfeer",
+      "industries": [
+        "finance",
+        "fintech",
+        "consulting"
+      ],
+      "vibes": [
+        "premium",
+        "modern"
+      ]
+    },
+    {
+      "name": "NorthForge",
+      "archetype": "compound",
+      "rationale": "Directional craftsmanship",
+      "pronunciation_hint": "NORTH-forj",
+      "industries": [
+        "manufacturing",
+        "tech",
+        "design"
+      ],
+      "vibes": [
+        "bold",
+        "refined"
+      ]
+    },
+    {
+      "name": "RiverHall",
+      "archetype": "compound",
+      "rationale": "Flowing gathering place",
+      "pronunciation_hint": "RIV-er-hawl",
+      "industries": [
+        "hospitality",
+        "real-estate",
+        "education"
+      ],
+      "vibes": [
+        "warm",
+        "classical"
+      ]
+    },
+    {
+      "name": "BrightHouse",
+      "archetype": "compound",
+      "rationale": "Clarity and home, optimistic",
+      "pronunciation_hint": "BRYTE-howss",
+      "industries": [
+        "real-estate",
+        "education",
+        "wellness"
+      ],
+      "vibes": [
+        "warm",
+        "modern"
+      ]
+    },
+    {
+      "name": "StarBound",
+      "archetype": "compound",
+      "rationale": "Aspirational, motion",
+      "pronunciation_hint": "STAR-bownd",
+      "industries": [
+        "media",
+        "tech",
+        "art"
+      ],
+      "vibes": [
+        "bold",
+        "playful"
+      ]
+    },
+    {
+      "name": "OakWell",
+      "archetype": "compound",
+      "rationale": "Strong root + fresh water imagery",
+      "pronunciation_hint": "OHK-wel",
+      "industries": [
+        "wellness",
+        "food",
+        "real-estate"
+      ],
+      "vibes": [
+        "classical",
+        "warm"
+      ]
+    },
+    {
+      "name": "CedarStone",
+      "archetype": "compound",
+      "rationale": "Natural materials, permanence",
+      "pronunciation_hint": "SEE-dur-stohn",
+      "industries": [
+        "real-estate",
+        "manufacturing",
+        "design"
+      ],
+      "vibes": [
+        "classical",
+        "refined"
+      ]
+    },
+    {
+      "name": "DeepBloom",
+      "archetype": "compound",
+      "rationale": "Sustained flourishing",
+      "pronunciation_hint": "DEEP-bloom",
+      "industries": [
+        "wellness",
+        "fashion",
+        "food"
+      ],
+      "vibes": [
+        "warm",
+        "playful"
+      ]
+    },
+    {
+      "name": "AmberMill",
+      "archetype": "compound",
+      "rationale": "Warm color + traditional craft",
+      "pronunciation_hint": "AM-bur-mil",
+      "industries": [
+        "food",
+        "design",
+        "manufacturing"
+      ],
+      "vibes": [
+        "warm",
+        "classical"
+      ]
+    },
+    {
+      "name": "FieldNote",
+      "archetype": "compound",
+      "rationale": "Observational, journal-like",
+      "pronunciation_hint": "FEELD-noht",
+      "industries": [
+        "media",
+        "education",
+        "consulting"
+      ],
+      "vibes": [
+        "minimal",
+        "refined"
+      ]
+    },
+    {
+      "name": "StonePath",
+      "archetype": "compound",
+      "rationale": "Solid direction",
+      "pronunciation_hint": "STOHN-path",
+      "industries": [
+        "consulting",
+        "real-estate",
+        "wellness"
+      ],
+      "vibes": [
+        "classical",
+        "minimal"
+      ]
+    },
+    {
+      "name": "GoldLeaf",
+      "archetype": "compound",
+      "rationale": "Precious + delicate craftsmanship",
+      "pronunciation_hint": "GOHLD-leef",
+      "industries": [
+        "fashion",
+        "art",
+        "design"
+      ],
+      "vibes": [
+        "premium",
+        "classical"
+      ]
+    },
+    {
+      "name": "CopperHill",
+      "archetype": "compound",
+      "rationale": "Warm metal + terrain",
+      "pronunciation_hint": "KOP-ur-hil",
+      "industries": [
+        "manufacturing",
+        "design",
+        "food"
+      ],
+      "vibes": [
+        "warm",
+        "classical"
+      ]
+    },
+    {
+      "name": "Hartwell & Co",
+      "archetype": "founder",
+      "rationale": "Anglo surname with deer-by-spring etymology",
+      "pronunciation_hint": "HART-wel",
+      "industries": [
+        "consulting",
+        "finance",
+        "real-estate"
+      ],
+      "vibes": [
+        "classical",
+        "refined"
+      ]
+    },
+    {
+      "name": "Cartwright & Co",
+      "archetype": "founder",
+      "rationale": "Anglo trade surname, craftsmanship signal",
+      "pronunciation_hint": "KART-rite",
+      "industries": [
+        "manufacturing",
+        "consulting",
+        "real-estate"
+      ],
+      "vibes": [
+        "classical",
+        "warm"
+      ]
+    },
+    {
+      "name": "Whitfield Group",
+      "archetype": "founder",
+      "rationale": "Anglo surname, refined countryside feel",
+      "pronunciation_hint": "WIT-feeld",
+      "industries": [
+        "consulting",
+        "finance",
+        "real-estate"
+      ],
+      "vibes": [
+        "classical",
+        "refined"
+      ]
+    },
+    {
+      "name": "Ashworth Holdings",
+      "archetype": "founder",
+      "rationale": "Anglo surname with naturalist quality",
+      "pronunciation_hint": "ASH-wurth",
+      "industries": [
+        "wellness",
+        "design",
+        "real-estate"
+      ],
+      "vibes": [
+        "minimal",
+        "refined"
+      ]
+    },
+    {
+      "name": "Brookmore & Co",
+      "archetype": "founder",
+      "rationale": "Compound surname feel — water + meadow",
+      "pronunciation_hint": "BROOK-mor",
+      "industries": [
+        "real-estate",
+        "hospitality",
+        "consulting"
+      ],
+      "vibes": [
+        "warm",
+        "refined"
+      ]
+    },
+    {
+      "name": "Larkin House",
+      "archetype": "founder",
+      "rationale": "Irish surname, light and lyrical",
+      "pronunciation_hint": "LAR-kin",
+      "industries": [
+        "media",
+        "art",
+        "design"
+      ],
+      "vibes": [
+        "warm",
+        "playful"
+      ]
+    },
+    {
+      "name": "Stradford Capital",
+      "archetype": "founder",
+      "rationale": "Anglo surname with cultural weight",
+      "pronunciation_hint": "STRAD-furd",
+      "industries": [
+        "education",
+        "media",
+        "consulting"
+      ],
+      "vibes": [
+        "classical",
+        "premium"
+      ]
+    },
+    {
+      "name": "Holloway Group",
+      "archetype": "founder",
+      "rationale": "Anglo surname / hollow road",
+      "pronunciation_hint": "HOL-uh-way",
+      "industries": [
+        "real-estate",
+        "consulting",
+        "manufacturing"
+      ],
+      "vibes": [
+        "classical",
+        "warm"
+      ]
+    },
+    {
+      "name": "Sinclair & Co",
+      "archetype": "founder",
+      "rationale": "Norman surname, refined heritage",
+      "pronunciation_hint": "SIN-klair",
+      "industries": [
+        "finance",
+        "consulting",
+        "hospitality"
+      ],
+      "vibes": [
+        "premium",
+        "refined"
+      ]
+    },
+    {
+      "name": "Beaumont Capital",
+      "archetype": "founder",
+      "rationale": "French-origin surname, mountain beauty",
+      "pronunciation_hint": "BOH-mont",
+      "industries": [
+        "hospitality",
+        "real-estate",
+        "finance"
+      ],
+      "vibes": [
+        "premium",
+        "classical"
+      ]
+    },
+    {
+      "name": "Cavendish Group",
+      "archetype": "founder",
+      "rationale": "Anglo aristocratic surname",
+      "pronunciation_hint": "KAV-en-dish",
+      "industries": [
+        "finance",
+        "consulting",
+        "education"
+      ],
+      "vibes": [
+        "premium",
+        "classical"
+      ]
+    },
+    {
+      "name": "Linwood House",
+      "archetype": "founder",
+      "rationale": "Anglo placename surname, calm",
+      "pronunciation_hint": "LIN-wood",
+      "industries": [
+        "real-estate",
+        "wellness",
+        "design"
+      ],
+      "vibes": [
+        "warm",
+        "refined"
+      ]
+    },
+    {
+      "name": "Marbury & Co",
+      "archetype": "founder",
+      "rationale": "Anglo placename, weighty heritage",
+      "pronunciation_hint": "MAR-buh-ree",
+      "industries": [
+        "consulting",
+        "education",
+        "real-estate"
+      ],
+      "vibes": [
+        "classical",
+        "refined"
+      ]
+    },
+    {
+      "name": "Penrose Holdings",
+      "archetype": "founder",
+      "rationale": "Cornish surname with mathematical recognition",
+      "pronunciation_hint": "PEN-rohz",
+      "industries": [
+        "education",
+        "tech",
+        "consulting"
+      ],
+      "vibes": [
+        "classical",
+        "refined"
+      ]
+    },
+    {
+      "name": "The Aldwych",
+      "archetype": "place",
+      "rationale": "London locale, theatrical heritage",
+      "pronunciation_hint": "AHLD-witch",
+      "industries": [
+        "media",
+        "art",
+        "hospitality"
+      ],
+      "vibes": [
+        "classical",
+        "premium"
+      ]
+    },
+    {
+      "name": "Bloomsbury",
+      "archetype": "place",
+      "rationale": "London literary district",
+      "pronunciation_hint": "BLOOMZ-bree",
+      "industries": [
+        "education",
+        "media",
+        "art"
+      ],
+      "vibes": [
+        "classical",
+        "refined"
+      ]
+    },
+    {
+      "name": "Camden Forge",
+      "archetype": "place",
+      "rationale": "London neighborhood + craftsmanship",
+      "pronunciation_hint": "KAM-den FORJ",
+      "industries": [
+        "manufacturing",
+        "design",
+        "media"
+      ],
+      "vibes": [
+        "bold",
+        "warm"
+      ]
+    },
+    {
+      "name": "Brera",
+      "archetype": "place",
+      "rationale": "Milan design district",
+      "pronunciation_hint": "BREH-rah",
+      "industries": [
+        "fashion",
+        "design",
+        "art"
+      ],
+      "vibes": [
+        "refined",
+        "modern"
+      ]
+    },
+    {
+      "name": "Marais",
+      "archetype": "place",
+      "rationale": "Parisian district, refined gallery culture",
+      "pronunciation_hint": "mah-RAY",
+      "industries": [
+        "fashion",
+        "art",
+        "hospitality"
+      ],
+      "vibes": [
+        "premium",
+        "refined"
+      ]
+    },
+    {
+      "name": "North Loop",
+      "archetype": "place",
+      "rationale": "Urban neighborhood feel, transit",
+      "pronunciation_hint": "NORTH LOOP",
+      "industries": [
+        "real-estate",
+        "hospitality",
+        "food"
+      ],
+      "vibes": [
+        "modern",
+        "warm"
+      ]
+    },
+    {
+      "name": "Highgate",
+      "archetype": "place",
+      "rationale": "London village, hilltop quiet",
+      "pronunciation_hint": "HY-gayt",
+      "industries": [
+        "real-estate",
+        "education",
+        "consulting"
+      ],
+      "vibes": [
+        "classical",
+        "refined"
+      ]
+    },
+    {
+      "name": "Lumera & Co",
+      "archetype": "compound",
+      "rationale": "Latin light + house signature",
+      "pronunciation_hint": "loo-MEH-ruh AND koh",
+      "industries": [
+        "fashion",
+        "design",
+        "consulting"
+      ],
+      "vibes": [
+        "premium",
+        "refined"
+      ]
+    },
+    {
+      "name": "Apex Forge",
+      "archetype": "compound",
+      "rationale": "Peak craftsmanship",
+      "pronunciation_hint": "AY-peks FORJ",
+      "industries": [
+        "manufacturing",
+        "tech",
+        "design"
+      ],
+      "vibes": [
+        "bold",
+        "premium"
+      ]
+    },
+    {
+      "name": "Lyra House",
+      "archetype": "compound",
+      "rationale": "Constellation + house typology",
+      "pronunciation_hint": "LY-ruh HOWSS",
+      "industries": [
+        "fashion",
+        "media",
+        "design"
+      ],
+      "vibes": [
+        "refined",
+        "premium"
+      ]
+    },
+    {
+      "name": "Atlas Studio",
+      "archetype": "compound",
+      "rationale": "Mythic + creative workshop",
+      "pronunciation_hint": "AT-las STOO-dee-oh",
+      "industries": [
+        "design",
+        "art",
+        "media"
+      ],
+      "vibes": [
+        "bold",
+        "modern"
+      ]
+    },
+    {
+      "name": "Solis Group",
+      "archetype": "compound",
+      "rationale": "Sun + collective",
+      "pronunciation_hint": "SOH-lis GROOP",
+      "industries": [
+        "finance",
+        "consulting",
+        "real-estate"
+      ],
+      "vibes": [
+        "premium",
+        "classical"
+      ]
+    },
+    {
+      "name": "Vela Capital",
+      "archetype": "compound",
+      "rationale": "Latin sails + finance vocabulary",
+      "pronunciation_hint": "VAY-luh KAP-ih-tul",
+      "industries": [
+        "finance",
+        "fintech",
+        "consulting"
+      ],
+      "vibes": [
+        "premium",
+        "modern"
+      ]
+    },
+    {
+      "name": "Nova Foundry",
+      "archetype": "compound",
+      "rationale": "New + maker workshop",
+      "pronunciation_hint": "NOH-vuh FOWN-dree",
+      "industries": [
+        "manufacturing",
+        "tech",
+        "design"
+      ],
+      "vibes": [
+        "bold",
+        "modern"
+      ]
+    },
+    {
+      "name": "Orion Works",
+      "archetype": "compound",
+      "rationale": "Constellation + manufacturing register",
+      "pronunciation_hint": "oh-RY-on WURKS",
+      "industries": [
+        "manufacturing",
+        "tech",
+        "design"
+      ],
+      "vibes": [
+        "bold",
+        "classical"
+      ]
+    },
+    {
+      "name": "Astra Labs",
+      "archetype": "compound",
+      "rationale": "Stars + scientific register",
+      "pronunciation_hint": "AHS-truh LABZ",
+      "industries": [
+        "tech",
+        "education",
+        "consulting"
+      ],
+      "vibes": [
+        "modern",
+        "premium"
+      ]
+    },
+    {
+      "name": "Vesta Atelier",
+      "archetype": "compound",
+      "rationale": "Hearth + workshop",
+      "pronunciation_hint": "VES-tuh AT-uh-lee-ay",
+      "industries": [
+        "fashion",
+        "design",
+        "hospitality"
+      ],
+      "vibes": [
+        "premium",
+        "refined"
+      ]
+    },
+    {
+      "name": "Tempus Bureau",
+      "archetype": "compound",
+      "rationale": "Time + agency, editorial",
+      "pronunciation_hint": "TEM-pus BYUR-oh",
+      "industries": [
+        "media",
+        "consulting",
+        "art"
+      ],
+      "vibes": [
+        "refined",
+        "classical"
+      ]
+    },
+    {
+      "name": "Sanctum Press",
+      "archetype": "compound",
+      "rationale": "Sacred space + publishing",
+      "pronunciation_hint": "SANK-tum PRES",
+      "industries": [
+        "media",
+        "art",
+        "education"
+      ],
+      "vibes": [
+        "mystic",
+        "refined"
+      ]
+    },
+    {
+      "name": "True North",
+      "archetype": "descriptive",
+      "rationale": "Directional honesty, sturdy",
+      "pronunciation_hint": "TROO NORTH",
+      "industries": [
+        "consulting",
+        "finance",
+        "wellness"
+      ],
+      "vibes": [
+        "minimal",
+        "bold"
+      ]
+    },
+    {
+      "name": "First Bench",
+      "archetype": "descriptive",
+      "rationale": "Workshop seating, craft-first identity",
+      "pronunciation_hint": "FURST BENCH",
+      "industries": [
+        "manufacturing",
+        "design",
+        "education"
+      ],
+      "vibes": [
+        "minimal",
+        "warm"
+      ]
+    },
+    {
+      "name": "Quiet Hours",
+      "archetype": "descriptive",
+      "rationale": "Sustained focus, calm",
+      "pronunciation_hint": "KWY-et OWRZ",
+      "industries": [
+        "wellness",
+        "media",
+        "design"
+      ],
+      "vibes": [
+        "minimal",
+        "refined"
+      ]
+    },
+    {
+      "name": "Slow Press",
+      "archetype": "descriptive",
+      "rationale": "Deliberate craft pace, editorial",
+      "pronunciation_hint": "SLOH PRES",
+      "industries": [
+        "media",
+        "food",
+        "art"
+      ],
+      "vibes": [
+        "minimal",
+        "warm"
+      ]
+    },
+    {
+      "name": "Brass Tacks",
+      "archetype": "descriptive",
+      "rationale": "Idiom for fundamentals, no-nonsense",
+      "pronunciation_hint": "BRAS TAKS",
+      "industries": [
+        "consulting",
+        "finance",
+        "manufacturing"
+      ],
+      "vibes": [
+        "bold",
+        "minimal"
+      ]
+    },
+    {
+      "name": "Open Field",
+      "archetype": "descriptive",
+      "rationale": "Possibility, exploration",
+      "pronunciation_hint": "OH-pen FEELD",
+      "industries": [
+        "consulting",
+        "education",
+        "tech"
+      ],
+      "vibes": [
+        "minimal",
+        "modern"
+      ]
+    },
+    {
+      "name": "The Common Set",
+      "archetype": "descriptive",
+      "rationale": "Shared assembly, community focus",
+      "pronunciation_hint": "thuh KAH-mun SET",
+      "industries": [
+        "media",
+        "art",
+        "design"
+      ],
+      "vibes": [
+        "minimal",
+        "playful"
+      ]
+    },
+    {
+      "name": "Forward Stack",
+      "archetype": "descriptive",
+      "rationale": "Tech-stack metaphor + forward motion",
+      "pronunciation_hint": "FOR-wurd STAK",
+      "industries": [
+        "tech",
+        "fintech",
+        "consulting"
+      ],
+      "vibes": [
+        "modern",
+        "bold"
+      ]
+    }
   ]
 }

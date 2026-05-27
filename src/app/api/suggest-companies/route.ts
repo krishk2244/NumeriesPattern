@@ -58,7 +58,12 @@ const MODEL = 'gpt-4o-mini'
 // candidate companies. Offline pool tops up the rest.
 const OVERSAMPLE_FACTOR = 1.5
 const MAX_GENERATED = 12
+// When mustInclude narrows the model's vocabulary heavily, we need to
+// generate a wider candidate pool so at least some pass the numerology
+// filter. The longer timeout (14s) makes this feasible.
+const MAX_GENERATED_MUST_INCLUDE = 20
 const MAX_OUTPUT_TOKENS = 700
+const MAX_OUTPUT_TOKENS_MUST_INCLUDE = 1200
 // 9.5s — gpt-4o-mini's actual time-to-completion for ~700 tokens of JSON.
 // 6.5s was too tight (call always timed out). Total route latency ~10s.
 const OPENAI_TIMEOUT_MS = 9_500
@@ -141,9 +146,13 @@ export async function POST(req: Request) {
     )
   }
 
+  // Bump timeout when mustInclude is set — the substring constraint
+  // narrows the model's vocabulary, so we'd rather wait an extra few
+  // seconds than fall back to the offline pool which has thin coverage.
+  const timeout = mustInclude ? 14_000 : OPENAI_TIMEOUT_MS
   const client = new OpenAI({
     apiKey,
-    timeout: OPENAI_TIMEOUT_MS,
+    timeout,
     maxRetries: 0,
   })
 
@@ -162,10 +171,12 @@ export async function POST(req: Request) {
       selection === 'both'
         ? 'Names will be filtered to those whose letters reduce to the target under BOTH Pythagorean and Chaldean systems. This is a tight intersection — favor short to medium length, varied letters, and a wide pool.'
         : null,
-    // When intersection-filtering, the natural hit-rate drops sharply
-    // (≈1%–2% vs ≈11% single-system), so we ask the model for more.
-    count:
-      selection === 'both'
+    // When intersection-filtering (both systems) OR mustInclude is set,
+    // the natural hit-rate drops sharply (≈1%–2% vs ≈11% single-system),
+    // so we ask the model for more candidates.
+    count: mustInclude
+      ? MAX_GENERATED_MUST_INCLUDE
+      : selection === 'both'
         ? Math.min(Math.ceil(count * OVERSAMPLE_FACTOR * 2.5), MAX_GENERATED)
         : Math.min(Math.ceil(count * OVERSAMPLE_FACTOR), MAX_GENERATED),
   }
@@ -229,7 +240,9 @@ export async function POST(req: Request) {
       // parse is dramatically faster.
       const completion = await client.chat.completions.create({
         model: MODEL,
-        max_tokens: MAX_OUTPUT_TOKENS,
+        max_tokens: mustInclude
+          ? MAX_OUTPUT_TOKENS_MUST_INCLUDE
+          : MAX_OUTPUT_TOKENS,
         messages: [
           { role: 'system', content: COMPANY_SUGGESTIONS_SYSTEM_PROMPT },
           {
@@ -313,34 +326,18 @@ export async function POST(req: Request) {
     }
   }
 
-  // If every pass failed entirely, fall back to offline pool
-  if (verifiedFromModel.length === 0 && modelError) {
-    const suggestions = buildPoolResult('pool-fallback')
-    return NextResponse.json({
-      suggestions,
-      notes:
-        'OpenAI request did not return structured output — showing names from the offline pool. They still verify to your target number.',
-      meta: {
-        requested_count: count,
-        generated_count: suggestions.length,
-        verified_count: suggestions.length,
-        target_number: targetNumber,
-        system,
-        structure,
-        model: 'offline-pool',
-        model_error: modelError,
-      },
-    })
-  }
-
-  // Slice to count
+  // Slice model results to count (may be 0 if model errored or returned no
+  // verified hits). Pool top-up + relaxed fallback below handles both cases.
   const modelSliced = verifiedFromModel.slice(0, count)
 
+  type PoolEntry = ReturnType<typeof buildPoolResult>[number]
+  type RelaxedPoolEntry = Omit<PoolEntry, 'source'> & { source: 'relaxed-pool' }
+  type SuggestionEntry = VerifiedModelEntry | PoolEntry | RelaxedPoolEntry
+
   // Top up from offline pool if model didn't produce enough verified hits
-  let suggestions: Array<
-    VerifiedModelEntry | ReturnType<typeof buildPoolResult>[number]
-  > = modelSliced
+  let suggestions: SuggestionEntry[] = modelSliced
   let topUpUsed = false
+  let relaxedFallback = false
   if (modelSliced.length < count) {
     const poolEntries = buildPoolResult('pool')
     const modelNames = new Set(modelSliced.map((v) => v.name.toLowerCase()))
@@ -353,14 +350,93 @@ export async function POST(req: Request) {
     }
   }
 
+  // Relaxed fallback: if every constrained filter killed every name, fall
+  // back to pool entries that hit the numerology target. We relax industry
+  // and keywords (soft filters) but NEVER mustInclude — if the user asked
+  // for a substring, they need to see names containing it or hear that
+  // none exist. Silently dropping must-include made the field feel broken.
+  let relaxedSystem: NumerologySystem | null = null
+  if (suggestions.length === 0) {
+    let relaxedSystems: NumerologySystem[] = activeSystems
+    let relaxed = getPool().filter((c) => {
+      if (!passesMustInclude(c.name)) return false
+      return relaxedSystems.every(
+        (s) => calculateName(c.name, s).finalNumber === targetNumber
+      )
+    })
+
+    // Pool is small (~86 names) and the dual-system intersection is empty
+    // for many targets (e.g. 0 candidates reduce to 5 under BOTH systems).
+    // If we asked for 'both' and got 0, try each system individually and
+    // pick whichever has more matches. Flag this in the note so the user
+    // knows we relaxed the system constraint, not just the filters.
+    if (relaxed.length === 0 && selection === 'both') {
+      const pyth = getPool().filter(
+        (c) =>
+          passesMustInclude(c.name) &&
+          calculateName(c.name, 'pythagorean').finalNumber === targetNumber
+      )
+      const chald = getPool().filter(
+        (c) =>
+          passesMustInclude(c.name) &&
+          calculateName(c.name, 'chaldean').finalNumber === targetNumber
+      )
+      if (pyth.length >= chald.length && pyth.length > 0) {
+        relaxed = pyth
+        relaxedSystems = ['pythagorean']
+        relaxedSystem = 'pythagorean'
+      } else if (chald.length > 0) {
+        relaxed = chald
+        relaxedSystems = ['chaldean']
+        relaxedSystem = 'chaldean'
+      }
+    }
+
+    const mapped = relaxed.slice(0, count).map((c) => {
+      const primary = relaxedSystems[0]
+      const calc = calculateName(c.name, primary)
+      return {
+        name: c.name,
+        archetype: c.archetype,
+        rationale: c.rationale,
+        pronunciation_hint: c.pronunciation_hint,
+        expected_value: targetNumber,
+        actual_value: calc.finalNumber,
+        sum: calc.sum,
+        reduction_steps: calc.reductionSteps,
+        verified: true,
+        source: 'relaxed-pool' as const,
+      }
+    })
+    if (mapped.length > 0) {
+      suggestions = mapped
+      relaxedFallback = true
+    }
+  }
+
+  // Must-include is preserved in the relaxed fallback (never dropped).
+  // Industry/keywords are soft filters that we *do* relax.
+  const droppedFilters: string[] = []
+  if (relaxedFallback) {
+    if (industry) droppedFilters.push('industry')
+    if (keywords) droppedFilters.push('keywords')
+    if (relaxedSystem) droppedFilters.push('dual-system match')
+  }
+
   return NextResponse.json({
     suggestions,
     notes:
       suggestions.length === 0
-        ? 'No matches in either the model output or the offline pool. Try a different target number or industry.'
-        : topUpUsed
-          ? `Model returned ${modelSliced.length} matching name${modelSliced.length === 1 ? '' : 's'}; topped up with offline-pool candidates to reach your requested count.`
-          : null,
+        ? mustInclude
+          ? `No company names containing “${mustInclude}” reduce to ${targetNumber} under ${selection === 'both' ? 'either system' : selection}. Try a shorter / different fragment, a different target number, or remove the Must Include filter.`
+          : `No invented company names in our pool reduce to ${targetNumber} under ${selection === 'both' ? 'either system' : selection}. Try a different target number — most targets have 5-15 candidates.`
+        : relaxedFallback
+          ? relaxedSystem
+            ? `No pool names reduce to ${targetNumber} under BOTH systems — the dual-system intersection is sparse in our 86-name company pool. Showing names that reduce to ${targetNumber} under ${relaxedSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only${droppedFilters.length > 1 ? ` (also dropped: ${droppedFilters.filter((f) => f !== 'dual-system match').join(', ')})` : ''}.`
+            : `No company names matched your ${droppedFilters.join(' / ') || 'filters'} AND target ${targetNumber}. Showing pool names that reduce to ${targetNumber} — relax or remove ${droppedFilters.join(' / ') || 'filters'} to narrow these further.`
+          : topUpUsed
+            ? `Model returned ${modelSliced.length} matching name${modelSliced.length === 1 ? '' : 's'}; topped up with offline-pool candidates to reach your requested count.`
+            : null,
     meta: {
       requested_count: count,
       generated_count: rawGenerated,

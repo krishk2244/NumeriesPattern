@@ -1,8 +1,8 @@
 {
   "country": "India",
-  "generated_at": "2026-05-08T17:59:41.090Z",
-  "model": "anthropic/claude-haiku-4.5",
-  "count": 86,
+  "generated_at": "2026-05-27T07:13:53.788Z",
+  "model": "gpt-4o-mini",
+  "count": 258,
   "names": [
     {
       "name": "Arjun",
@@ -605,7 +605,1210 @@
       "meaning": "humility, courtesy",
       "gender": "M",
       "era": "modern"
+    },
+    {
+      "name": "Bharat",
+      "origin": "Derived from Sanskrit, representing ancient Indian culture.",
+      "meaning": "The name of an ancient Indian king and a name for India itself.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Chandni",
+      "origin": "Hindi, meaning 'moonlight'.",
+      "meaning": "Symbolizes beauty and light, often used in poetry.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Devendra",
+      "origin": "Sanskrit, a combination of 'deva' (god) and 'indra' (king).",
+      "meaning": "King of gods; represents power and divinity.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Gaurika",
+      "origin": "Sanskrit-derived, often associated with the goddess Gauri.",
+      "meaning": "The young and charming goddess who represents purity.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Harish",
+      "origin": "Sanskrit, derived from 'hari' (lord) and 'isha' (god).",
+      "meaning": "Lord of Vishnu, signifies prosperity and benevolence.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ishika",
+      "origin": "Sanskrit, meaning 'one who is a worshipper'.",
+      "meaning": "Represents an individual who is devoted and dedicated.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Jahan",
+      "origin": "Persian, meaning 'world'.",
+      "meaning": "Symbolizes breadth and expanse, associated with cosmopolitan ideals.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Kalpana",
+      "origin": "Sanskrit, meaning 'imagination' or 'creativity'.",
+      "meaning": "Represents the power of thought and creativity.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Manav",
+      "origin": "Sanskrit, meaning 'human being'.",
+      "meaning": "Embodies humanity and awareness of social values.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Neeraj",
+      "origin": "Sanskrit, meaning 'lotus'.",
+      "meaning": "Symbolizes purity and beauty, often seen in spiritual contexts.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Omkara",
+      "origin": "Sanskrit, derived from 'Om', a sacred sound in Hinduism.",
+      "meaning": "Represents the cosmic sound and ultimate reality.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Pallavi",
+      "origin": "Sanskrit, meaning 'new leaves' or 'budding'.",
+      "meaning": "Symbolizes new beginnings and growth.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Quadir",
+      "origin": "Arabic and Persian influence, meaning 'powerful'.",
+      "meaning": "Conveys strength and capability.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ritika",
+      "origin": "Sanskrit, means 'brilliant' or 'joyful'.",
+      "meaning": "Represents dynamism and warmth in personality.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Siddharth",
+      "origin": "Sanskrit, meaning 'one who has attained his goals'.",
+      "meaning": "Symbolizes accomplishment and fulfillment.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Tanvi",
+      "origin": "Sanskrit, meaning 'delicate' or 'beautiful'.",
+      "meaning": "Represents allure and fragility in charm.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Uday",
+      "origin": "Sanskrit, meaning 'rise' or 'to ascend'.",
+      "meaning": "Symbolizes new beginnings and hope.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Vedika",
+      "origin": "Sanskrit, meaning 'authority of the Veda'.",
+      "meaning": "Denotes knowledge, gathering of wisdom.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Yogesh",
+      "origin": "Sanskrit, meaning 'lord of yoga'.",
+      "meaning": "Represents wisdom, introspection, and self-control.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ziya",
+      "origin": "Arabic, meaning 'light' or 'splendour'.",
+      "meaning": "Symbolizes illumination and brilliance.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Aradhya",
+      "origin": "Sanskrit, meaning 'worthy of worship'.",
+      "meaning": "Represents reverence and respect.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Bhavik",
+      "origin": "Sanskrit, meaning 'one who has feelings'.",
+      "meaning": "Symbolizes emotional depth and sensitivity.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Charulata",
+      "origin": "Sanskrit, means 'beautiful creeper'.",
+      "meaning": "Represents grace and nature's beauty.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Diwakar",
+      "origin": "Sanskrit, meaning 'sun'.",
+      "meaning": "Symbolizes brightness and energy.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Eshita",
+      "origin": "Sanskrit, meaning 'one who desires'.",
+      "meaning": "Represents aspiration and ambition.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Falguni",
+      "origin": "Sanskrit, means 'born in the month of Falgun'.",
+      "meaning": "Represents spring and vitality.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Gunjan",
+      "origin": "Sanskrit, meaning 'humming or buzzing sound'.",
+      "meaning": "Symbolizes vibrancy and liveliness.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Himani",
+      "origin": "Sanskrit, meaning 'snowy'.",
+      "meaning": "Represents purity and coolness.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Ikshit",
+      "origin": "Sanskrit, meaning 'one who observes'.",
+      "meaning": "Denotes wisdom and the ability to learn.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Jigyasa",
+      "origin": "Sanskrit, meaning 'curiosity'.",
+      "meaning": "Conveys the importance of knowledge and questioning.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Keshav",
+      "origin": "Sanskrit, meaning 'one with beautiful hair', another name for Krishna.",
+      "meaning": "Symbolizes divine beauty and charm.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Lakshya",
+      "origin": "Sanskrit, meaning 'goal' or 'aim'.",
+      "meaning": "Represents purpose and determination.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Mitali",
+      "origin": "Sanskrit, meaning 'friendship'.",
+      "meaning": "Symbolizes companionship and harmony.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Niranjan",
+      "origin": "Sanskrit, meaning 'without blemish'.",
+      "meaning": "Represents purity and flawlessness.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Omisha",
+      "origin": "Sanskrit, meaning 'god of death and life'.",
+      "meaning": "Symbolizes the cycle of life and existence.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Palash",
+      "origin": "Sanskrit, referring to a flowering tree known for its bright orange flowers.",
+      "meaning": "Symbolizes beauty and Indian flora.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Qamar",
+      "origin": "Arabic, meaning 'moon'.",
+      "meaning": "Represents beauty and serenity.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Raghav",
+      "origin": "Sanskrit, meaning 'descendant of Raghu', another name for Lord Rama.",
+      "meaning": "Symbolizes righteousness and virtue.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Shubhi",
+      "origin": "Sanskrit, meaning 'auspicious'.",
+      "meaning": "Symbolizes good fortune and positivity.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Trisha",
+      "origin": "Sanskrit, meaning 'thirst'.",
+      "meaning": "Symbolizes desire and aspiration.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Ajay",
+      "origin": "A common name derived from Sanskrit, often used in Hindu communities.",
+      "meaning": "Unconquerable; invincible.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Bilal",
+      "origin": "An Arabic name popular in India due to Islamic influence.",
+      "meaning": "Moist; refreshing.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Chhaya",
+      "origin": "Derived from Sanskrit, this name is used across various Indian languages.",
+      "meaning": "Shade; shadow.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Darshana",
+      "origin": "Of Sanskrit origin, often found in Hindu culture.",
+      "meaning": "Vision; sight.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Eshaan",
+      "origin": "A name with Persian roots, used in modern Indian contexts.",
+      "meaning": "Desire; wish.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Gaurav",
+      "origin": "A common Hindi name that has roots in Sanskrit.",
+      "meaning": "Pride; honor.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Hiral",
+      "origin": "A name of Gujarati origin, often used for girls.",
+      "meaning": "Golden; radiant.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Iksha",
+      "origin": "Sanskrit-derived, representing knowledge and vision.",
+      "meaning": "Knowledge; sight.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Jaspreet",
+      "origin": "A name with Punjabi roots that refers to astrology and spirituality.",
+      "meaning": "One who is famous and has a radiant personality.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Kamala",
+      "origin": "A name from Sanskrit, frequently used in Hindu mythology.",
+      "meaning": "Lotus; goddess Lakshmi.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Lalit",
+      "origin": "Derived from Sanskrit, popular in Hindu epic literature.",
+      "meaning": "Playful; charming.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Mihir",
+      "origin": "Sanskrit origin, commonly associated with the sun.",
+      "meaning": "Sun; light.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Neelam",
+      "origin": "A name from Sanskrit, also common in several Indian languages.",
+      "meaning": "Blue sapphire; precious stone.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Onkar",
+      "origin": "A name that has roots in Sikhism and is derived from the spiritual sound of 'Om.'",
+      "meaning": "The primal sound; the essence of God.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Parvati",
+      "origin": "Sanskrit origin, a prominent figure in Hindu mythology.",
+      "meaning": "Goddess of fertility and love; the wife of Shiva.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Radhika",
+      "origin": "A name from Sanskrit, associated with the divine feminine.",
+      "meaning": "Successful; prosperous; another name for Radha.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Sanju",
+      "origin": "A name common in various Indian languages, often used as a diminutive form.",
+      "meaning": "Victorious; a name of victory.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Tanay",
+      "origin": "Of Sanskrit origin, used often for boys in modern India.",
+      "meaning": "Son; offspring.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Urja",
+      "origin": "Sanskrit-derived, used across various Indian cultures.",
+      "meaning": "Energy; power; vitality.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Vatsal",
+      "origin": "A name from Sanskrit, meaning affectionate and nurturing.",
+      "meaning": "Affectionate; tender-hearted.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Yamini",
+      "origin": "A name from Sanskrit, commonly used in Hindu communities.",
+      "meaning": "Night; night-time.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Zarin",
+      "origin": "A name with Persian roots, used in modern Indian contexts as well.",
+      "meaning": "Golden; wealth.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Devika",
+      "origin": "Sanskrit-derived, often used to refer to a goddess.",
+      "meaning": "Little goddess; divine woman.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Arvind",
+      "origin": "Sanskrit origin, refers to the lotus flower.",
+      "meaning": "Lotus; one with knowledge.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Gaurangi",
+      "origin": "Of Sanskrit origin, used to denote a fair complexioned girl.",
+      "meaning": "One of fair form; the goddess Radha.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Vimal",
+      "origin": "Sanskrit-derived, commonly given in Hindu families.",
+      "meaning": "Pure; clean; free from impurities.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Shaila",
+      "origin": "Derived from Sanskrit, often associated with mountains and hills.",
+      "meaning": "Stone; mountain; goddess Durga.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Laxman",
+      "origin": "A name rooted in Hindu mythology, brother of Lord Rama.",
+      "meaning": "One who brings wealth; auspicious.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Nirmala",
+      "origin": "Derived from Sanskrit, used in various Indian languages.",
+      "meaning": "Pure; clean; immaculate.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Siddhi",
+      "origin": "Sanskrit origin, often used to symbolize achievement and success.",
+      "meaning": "Achievement; attainment.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Ujwal",
+      "origin": "Of Sanskrit origin, used mainly in North India.",
+      "meaning": "Bright; luminous; radiant.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Yashoda",
+      "origin": "Sanskrit-derived, often associated with the mother of Lord Krishna.",
+      "meaning": "One who gives fame; mother of Lord Krishna.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Ajaya",
+      "origin": "A name of Sanskrit origin signifying victory.",
+      "meaning": "Invincible; undefeated.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Bhuvana",
+      "origin": "Sanskrit",
+      "meaning": "World; earth",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Chandrika",
+      "origin": "Sanskrit",
+      "meaning": "Moonlight",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Darshan",
+      "origin": "Sanskrit",
+      "meaning": "Vision; sight",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ekta",
+      "origin": "Hindi",
+      "meaning": "Unity; oneness",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Faizan",
+      "origin": "Arabic",
+      "meaning": "Beneficence; grace",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Gurdeep",
+      "origin": "Punjabi",
+      "meaning": "Light of the Guru",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Harika",
+      "origin": "Telugu",
+      "meaning": "Mystical; wonderful",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ishaanvi",
+      "origin": "Sanskrit",
+      "meaning": "Goddess Lakshmi; one who is prosperous",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Jayesh",
+      "origin": "Sanskrit",
+      "meaning": "Victorious; winner",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Lavanya",
+      "origin": "Sanskrit",
+      "meaning": "Grace; beauty",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Manisha",
+      "origin": "Sanskrit",
+      "meaning": "Intellect; knowledge",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Nandesh",
+      "origin": "Sanskrit",
+      "meaning": "Lord of joy; happiness",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Opal",
+      "origin": "English; popular in India",
+      "meaning": "Precious stone",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Prisha",
+      "origin": "Sanskrit",
+      "meaning": "Beloved; precious",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Rajeev",
+      "origin": "Sanskrit",
+      "meaning": "Blue lotus; success",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Siddhika",
+      "origin": "Sanskrit",
+      "meaning": "Accomplished; successful",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Tania",
+      "origin": "Hindi",
+      "meaning": "Fairy queen; princess",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Uttam",
+      "origin": "Sanskrit",
+      "meaning": "Best; excellent",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Vaibhav",
+      "origin": "Sanskrit",
+      "meaning": "Wealth; prosperity",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Yogita",
+      "origin": "Sanskrit",
+      "meaning": "One who practices Yoga; to be present",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Anaya",
+      "origin": "Sanskrit",
+      "meaning": "Care; protection",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Binod",
+      "origin": "Bengali",
+      "meaning": "Delight; happiness",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Chirag",
+      "origin": "Hindi",
+      "meaning": "Lamp; light",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Dipika",
+      "origin": "Sanskrit",
+      "meaning": "Light; lamp",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Feroze",
+      "origin": "Persian",
+      "meaning": "Victorious; prosperous",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Gitali",
+      "origin": "Bengali",
+      "meaning": "One who sings; melody",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Himali",
+      "origin": "Sanskrit",
+      "meaning": "Himalayan; from the mountains",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Indrani",
+      "origin": "Sanskrit",
+      "meaning": "Queen of Indra; goddess",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Jivanshu",
+      "origin": "Sanskrit",
+      "meaning": "The soul; one who gives life",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Maya",
+      "origin": "Sanskrit",
+      "meaning": "Illusion; goddess Durga",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Neeti",
+      "origin": "Sanskrit",
+      "meaning": "Moral; ethics",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Oorja",
+      "origin": "Sanskrit",
+      "meaning": "Energy; vitality",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Pavitra",
+      "origin": "Sanskrit",
+      "meaning": "Pure; sacred",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Quiana",
+      "origin": "Hindi",
+      "meaning": "To be fulfilled; accomplished",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Rishabh",
+      "origin": "Sanskrit",
+      "meaning": "Superior; moral",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Saurav",
+      "origin": "Sanskrit",
+      "meaning": "Fragrance; aroma",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Tarun",
+      "origin": "Sanskrit",
+      "meaning": "Young; youth",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Utsav",
+      "origin": "Sanskrit",
+      "meaning": "Festival; celebration",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Veena",
+      "origin": "Sanskrit",
+      "meaning": "Musical instrument; goddess Saraswati",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Warisha",
+      "origin": "Hindi",
+      "meaning": "Bringer of abundance; prosperous",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Yashasvi",
+      "origin": "Sanskrit",
+      "meaning": "Famous; successful",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Adviti",
+      "origin": "Derived from Sanskrit, it signifies uniqueness and singularity.",
+      "meaning": "One who is unmatched or incomparable.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Bhargav",
+      "origin": "Sanskrit origin, often associated with Lord Shiva.",
+      "meaning": "A name related to the Brilliance of the Sun.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Chaitali",
+      "origin": "A name primarily used in Bengali culture, linked to the spring season.",
+      "meaning": "Born in the month of Chaitra (spring).",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Devansh",
+      "origin": "Derived from Sanskrit, meaning a part of God.",
+      "meaning": "Part of the divine or Godly essence.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ekisha",
+      "origin": "A contemporary Indian name rooted in the belief of God's presence.",
+      "meaning": "A form of God that represents oneness.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Farhan",
+      "origin": "An Arabic name popular among Indian Muslims, meaning joy or happiness.",
+      "meaning": "One who brings happiness and pleasantness.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Gulnaz",
+      "origin": "A Persian-derived name often used in Urdu and Hindi contexts.",
+      "meaning": "A beautiful flower or a flower-like, charming individual.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Hrishikesh",
+      "origin": "Sanskrit term combining 'Hrishika' (senses) and 'Isha' (lord), connected to Lord Vishnu.",
+      "meaning": "Lord of the senses.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Jayant",
+      "origin": "Sanskrit, meaning victorious or invincible.",
+      "meaning": "One who has conquered or is triumphant.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Kanika",
+      "origin": "Derived from Sanskrit, commonly used in various North Indian cultures.",
+      "meaning": "A tiny particle or an atom; represents smallness.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Nishta",
+      "origin": "A Hindi name widely used in various Indian cultures, meaning faithfulness.",
+      "meaning": "Faith or commitment; someone who is dedicated.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Pawan",
+      "origin": "Sanskrit meaning wind or breeze, often refers to purity.",
+      "meaning": "The purifying breeze; a sacred wind.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ruchika",
+      "origin": "A Hindi name from Sanskrit roots meaning delightful.",
+      "meaning": "Delightful or having a pleasing effect.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Sadhana",
+      "origin": "Sanskrit meaning practice or discipline; often relates to spiritual growth.",
+      "meaning": "The path of practice towards enlightenment.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Tanveer",
+      "origin": "An Urdu name meaning luminous or bright.",
+      "meaning": "One who is radiant or bright.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Urmila",
+      "origin": "Sanskrit name, historically associated with the wife of Lord Lakshman in Ramayana.",
+      "meaning": "The one who enchants or draws others in.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Zoravar",
+      "origin": "Derived from the Punjabi language, meaning powerful or strong.",
+      "meaning": "One who is mighty or robust.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Amolika",
+      "origin": "A Sanskrit and Hindi name meaning priceless or rare gem.",
+      "meaning": "A treasure that is invaluable or cherished.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Bharati",
+      "origin": "Sanskrit name representing the goddess of knowledge and learning.",
+      "meaning": "Goddess or personification of eloquence; speech.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Chandravadan",
+      "origin": "Sanskrit, meaning moon-faced; often used in poetry.",
+      "meaning": "One whose face is as beautiful as the moon.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Diksha",
+      "origin": "Sanskrit term meaning initiation or consecration, often in spiritual contexts.",
+      "meaning": "The process of initiation into vows or a discipline.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Eshan",
+      "origin": "Sanskrit, meaning the direction of the Lord; often associated with spirituality.",
+      "meaning": "The one who is auspicious; related to divinity.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Gaurisha",
+      "origin": "A contemporary Indian name linked to the goddess Durga and Lord Shiva.",
+      "meaning": "The one who bears the beauty or fairness of Gauri.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Harsha",
+      "origin": "Sanskrit term meaning joy or pleasure, often used in various Indian cultures.",
+      "meaning": "One who brings happiness.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Jasvinder",
+      "origin": "A popular Punjabi name meaning the one who is famous for being wealthy or prosperous.",
+      "meaning": "Famous or known for wealth.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Kriti",
+      "origin": "Sanskrit for creation or work of art.",
+      "meaning": "A creative endeavor; a masterpiece.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Lekha",
+      "origin": "Derived from Sanskrit, meaning a written text or Scripture.",
+      "meaning": "One who is knowledgeable or has written skills.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Mohin",
+      "origin": "Sanskrit for the illusion or magical charm.",
+      "meaning": "One who enchants or captivates others.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Omprakash",
+      "origin": "Sanskrit term meaning light of the Om; represents enlightenment.",
+      "meaning": "The light or illumination of the cosmic essence.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Aadya",
+      "origin": "Sanskrit",
+      "meaning": "The first, beginning; relating to the goddess Durga",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Bhakti",
+      "origin": "Sanskrit",
+      "meaning": "Devotion; love for God",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Chinmay",
+      "origin": "Sanskrit",
+      "meaning": "Blissful; supreme consciousness",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Deepti",
+      "origin": "Hindi",
+      "meaning": "Glow; light",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Eshwar",
+      "origin": "Sanskrit",
+      "meaning": "God; supreme being",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Ishita",
+      "origin": "Sanskrit",
+      "meaning": "Desire; mastery",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Jatin",
+      "origin": "Sanskrit",
+      "meaning": "One who is disciplined; ascetic",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Leela",
+      "origin": "Sanskrit",
+      "meaning": "Divine play; amusement",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Nayan",
+      "origin": "Sanskrit",
+      "meaning": "Eye; vision",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ojasvi",
+      "origin": "Sanskrit",
+      "meaning": "Bright; luminous; powerful",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Pankhuri",
+      "origin": "Hindi",
+      "meaning": "Petal; a beautiful flower part",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Qasim",
+      "origin": "Arabic",
+      "meaning": "One who distributes; generous",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Tanish",
+      "origin": "Sanskrit",
+      "meaning": "Ambition; desired",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Udita",
+      "origin": "Sanskrit",
+      "meaning": "One who has arisen; enlightened",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Yamuna",
+      "origin": "Sanskrit",
+      "meaning": "Name of a river; one who has a soothing nature",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Bina",
+      "origin": "Hindi",
+      "meaning": "Without; also means a musical instrument",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Dhananjay",
+      "origin": "Sanskrit",
+      "meaning": "One who conquers wealth; Arjun's name",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Farida",
+      "origin": "Arabic",
+      "meaning": "Unique; precious",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Gurshan",
+      "origin": "Punjabi",
+      "meaning": "One who brings light; spiritual teacher",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Harvinder",
+      "origin": "Punjabi",
+      "meaning": "Lord of the Haris; godly",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Indira",
+      "origin": "Sanskrit",
+      "meaning": "Splendid; beauty; goddess Lakshmi",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Lakshay",
+      "origin": "Sanskrit",
+      "meaning": "Aim; target",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Manik",
+      "origin": "Sanskrit",
+      "meaning": "Jewel; a precious stone",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Prachi",
+      "origin": "Sanskrit",
+      "meaning": "The east; dawn",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Rudraja",
+      "origin": "Sanskrit",
+      "meaning": "Son of Rudra; powerful",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Shivani",
+      "origin": "Sanskrit",
+      "meaning": "Consort of Lord Shiva; auspicious",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Tanya",
+      "origin": "Sanskrit",
+      "meaning": "Of the family; a princess",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Vaishali",
+      "origin": "Sanskrit",
+      "meaning": "Prosperity; a city in ancient India",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Zahida",
+      "origin": "Arabic",
+      "meaning": "One who is selfless; noble",
+      "gender": "F",
+      "era": "modern"
     }
-  ],
-  "last_seeded_at": "2026-05-08T18:05:36.078Z"
+  ]
 }

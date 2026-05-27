@@ -1,8 +1,8 @@
 {
   "country": "France",
-  "generated_at": "2026-05-08T17:59:42.046Z",
-  "model": "anthropic/claude-haiku-4.5",
-  "count": 84,
+  "generated_at": "2026-05-27T07:23:22.828Z",
+  "model": "gpt-4o-mini",
+  "count": 241,
   "names": [
     {
       "name": "Marie",
@@ -591,7 +591,1105 @@
       "meaning": "life",
       "gender": "F",
       "era": "modern"
+    },
+    {
+      "name": "Agathe",
+      "origin": "Derived from the ancient Greek name Agathē, meaning good.",
+      "meaning": "Goodness, virtue.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Claudine",
+      "origin": "From the Latin name Claudinus, meaning lame or disabled.",
+      "meaning": "In reference to a Roman family name.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Dorian",
+      "origin": "Of Greek origin, derived from the Dorian tribe.",
+      "meaning": "From Doris, meaning of the sea.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Eloïse",
+      "origin": "Derived from the Old French name Heloïse, which comes from the Germanic Name Helewidis.",
+      "meaning": "Healthy, wide.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Fabienne",
+      "origin": "Feminine form of the Latin name Fabianus, meaning bean grower.",
+      "meaning": "One who grows beans.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Gaspard",
+      "origin": "From the Persian name Gaspar, meaning treasurer.",
+      "meaning": "A bringer of treasure.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Heloise",
+      "origin": "Derived from the Germanic name Heloisia, meaning healthy and wide.",
+      "meaning": "Active and healthy.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Irène",
+      "origin": "Of Greek origin, derived from Eirēnē, meaning peace.",
+      "meaning": "Peaceful, serene.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Jules",
+      "origin": "Derived from the Latin name Julius, meaning youthful.",
+      "meaning": "Youthful, soft-haired.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Katia",
+      "origin": "A diminutive of Ekaterina, rooted in Greek.",
+      "meaning": "Pure, unsullied.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Léandre",
+      "origin": "Derived from the Greek name Leandros, meaning lion-man.",
+      "meaning": "Lion-like person.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Mireille",
+      "origin": "Of Occitan origin, a diminutive of the Latin word 'mirabilis', meaning wonderful.",
+      "meaning": "Admirable or wonderful one.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Norbert",
+      "origin": "From the Germanic elements Nor and berht, meaning north and bright.",
+      "meaning": "Bright from the North.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Océane",
+      "origin": "Derived from the French word for ocean, often used as a name.",
+      "meaning": "Ocean, sea.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Philomène",
+      "origin": "From the Greek name Philomenos, meaning lover of strength.",
+      "meaning": "One who loves to be strong.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Renaud",
+      "origin": "Of Germanic origin, derived from Reginhard, meaning wise or powerful counsel.",
+      "meaning": "Mighty advice.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Sabine",
+      "origin": "Derived from the name of an ancient Italian people, the Sabines.",
+      "meaning": "From the Sabine people.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Thibaut",
+      "origin": "Derived from the Germanic name Theobald, meaning bold people.",
+      "meaning": "Brave and bold name.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ursuline",
+      "origin": "From the Latin Ursus, meaning bear-like; associated with Saint Ursula.",
+      "meaning": "Little bear or she-bear.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Victorine",
+      "origin": "Feminine form of Victor, derived from Latin, meaning conqueror.",
+      "meaning": "Victorious, conqueror.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Wendeline",
+      "origin": "A variant of the German Wendel, meaning wanderer.",
+      "meaning": "A traveler or wanderer.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Yannick",
+      "origin": "Breton variant of the name Yohann, which comes from John.",
+      "meaning": "God is gracious.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Zélie",
+      "origin": "Derived from the Greek word 'zelos', meaning zeal or enthusiasm.",
+      "meaning": "Zealous, energetic.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Armel",
+      "origin": "Breton name derived from the Latin 'Arnulfus', meaning bear or warrior.",
+      "meaning": "Strong as a bear.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Bertille",
+      "origin": "French feminine name derived from the Germanic name Berhtheilde, meaning bright battle.",
+      "meaning": "Illustrious warrior; bright combatant.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Clarisse",
+      "origin": "A variant of Clara, derived from Latin, meaning bright or clear.",
+      "meaning": "Clear, bright; famous.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Daphne",
+      "origin": "Of Greek origin, associated with the laurel tree.",
+      "meaning": "Laurel; symbol of victory.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Emilien",
+      "origin": "Derived from the Roman family name Aemilius, meaning rival.",
+      "meaning": "Rival; striving to excel.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Gabin",
+      "origin": "From the Latin name Gabinus, it was used in ancient Rome.",
+      "meaning": "From Gabii, an ancient Roman town.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Alain",
+      "origin": "French form of the Breton name Alan.",
+      "meaning": "Little rock; harmony.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Bertin",
+      "origin": "Derived from the Old German name Berhtin.",
+      "meaning": "Bright; shining; famous.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Celeste",
+      "origin": "From Latin, meaning heavenly.",
+      "meaning": "Heavenly; celestial goddess.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Etel",
+      "origin": "Derived from the Old French name Aethel.",
+      "meaning": "Noble; prosperous.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Fabien",
+      "origin": "Derived from the Roman family name Fabius.",
+      "meaning": "Bean grower; farmer.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Gisèle",
+      "origin": "Of Germanic origin, popular in France since the 19th century.",
+      "meaning": "Pledge; hostage.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Hervé",
+      "origin": "From Breton origin meaning 'battle worthy.'",
+      "meaning": "Brave; strong; worthy of battle.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Iris",
+      "origin": "From Greek mythology, symbolizing the rainbow.",
+      "meaning": "Rainbow; messenger of the gods.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Julian",
+      "origin": "Derived from the Roman family name Julius.",
+      "meaning": "Youthful; downy; soft-haired.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Lucie",
+      "origin": "Comes from Latin 'lux' meaning light.",
+      "meaning": "Light; illumination.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Marcel",
+      "origin": "A diminutive of the Latin name Marcus.",
+      "meaning": "Little warrior; hammer.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Paulette",
+      "origin": "Originally derived from the name Paula.",
+      "meaning": "Small; humble; little.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Renée",
+      "origin": "From Latin 'renatus' meaning reborn.",
+      "meaning": "Reborn; born again.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Sébastien",
+      "origin": "Derived from the Latin name Sebastianus.",
+      "meaning": "Venerable; revered.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Théa",
+      "origin": "Derived from Greek meaning goddess.",
+      "meaning": "Goddess; divine being.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ulysse",
+      "origin": "French form of the Greek hero Odysseus.",
+      "meaning": "Wrathful; hater; to be angry.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Valentin",
+      "origin": "From Latin, meaning strong and powerful.",
+      "meaning": "Strong; healthy; powerful.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Wanda",
+      "origin": "Of Slavic origin, popularized in France during the 20th century.",
+      "meaning": "Wanderer; shepherdess.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Yvette",
+      "origin": "From the Germanic name Ivo, meaning yew.",
+      "meaning": "Yew tree; archer.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Zacharie",
+      "origin": "Derived from Hebrew name Zechariah, popular in France.",
+      "meaning": "God remembers; remembered by God.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Aimé",
+      "origin": "French variant of the Latin name Aimericus.",
+      "meaning": "Beloved; loved one.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Béatrice",
+      "origin": "From Latin 'beatrix', derived from 'beatum'.",
+      "meaning": "Bringer of joy; blessed.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Cédric",
+      "origin": "An English name popularized in France by Walter Scott.",
+      "meaning": "Bounty; kind; loved.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Domitille",
+      "origin": "From the late Latin name Domitilla.",
+      "meaning": "Tamed; submissive.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Émilie",
+      "origin": "Feminine form of Emil, derived from Latin Aemilius.",
+      "meaning": "Rival; striving; eager.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "François",
+      "origin": "Derived from the Latin Franciscus, meaning Frenchman.",
+      "meaning": "Free man; the French.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Gautier",
+      "origin": "Old Germanic origin, derived from Walter.",
+      "meaning": "Ruler of the army; chief.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Hortense",
+      "origin": "Derived from Latin 'hortus' meaning garden.",
+      "meaning": "Gardener; of the garden.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Isidore",
+      "origin": "Of Greek origin, meaning gift of Isis.",
+      "meaning": "Gift from Isis; abundant.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Jocelyne",
+      "origin": "Derived from the Germanic name Gautzelin.",
+      "meaning": "Joyful; cheerful.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Kévin",
+      "origin": "Anglicized form of the Celtic name Caoimhín, meaning beautiful.",
+      "meaning": "Gentle; kind; handsome.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Maud",
+      "origin": "Derived from the Germanic name Matilda.",
+      "meaning": "Mighty in battle; strength.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Adeline",
+      "origin": "Derived from the Germanic word 'nobel' or 'noble' and popular in France since the Middle Ages.",
+      "meaning": "Noble and kind.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Claudette",
+      "origin": "A feminine form of Claude, which has Latin roots meaning 'lame' or 'enclosure'.",
+      "meaning": "The lame one.",
+      "gender": "F",
+      "era": "classic"
+    },
+    {
+      "name": "Ferdinand",
+      "origin": "Derived from Gothic elements meaning 'bold voyager' or 'daring traveler'.",
+      "meaning": "Daring traveler.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Gabrielle",
+      "origin": "Feminine form of Gabriel, rooted in Hebrew meaning 'God is my strength'.",
+      "meaning": "God is my strength.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Isabeau",
+      "origin": "A French form of Elizabeth, with roots in Hebrew meaning 'God is my oath'.",
+      "meaning": "God is my oath.",
+      "gender": "F",
+      "era": "classic"
+    },
+    {
+      "name": "Lucien",
+      "origin": "From Latin 'lux', meaning 'light'; a popular name in 19th-century France.",
+      "meaning": "Light.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Noé",
+      "origin": "A French variation of Noah, which is of Hebrew origin meaning 'rest' or 'comfort'.",
+      "meaning": "Rest.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ophélie",
+      "origin": "Derived from the Greek name Ophelia, meaning 'help' or 'serpent'.",
+      "meaning": "Helpful one.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Quintine",
+      "origin": "An feminine form of Quintin, from Latin 'quintus' meaning 'fifth'.",
+      "meaning": "Fifth child.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Solange",
+      "origin": "Derived from Latin elements meaning 'solemn' or 'dignified'.",
+      "meaning": "Dignified one.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Thibault",
+      "origin": "Of Frankish origin meaning 'bold people' or 'people's bravery'.",
+      "meaning": "Brave people.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Urbain",
+      "origin": "Derived from Latin 'urbanus', meaning 'of the city' or 'cultured'.",
+      "meaning": "Cultured one.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Victor",
+      "origin": "From Latin 'victor', meaning 'conqueror' or 'victorious'.",
+      "meaning": "Conqueror.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Xavier",
+      "origin": "Of Arabic and Basque origins meaning 'bright' or 'new house'.",
+      "meaning": "Bright.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Yseult",
+      "origin": "Of uncertain origin, often associated with Celtic roots and the legend of Tristan and Isolde.",
+      "meaning": "Fair lady.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Alixe",
+      "origin": "A form of Alice, of Germanic origin meaning 'noble'.",
+      "meaning": "Noble.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Berlioz",
+      "origin": "French surname that has become a first name, associated with composer Hector Berlioz.",
+      "meaning": "A musical legacy.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Cyprien",
+      "origin": "Of Greek origin, meaning 'from Cyprus' and popular in France since the middle ages.",
+      "meaning": "From Cyprus.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Delphine",
+      "origin": "From the Greek word 'delphus', relating to the oracle of Delphi.",
+      "meaning": "Dolphin.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Enzo",
+      "origin": "An Italian variant of Heinz, meaning 'estate ruler', used in modern French naming.",
+      "meaning": "Ruler.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Georges",
+      "origin": "A Greek-derived name meaning 'farmer', traditionally popular in France.",
+      "meaning": "Farmer.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Léonie",
+      "origin": "Of Latin origin, meaning 'lion; brave'.",
+      "meaning": "Lion-hearted.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Margaux",
+      "origin": "A name of debated origin, often linked to the Persian word for 'pearl'.",
+      "meaning": "Pearl.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Nathanaël",
+      "origin": "Of Hebrew origin meaning 'gift of God', frequently found in biblical texts.",
+      "meaning": "Gift of God.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Odile",
+      "origin": "Of Old German origin meaning 'wealth' or 'fortune'.",
+      "meaning": "Fortune.",
+      "gender": "F",
+      "era": "classic"
+    },
+    {
+      "name": "Roxane",
+      "origin": "Of Persian origin meaning 'dawn' or 'bright'.",
+      "meaning": "Bright dawn.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Timothée",
+      "origin": "Derived from Greek meaning 'honoring God'.",
+      "meaning": "Honoring God.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ursule",
+      "origin": "Derived from Latin patrician name meaning 'little bear'.",
+      "meaning": "Little bear.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Agustin",
+      "origin": "Derived from Latin, common in regions influenced by Christian traditions.",
+      "meaning": "Exalted, venerable.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Berenice",
+      "origin": "Rooted in Greek, popularized in France during the classical era.",
+      "meaning": "Bringer of victory.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Céline",
+      "origin": "Derived from Latin, meaning 'heavenly'.",
+      "meaning": "Heavenly.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Doriane",
+      "origin": "French variation on Greek roots, inspired by classical literature.",
+      "meaning": "Of the sea; a gift.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Eloi",
+      "origin": "A variant of the Latin name Eligius, historically popular in France.",
+      "meaning": "Chosen one.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Félicie",
+      "origin": "French derived from Latin, associated with happiness.",
+      "meaning": "Fortunate or happy.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Gildas",
+      "origin": "Of Welsh origin, popularized in France during the medieval period.",
+      "meaning": "Servant of the gold.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Ilan",
+      "origin": "A name of Hebrew origin, gaining popularity in modern French contexts.",
+      "meaning": "Tree.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Jacinthe",
+      "origin": "French name derived from the flower, linked to Greek origins.",
+      "meaning": "Hyacinth flower.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Kylian",
+      "origin": "A modern French variant derived from the Gaelic 'Cillian'.",
+      "meaning": "Little church.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Mélina",
+      "origin": "A name of Greek origin, becoming popular in French-speaking areas.",
+      "meaning": "Honey, or of the honey bee.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Noélie",
+      "origin": "French diminutive form of Noël which means Christmas.",
+      "meaning": "Christmas-born.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Rébecca",
+      "origin": "A name of Hebrew origin, adopted into French culture.",
+      "meaning": "To bind, tie, or bond.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Sacha",
+      "origin": "Derived from the Hebrew name Alexander, commonly used in France.",
+      "meaning": "Defender of men.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Tanguy",
+      "origin": "A Breton name meaning 'fire,' popular in Brittany region.",
+      "meaning": "Fire or warrior.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ursine",
+      "origin": "Derived from Latin with association to bears.",
+      "meaning": "Bear-like or strong.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Valérian",
+      "origin": "Derived from Latin, common in French culture since ancient times.",
+      "meaning": "Strong, healthy.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Wendell",
+      "origin": "Of Germanic origin, introduced in France via historical movements.",
+      "meaning": "Wanderer or adventurer.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ysaline",
+      "origin": "Modern variation stemming from the older name Eline.",
+      "meaning": "God is my light.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Zachée",
+      "origin": "From Arabic roots, integrated into French vocabulary.",
+      "meaning": "Pure or innocent.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Aurelie",
+      "origin": "Latin, meaning golden; used frequently in post-classical France.",
+      "meaning": "Golden one.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Brice",
+      "origin": "French form of a Latin name, traditionally associated with holy figures.",
+      "meaning": "Speckled or freckled.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Clementine",
+      "origin": "Derived from Latin Clementinus, signifies gentleness.",
+      "meaning": "Gentle, merciful.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Denis",
+      "origin": "Of Greek origin, commonly used in French history since medieval times.",
+      "meaning": "Follower of Dionysus.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Fleur",
+      "origin": "French word for flower, commonly used as a name.",
+      "meaning": "Flower.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Gaston",
+      "origin": "French origins, historically linked to nobility and landownership.",
+      "meaning": "From the guest or stranger.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Hélène",
+      "origin": "Rooted in Greek, signifying brightness or shining light.",
+      "meaning": "Bright, shining light.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Jolie",
+      "origin": "French word for pretty; modern use as a name was popularized.",
+      "meaning": "Pretty or beautiful.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Léa",
+      "origin": "Hebrew origin, commonly adopted in French contexts.",
+      "meaning": "Weary or delicate.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Martin",
+      "origin": "Derived from Latin, associated with the god Mars, popular throughout history.",
+      "meaning": "Of Mars, warlike.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Nico",
+      "origin": "Short form of Nicolas, derived from Greek origins.",
+      "meaning": "Victory of the people.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Octave",
+      "origin": "French form of Latin Octavius, indicating eighth.",
+      "meaning": "Eighth-born child.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Quinlan",
+      "origin": "A name of Irish origin becoming trendy in modern France.",
+      "meaning": "Descendant of the fierce warrior.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Téa",
+      "origin": "Of Greek origin, popular in France for its simplicity.",
+      "meaning": "Gift of God.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Valérie",
+      "origin": "Derived from Latin Valerius, meaning strong, brave.",
+      "meaning": "Strong, brave.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Ximène",
+      "origin": "From Arabic origins, now commonly used in French-speaking areas.",
+      "meaning": "Heard.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Yves",
+      "origin": "Of Breton origin, highly regarded in the Middle Ages.",
+      "meaning": "Yew tree.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Amandine",
+      "origin": "Derived from the Latin name 'Amandus', popular in France since the Middle Ages.",
+      "meaning": "Beloved, worthy of love.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Clémence",
+      "origin": "Derived from Latin 'Clemens', which has roots in Ancient Rome and is widely used in France.",
+      "meaning": "Merciful, gentle.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Elodie",
+      "origin": "A French name of Greek origin, often linked to the word for foreign riches.",
+      "meaning": "Marsh flower, wealth.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Honoré",
+      "origin": "From the Latin 'Honoratus', common in France historically, particularly among clergy.",
+      "meaning": "Honored, respected.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Iggy",
+      "origin": "A short form of Ignace, which comes from Latin and gained popularity in modern times.",
+      "meaning": "Fiery, ardent.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Marceau",
+      "origin": "A French diminutive form of the name Marcus, historically used in France.",
+      "meaning": "Little warrior.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Nadine",
+      "origin": "Of Slavic origin, it became popular in France in the early 20th century.",
+      "meaning": "Hope.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Priscille",
+      "origin": "Derived from 'Priscus', Latin for ancient, it has a classical essence in France.",
+      "meaning": "Ancient, venerable.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Rafaëlle",
+      "origin": "The feminine form of Raphaël, with Hebrew and Latin roots, used in French culture.",
+      "meaning": "God has healed.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Sylvain",
+      "origin": "Derived from the Latin 'Silvanus', it includes connections to forest or woods in French lore.",
+      "meaning": "Of the forest.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Tristan",
+      "origin": "A name of Celtic origin, popularized by the legend of Tristan and Isolde in French literature.",
+      "meaning": "Tumult or outcry.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Victoire",
+      "origin": "Derived from the Latin 'Victoria', widely embraced in French history and mythology.",
+      "meaning": "Victory, triumph.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Wilfried",
+      "origin": "Of Germanic origin meaning 'desiring peace', used in France since the Middle Ages.",
+      "meaning": "Desires peace.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Xena",
+      "origin": "Of uncertain origin, but gaining popularity through various cultural influences in modern France.",
+      "meaning": "Guest, stranger.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Célestin",
+      "origin": "From the Latin name 'Caelestis', meaning celestial, it has been popular in French and church tradition.",
+      "meaning": "Heavenly, celestial.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Désirée",
+      "origin": "French name derived from Latin 'desiderium', it became popular in the 19th century.",
+      "meaning": "Desired, wished for.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Eulalie",
+      "origin": "Of Greek origin, Eulalie has historical significance in French literature and culture.",
+      "meaning": "Well-spoken, sweetly spoken.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Félicien",
+      "origin": "A variant of 'Félix', from Latin roots meaning happy or fortunate, popular in France.",
+      "meaning": "Lucky, happy.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Geneviève",
+      "origin": "Of Frankish origin, associated with patron saints in French history.",
+      "meaning": "Woman of the race, woman of the family.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Hadrien",
+      "origin": "Of Latin origin, linked to the Roman Emperor Hadrian, widely used in France since the classical era.",
+      "meaning": "From Hadria, a town in Italy.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Igor",
+      "origin": "Of Slavic origin widely adopted in France in the modern era.",
+      "meaning": "Warrior of the people.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Jasmine",
+      "origin": "Of Persian origin, the name has seen widespread use in modern French due to floral connections.",
+      "meaning": "Jasmine flower.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Kassandra",
+      "origin": "From Greek mythology, this name has been used in France since the 20th century.",
+      "meaning": "Shining upon man.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Noémie",
+      "origin": "A Hebrew name, popular in biblical stories, adopted in French traditions.",
+      "meaning": "Pleasantness, delight.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Orianne",
+      "origin": "Derived from the Latin Aurianus, it has contemporary use among French speakers.",
+      "meaning": "Golden, light.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Querelle",
+      "origin": "From a French word meaning 'quarrel', used as a first name with literary significance.",
+      "meaning": "Quarrel, dispute.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Romain",
+      "origin": "Latin name referring to Rome, commonly used in France since classical times.",
+      "meaning": "Citizen of Rome.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Sérène",
+      "origin": "Of Latin origin, it means calm and peaceful, and is enjoyed in modern naming practices.",
+      "meaning": "Serene, calm.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Théodore",
+      "origin": "A name of Greek origin meaning 'gift of God', introduced into France in the Middle Ages.",
+      "meaning": "Divine gift.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Ulrich",
+      "origin": "Of Germanic origin, adopted in France with a meaning focused on power and rich heritage.",
+      "meaning": "Ruler of all.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Violette",
+      "origin": "Derived from the flower name, popular in France during the 19th and 20th centuries.",
+      "meaning": "Viola flower, purple hue.",
+      "gender": "F",
+      "era": "modern"
     }
-  ],
-  "last_seeded_at": "2026-05-08T18:05:36.083Z"
+  ]
 }
