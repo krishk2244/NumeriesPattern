@@ -65,7 +65,7 @@ export function NameSuggester() {
           system,
           keywords: keywords.trim() || undefined,
           mustInclude: mustInclude.trim() || undefined,
-          count: 20,
+          count: 100,
         }),
       })
       const data = await res.json()

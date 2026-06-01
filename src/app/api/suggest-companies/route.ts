@@ -13,6 +13,7 @@ import {
   COMPANY_COMPOSITION_SYSTEM_PROMPT,
 } from '@/lib/company-suggestions-prompt'
 import { getPool, scoreCompany, shuffle } from '@/lib/company-pool'
+import { BUSINESS_WORDS } from '@/lib/business-words'
 import { isFoundryEnabled } from '@/lib/features'
 
 export const runtime = 'nodejs'
@@ -27,7 +28,7 @@ const RequestSchema = z.object({
   // User-supplied required substring (case-insensitive). Every suggested
   // company name must contain this fragment.
   mustInclude: z.string().min(1).max(40).optional(),
-  count: z.number().int().min(3).max(30).optional().default(20),
+  count: z.number().int().min(3).max(50).optional().default(20),
 })
 
 const ARCHETYPES = [
@@ -38,29 +39,6 @@ const ARCHETYPES = [
   'place',
   'compound',
   'abstract',
-] as const
-
-// Curated brand-word vocabulary for DETERMINISTIC composition. When a
-// must-include fragment is long (e.g. a place name) and the system filter is
-// tight, the model rarely lands a real-looking hit by chance. Pairing the
-// fragment with these words (before AND after) and keeping only target-
-// matching combos guarantees we surface every valid option that exists,
-// reliably — instead of 0-1 by luck.
-const BRAND_WORDS = [
-  'Vale', 'Crest', 'Forge', 'Atlas', 'Haven', 'North', 'South', 'East',
-  'West', 'Aurora', 'Stone', 'Vault', 'Grove', 'Ridge', 'Bay', 'Harbor',
-  'Quay', 'Court', 'Park', 'Gate', 'Hill', 'Field', 'Lane', 'Bridge',
-  'Arch', 'Pillar', 'Anchor', 'Beacon', 'Summit', 'Peak', 'Terra', 'Nova',
-  'Lux', 'Apex', 'Crown', 'Royal', 'Prime', 'Core', 'Edge', 'Pulse',
-  'Wave', 'Tide', 'Bloom', 'Sage', 'Oak', 'Cedar', 'Birch', 'Ash',
-  'Ember', 'Flint', 'Sterling', 'Noble', 'Vista', 'Lumen', 'Solace',
-  'Echo', 'Halo', 'Onyx', 'Ivory', 'Pearl', 'Amber', 'Coral', 'Jade',
-  'Slate', 'Cove', 'Dale', 'Mead', 'Brook', 'Wells', 'Banks', 'Reef',
-  'Marsh', 'Glen', 'Cliff', 'Shore', 'Vance', 'Reign', 'Realm', 'Domain',
-  'Estate', 'Manor', 'Villa', 'Casa', 'House', 'Works', 'Labs', 'Studio',
-  'Atelier', 'Foundry', 'Guild', 'Union', 'League', 'Circle', 'Collective',
-  'Partners', 'Holdings', 'Capital', 'Ventures', 'Standard', 'Meridian',
-  'Horizon', 'Compass', 'Keystone', 'Cornerstone', 'Frontier', 'Vantage',
 ] as const
 
 // archetype/pronunciation_hint are optional with defaults so the lean
@@ -182,6 +160,7 @@ export async function POST(req: Request) {
   const timeout = wideCandidatesMode ? 14_000 : OPENAI_TIMEOUT_MS
   const client = new OpenAI({
     apiKey,
+    baseURL: process.env.OPENAI_BASE_URL || undefined,
     timeout,
     maxRetries: 0,
   })
@@ -401,21 +380,26 @@ export async function POST(req: Request) {
     source: 'composed'
   }
 
-  // Deterministic composition floor. Two strategies, both compute in <50ms:
+  // Deterministic composition floor — uses the 250-word BUSINESS_WORDS bank
+  // (Shyamal). Two strategies, both compute in <50ms:
   //
-  //  (a) MUST-INCLUDE: pair the user's fragment with every brand word
+  //  (a) MUST-INCLUDE: pair the user's fragment with every business word
   //      (before and after). Surfaces "Melbourne Wells", "Wells Melbourne".
   //
-  //  (b) BOTH-SYSTEMS without must-include: pair every brand word with
-  //      every other brand word — 100×100 ≈ 10,000 candidates, of which
-  //      ~1% hit the target under both systems = ~100 valid real-looking
-  //      names ("Aurora Capital", "North Forge", "Bay Sterling"). Without
-  //      this, the model alone yields only 1-5 hits at any plausible cost
+  //  (b) BOTH-SYSTEMS without must-include: pair every word with every
+  //      other word — 250×250 ≈ 62,500 candidates, of which ~1% hit the
+  //      target under both systems = ~600 valid real-looking names
+  //      ("Aurora Capital", "North Forge", "Bay Sterling"). Without this
+  //      the model alone yields only 1-5 hits at any plausible cost
   //      because the dual-system pass rate is ~0.4%.
   //
   // Both strategies guarantee real brand names, no API cost, instant.
   const composed: ComposedEntry[] = []
-  const pushComposed = (name: string, rationale: string) => {
+  const pushComposed = (
+    name: string,
+    rationale: string,
+    archetype: (typeof ARCHETYPES)[number] = 'compound'
+  ) => {
     const key = name.toLowerCase().trim()
     if (seen.has(key)) return false
     if (!matchesAllSystems(name)) return false
@@ -424,7 +408,7 @@ export async function POST(req: Request) {
     const calc = calculateName(name, primary)
     composed.push({
       name,
-      archetype: 'compound',
+      archetype,
       rationale,
       pronunciation_hint: '',
       expected_value: targetNumber,
@@ -440,11 +424,16 @@ export async function POST(req: Request) {
 
   if (mustInclude && !enough()) {
     const core = mustInclude.trim()
-    const coreTitle = core.charAt(0).toUpperCase() + core.slice(1).toLowerCase()
-    for (const w of BRAND_WORDS) {
+    const coreTitle =
+      core.charAt(0).toUpperCase() + core.slice(1).toLowerCase()
+    for (const [word, meaning] of BUSINESS_WORDS) {
       if (enough()) break
-      for (const name of [`${coreTitle} ${w}`, `${w} ${coreTitle}`]) {
-        pushComposed(name, `“${coreTitle}” paired with “${w}”`)
+      for (const name of [`${coreTitle} ${word}`, `${word} ${coreTitle}`]) {
+        pushComposed(
+          name,
+          `A composed brand grounding ${coreTitle}'s identity in ${meaning}.`,
+          'place'
+        )
         if (enough()) break
       }
     }
@@ -452,10 +441,11 @@ export async function POST(req: Request) {
     // Pair every word with every other word, shuffled so successive runs
     // don't always return the same brands at the top. Works for both
     // single-system and 'both'; the matchesAllSystems check handles either.
+    const words = BUSINESS_WORDS.map(([w]) => w)
     const pairs: [string, string][] = []
-    for (let i = 0; i < BRAND_WORDS.length; i++)
-      for (let j = 0; j < BRAND_WORDS.length; j++)
-        if (i !== j) pairs.push([BRAND_WORDS[i], BRAND_WORDS[j]])
+    for (let i = 0; i < words.length; i++)
+      for (let j = 0; j < words.length; j++)
+        if (i !== j) pairs.push([words[i], words[j]])
     // Fisher-Yates shuffle for run-to-run variety
     for (let i = pairs.length - 1; i > 0; i--) {
       const k = Math.floor(Math.random() * (i + 1))
@@ -472,7 +462,9 @@ export async function POST(req: Request) {
   const modelSliced = [...verifiedFromModel, ...composed].slice(0, count)
 
   type PoolEntry = ReturnType<typeof buildPoolResult>[number]
-  type RelaxedPoolEntry = Omit<PoolEntry, 'source'> & { source: 'relaxed-pool' }
+  type RelaxedPoolEntry = Omit<PoolEntry, 'source'> & {
+    source: 'relaxed-pool'
+  }
   type SuggestionEntry =
     | VerifiedModelEntry
     | ComposedEntry
@@ -577,8 +569,8 @@ export async function POST(req: Request) {
           : `No invented company names in our pool reduce to ${targetNumber} under ${selection === 'both' ? 'either system' : selection}. Try a different target number — most targets have 5-15 candidates.`
         : relaxedFallback
           ? relaxedSystem
-            ? `No pool names reduce to ${targetNumber} under BOTH systems — the dual-system intersection is sparse in our 86-name company pool. Showing names that reduce to ${targetNumber} under ${relaxedSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only${droppedFilters.length > 1 ? ` (also dropped: ${droppedFilters.filter((f) => f !== 'dual-system match').join(', ')})` : ''}.`
-            : `No company names matched your ${droppedFilters.join(' / ') || 'filters'} AND target ${targetNumber}. Showing pool names that reduce to ${targetNumber} — relax or remove ${droppedFilters.join(' / ') || 'filters'} to narrow these further.`
+            ? `No names reduce to ${targetNumber} under both systems — showing names that reduce to ${targetNumber} under ${relaxedSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only${droppedFilters.length > 1 ? ` (also dropped: ${droppedFilters.filter((f) => f !== 'dual-system match').join(', ')})` : ''}.`
+            : `No company names matched your ${droppedFilters.join(' / ') || 'filters'} AND target ${targetNumber}. Showing names that reduce to ${targetNumber} — relax or remove ${droppedFilters.join(' / ') || 'filters'} to narrow these further.`
           : topUpUsed
             ? `Model returned ${modelSliced.length} matching name${modelSliced.length === 1 ? '' : 's'}; topped up with offline-pool candidates to reach your requested count.`
             : null,

@@ -19,7 +19,7 @@ const RequestSchema = z.object({
   country: z.string().min(1).max(120).optional(),
   keywords: z.string().max(400).optional(),
   mustInclude: z.string().min(1).max(40).optional(),
-  count: z.number().int().min(3).max(30).optional().default(20),
+  count: z.number().int().min(3).max(100).optional().default(20),
 })
 
 /**
@@ -143,9 +143,15 @@ async function generateFromOpenAI(opts: {
   // JSON output; tighter timeouts caused all calls to fail. Total route
   // latency ~10s on narrowed queries; plain queries skip OpenAI entirely.
   // Must-include composition needs a wider candidate pool, so allow more
-  // wall-clock when it's active.
-  const timeout = opts.mustInclude ? 14_000 : 9_500
-  const client = new OpenAI({ apiKey, timeout, maxRetries: 0 })
+  // wall-clock when it's active. baseURL is optional — lets the same key
+  // work via OpenRouter when OPENAI_BASE_URL is set.
+  const timeout = opts.mustInclude ? 18_000 : 9_500
+  const client = new OpenAI({
+    apiKey,
+    baseURL: process.env.OPENAI_BASE_URL || undefined,
+    timeout,
+    maxRetries: 0,
+  })
 
   const constraints: string[] = []
   if (opts.country) constraints.push(`country / cultural tradition: ${opts.country}`)
@@ -290,8 +296,16 @@ export async function POST(req: Request) {
   )
 
   let filteredPool = applyKeywordFilters(matchingNumber, keywords)
+  let mustIncludeFellBack = false
   if (mustInclude) {
-    filteredPool = filteredPool.filter((n) => matchesMustInclude(n.name, mustInclude))
+    const withSubstring = filteredPool.filter((n) => matchesMustInclude(n.name, mustInclude))
+    if (withSubstring.length > 0) {
+      filteredPool = withSubstring
+    } else {
+      // No names contain the substring — fall back to the pre-mustInclude pool
+      // and let the OpenAI top-up try to generate matches instead.
+      mustIncludeFellBack = true
+    }
   }
 
   // OpenAI top-up policy (sub-10s budget):
@@ -309,8 +323,12 @@ export async function POST(req: Request) {
   //   - User explicitly narrowed (mustInclude, both, country)
   //   - OR keyword filter collapsed the pool to a fraction of count
   // Plain queries skip OpenAI and serve from the pool only (~80ms).
+  // If mustInclude fell back (no names contain the substring), don't count it
+  // as a narrowing signal — the substring is unmatchable and the OpenAI top-up
+  // would waste time generating names that also can't match.
+  const effectiveMustInclude = mustIncludeFellBack ? undefined : mustInclude
   const userNarrowedSearch =
-    Boolean(mustInclude) ||
+    Boolean(effectiveMustInclude) ||
     selection === 'both' ||
     Boolean(country) ||
     (Boolean(keywords) && filteredPool.length < Math.max(3, Math.ceil(count / 3)))
@@ -344,21 +362,27 @@ export async function POST(req: Request) {
         selection,
         country,
         keywords,
-        mustInclude,
+        // When mustInclude has no pool support at all (mustIncludeFellBack),
+        // pass undefined so the model can compose names without the
+        // substring being a hard generation constraint upstream — the
+        // local filter below still enforces it if effectiveMustInclude
+        // remains the substring.
+        mustInclude: effectiveMustInclude,
         count: askFor,
         exclude,
       })
       if (!generated) {
-        // Only surface an error if no pass has produced anything.
+        // Surface a transient error but keep trying — gpt-4o-mini latency
+        // is variable and one timeout often clears on the next call.
         if (fromModel.length === 0)
           modelError = 'OpenAI call timed out or unavailable'
-        break
+        continue
       }
       let addedThisPass = 0
       for (const cand of generated) {
         const key = cand.name.toLowerCase().trim()
         if (seenNames.has(key)) continue
-        if (!matchesMustInclude(cand.name, mustInclude)) continue
+        if (!matchesMustInclude(cand.name, effectiveMustInclude)) continue
         if (!matchesAllSystems(cand.name, activeSystems, targetNumber)) continue
         fromModel.push(cand)
         seenNames.add(key)
@@ -416,7 +440,9 @@ export async function POST(req: Request) {
           : selection === 'both'
             ? `No names reduce to ${targetNumber} under both Pythagorean AND Chaldean. Try a different target number — the intersection is naturally tight.`
             : 'No matches. Try a different target number or remove keywords.'
-        : null,
+        : mustIncludeFellBack
+          ? `No names contain "${mustInclude}" as a substring — showing all names that reduce to ${targetNumber} instead.`
+          : null,
     meta: {
       requested_count: count,
       pool_size: pool.count,
