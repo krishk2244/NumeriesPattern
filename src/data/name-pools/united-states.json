@@ -1,8 +1,8 @@
 {
   "country": "United States",
-  "generated_at": "2026-05-27T07:16:44.594Z",
-  "model": "gpt-4o-mini",
-  "count": 227,
+  "generated_at": "2026-05-28T16:05:53.618Z",
+  "model": "gpt-4o",
+  "count": 395,
   "names": [
     {
       "name": "William",
@@ -1591,6 +1591,1182 @@
       "origin": "Latin, popular in literature and older American films.",
       "meaning": "Bear cub",
       "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Zoey",
+      "origin": "Greek, popular in the US today.",
+      "meaning": "Life.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Brayden",
+      "origin": "Irish surname that gained popularity in the US.",
+      "meaning": "Brave or salmon.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Gage",
+      "origin": "English occupational surname.",
+      "meaning": "Measure or pledge.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Liam",
+      "origin": "Irish, has become extremely popular in the US.",
+      "meaning": "Strong-willed warrior or protector.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Kai",
+      "origin": "Hawaiian, also popular in the US with varied meanings by region.",
+      "meaning": "Sea.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Naomi",
+      "origin": "Hebrew, biblical roots with enduring popularity in the US.",
+      "meaning": "Pleasantness.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Oliver",
+      "origin": "Latin, with increased modern popularity.",
+      "meaning": "Olive tree or symbol of peace.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Isla",
+      "origin": "Scottish name that gained popularity in the US.",
+      "meaning": "Island.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Isaiah",
+      "origin": "Hebrew, a long-standing biblical name in American use.",
+      "meaning": "Salvation of Yahweh.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Ruby",
+      "origin": "English name inspired by the gemstone.",
+      "meaning": "Red precious stone.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Sebastian",
+      "origin": "Latin and Greek, with classical roots and modern appeal.",
+      "meaning": "Revered or venerable.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Nova",
+      "origin": "Latin and used in English-speaking countries for its celestial connotation.",
+      "meaning": "New or a sudden star.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Matteo",
+      "origin": "Italian, increased US usage due to cultural blend.",
+      "meaning": "Gift of God.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Declan",
+      "origin": "Irish, now a popular name in the US.",
+      "meaning": "Full of goodness.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Hazel",
+      "origin": "English, inspired by the hazel tree or color.",
+      "meaning": "Hazel tree or light brown color.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Jaxon",
+      "origin": "Modern American phonetic variation of Jackson.",
+      "meaning": "Son of Jack.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Piper",
+      "origin": "English occupational surname, now a first name in the US.",
+      "meaning": "One who plays the pipe.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Emmett",
+      "origin": "English, with historical and modern popularity.",
+      "meaning": "Universal or powerful.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Jayce",
+      "origin": "Modern American variation of Jason.",
+      "meaning": "Healer.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Kinsley",
+      "origin": "English surname turned given name, has become popular for girls in the US.",
+      "meaning": "King's meadow.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Asher",
+      "origin": "Hebrew, a biblical name with modern American appeal.",
+      "meaning": "Blessed or happy.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Lexi",
+      "origin": "Short form of Alexandra, popular in modern contexts.",
+      "meaning": "Defender of man.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Finn",
+      "origin": "Irish, familiar in the US due to literature and cultural blending.",
+      "meaning": "Fair or white.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Sadie",
+      "origin": "English, diminutive of Sarah, with a long tradition in the US.",
+      "meaning": "Princess.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Ryder",
+      "origin": "English occupational surname that became a first name.",
+      "meaning": "Horseman or messenger.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Easton",
+      "origin": "English, a topographical surname turned popular first name in the US.",
+      "meaning": "East-facing place.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Braxton",
+      "origin": "English, originally a surname, popularized in modern US culture.",
+      "meaning": "Brock's town or badger's town.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Jolie",
+      "origin": "French, inspired by American celebrity use.",
+      "meaning": "Pretty or beautiful.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Ezra",
+      "origin": "Hebrew, a traditional biblical name that remains popular.",
+      "meaning": "Help or helper.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Hudson",
+      "origin": "English surname that has become a popular first name in the US.",
+      "meaning": "Son of Hugh.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Daphne",
+      "origin": "Greek mythology and has been used in English-speaking countries.",
+      "meaning": "Laurel tree or bay tree.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Maya",
+      "origin": "Derived from Sanskrit and has gained popularity in the US.",
+      "meaning": "Illusion or dream.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Oscar",
+      "origin": "Old Norse via Irish mythology, used in English-speaking countries.",
+      "meaning": "Deer-lover or divine spear.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Athena",
+      "origin": "Greek mythology, brought to popularity in the US.",
+      "meaning": "Goddess of wisdom and war.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Jackson",
+      "origin": "English origin, commonly used in the US, particularly in the South.",
+      "meaning": "Son of Jack.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Seraphina",
+      "origin": "Hebrew via Latin, gaining usage in the US.",
+      "meaning": "Fiery or burning ones.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Gavin",
+      "origin": "Medieval given name of Welsh origin.",
+      "meaning": "White hawk.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Jocelyn",
+      "origin": "Medieval Norman given name, popular in English-speaking countries.",
+      "meaning": "Joyful or merry.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Dexter",
+      "origin": "Latin, promoted by American cultural references.",
+      "meaning": "Dyer of clothes or right-handed.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Samantha",
+      "origin": "A female given name of uncertain origin, popular in the US since the late 20th century.",
+      "meaning": "Listener.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Griffin",
+      "origin": "Welsh origin referring to a mythical creature.",
+      "meaning": "Strong in faith.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Nora",
+      "origin": "Shortened form of the name Eleanor or Honora, used in English-speaking countries.",
+      "meaning": "Honor.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Preston",
+      "origin": "English origin, brought by settlers to the US.",
+      "meaning": "Priest's town.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Tessa",
+      "origin": "Shortened form of Teresa, spreading in the US through English usage.",
+      "meaning": "To harvest.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Vincent",
+      "origin": "Latin root, consistently popular in the US.",
+      "meaning": "Conquering.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Ophelia",
+      "origin": "Greek, famous from Shakespeare's Hamlet.",
+      "meaning": "Help.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Arabella",
+      "origin": "Latin origins, popular in Victorian England, and regained popularity in contemporary US.",
+      "meaning": "Yielding to prayer.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Juniper",
+      "origin": "Latin name gaining popularity in modern US for nature lovers.",
+      "meaning": "Type of evergreen tree.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Raven",
+      "origin": "English name from the bird known for its intelligence.",
+      "meaning": "Blackbird.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Kyler",
+      "origin": "Modern American variant, based on Tyler and Kyle.",
+      "meaning": "Narrow or channel.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Georgia",
+      "origin": "English, named after the state or from the feminine form of George.",
+      "meaning": "Farmer or earth-worker.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Blake",
+      "origin": "Old English, used as a surname and later popularized as a first name.",
+      "meaning": "Pale or dark.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Hadley",
+      "origin": "English, carried over to the US through surnames turned into first names.",
+      "meaning": "Heather field.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Lennon",
+      "origin": "Irish surname popularized in the US for both genders.",
+      "meaning": "Lover or small cloak.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Weston",
+      "origin": "English place name, utilized in the US primarily in boys.",
+      "meaning": "From the western town.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ingrid",
+      "origin": "Old Norse, used particularly in Scandinavian descent families in the US.",
+      "meaning": "Fair or beautiful.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Damon",
+      "origin": "Greek, known from a legend of friendship and loyalty.",
+      "meaning": "To tame or subdue.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Evangeline",
+      "origin": "Greek, popularized by Longfellow's epic poem.",
+      "meaning": "Bearer of good news.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Isabelle",
+      "origin": "French variant of Elizabeth, widely used.",
+      "meaning": "Pledged to God.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Kira",
+      "origin": "Celtic and Russian origins known in the U.S.",
+      "meaning": "Throne or sun, different references.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Lincoln",
+      "origin": "Old English surname, now a given name.",
+      "meaning": "Lake settlement.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Sylvia",
+      "origin": "Latin, common throughout Western cultures.",
+      "meaning": "From the forest.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Ursula",
+      "origin": "Latin, linked to a Christian saint.",
+      "meaning": "Little bear.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Wyatt",
+      "origin": "English origin, often a surname now a first name.",
+      "meaning": "Brave in war.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Yara",
+      "origin": "Arabic and Brazilian roots, means small butterfly or friend.",
+      "meaning": "Small butterfly or friend.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Axel",
+      "origin": "Scandinavian origin, popular in contemporary settings.",
+      "meaning": "Father of peace.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Bianca",
+      "origin": "Italian, referencing a character from Shakespeare.",
+      "meaning": "White or fair.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Danica",
+      "origin": "Slavic, referencing morning star or Venus.",
+      "meaning": "Morning star.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Esther",
+      "origin": "Hebrew, from the Bible.",
+      "meaning": "Star.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Jude",
+      "origin": "Biblical, known through the Christian apostle.",
+      "meaning": "Praised.",
+      "gender": "U",
+      "era": "classical"
+    },
+    {
+      "name": "Raphael",
+      "origin": "Hebrew, known as an archangel name.",
+      "meaning": "God has healed.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Sage",
+      "origin": "Latin and English, often nature-inspired.",
+      "meaning": "Wise or herb.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Mallory",
+      "origin": "Of Old French origin, introduced by Norman conquerors.",
+      "meaning": "Unfortunate or unlucky.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Eleanor",
+      "origin": "Of Old French and English origins, popularized by royalty.",
+      "meaning": "Bright, shining one.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Brody",
+      "origin": "Of Irish origin, brought into the US through Scottish immigrants.",
+      "meaning": "From the muddy place.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Harrison",
+      "origin": "Of English origin, used since the 19th century in the US.",
+      "meaning": "Son of Harry.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Gabriella",
+      "origin": "Rooted in Hebrew culture, became popular in America via Spanish influence.",
+      "meaning": "God is my strength.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Connor",
+      "origin": "Of Irish Gaelic origin, common in America through Irish immigration.",
+      "meaning": "Lover of hounds.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Delilah",
+      "origin": "Of Hebrew origin, mentioned in biblical narratives.",
+      "meaning": "Delicate, languishing.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Sawyer",
+      "origin": "Occupational surname-turned-first name of English origin.",
+      "meaning": "Woodcutter.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Florence",
+      "origin": "French and Latin origin, name of major US cities too.",
+      "meaning": "Blossoming, flourishing.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Margot",
+      "origin": "French diminutive of Margaret, primarily spread through European influence.",
+      "meaning": "Pearl.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Bridget",
+      "origin": "Of Gaelic origin, famous in US via immigrants.",
+      "meaning": "Strength or exalted one.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Colton",
+      "origin": "Rooted in Old English, used across rural parts of America initially.",
+      "meaning": "Coal town or settlement.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Eloise",
+      "origin": "French origin, revived due to literary works throughout 20th-century.",
+      "meaning": "Famous warrior.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Grayson",
+      "origin": "English origin surname now popular as a first name.",
+      "meaning": "Son of the steward or gray-haired man.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Patrick",
+      "origin": "From Latin and Irish traditions, introduced early by European settlers.",
+      "meaning": "Noble, patrician.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Ashton",
+      "origin": "English surname that transitioned to a first name, more recently in the US.",
+      "meaning": "Ash tree town.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Jonathan",
+      "origin": "Hebrew origin, widely used across the US historically.",
+      "meaning": "Gift of Jehovah.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Sterling",
+      "origin": "Derived from Old English, often associated with American luxury.",
+      "meaning": "Of high quality or value.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Camille",
+      "origin": "French origin, found popularity in the US in late 19th century.",
+      "meaning": "Helper to the priest, noble.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Delia",
+      "origin": "Greek origin and also from regions with Hispanic influence.",
+      "meaning": "From Delos.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Winston",
+      "origin": "English origin, famous due to world leaders with US connections.",
+      "meaning": "Joy stone or friendly town.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Audra",
+      "origin": "English origin, shortened form of Audrey, popular in 20th-century US.",
+      "meaning": "Noble strength.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Octavia",
+      "origin": "Latin origin, expansive use in the US due to numeric symbolism.",
+      "meaning": "Eighth.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Reuben",
+      "origin": "Hebrew origin, historically revered through biblical scripts.",
+      "meaning": "Behold, a son.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Ainsley",
+      "origin": "Scottish origin, started as a surname and moved into first name use.",
+      "meaning": "One's own meadow.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Sienna",
+      "origin": "Based on the Italian city name, popular due to color and artistry.",
+      "meaning": "Reddish-brown.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Cleo",
+      "origin": "Greek origin, revived in American pop culture for short form appeal.",
+      "meaning": "Pride, glory.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Sullivan",
+      "origin": "Irish origin, consistently used due to evocative associations like literary arts.",
+      "meaning": "Dark eyes.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Astrid",
+      "origin": "Scandinavian origin, adopted into American naming psyche for its esoteric flair.",
+      "meaning": "Divine strength.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Loretta",
+      "origin": "Made popular through the Italian place name, first used as a given name in the 19th century.",
+      "meaning": "Laurel tree.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Calista",
+      "origin": "Greek origin, often associated with mythological qualities.",
+      "meaning": "Most beautiful.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Ezekiel",
+      "origin": "Of Hebrew origin, famous in the Bible.",
+      "meaning": "God strengthens.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Vera",
+      "origin": "Derived from Russian and Latin influences.",
+      "meaning": "Faith or truth.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Callie",
+      "origin": "Derived from the Greek name Callista.",
+      "meaning": "Beautiful.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Tabitha",
+      "origin": "Of Aramaic origin, known primarily through the New Testament.",
+      "meaning": "Gazelle.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Levi",
+      "origin": "Of Hebrew origin, grew in popularity due to cultural and religious significance.",
+      "meaning": "Joined, attached.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Maisie",
+      "origin": "Scottish origin, diminutive form of Margaret.",
+      "meaning": "Pearl.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Nigel",
+      "origin": "Of Latin origin, popular in British and American contexts.",
+      "meaning": "Champion.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Rafael",
+      "origin": "Spanish and Hebrew origin, recognized in both religious and secular contexts.",
+      "meaning": "God has healed.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Leon",
+      "origin": "Derivative of the Greek word for lion, widely used in various languages.",
+      "meaning": "Lion.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Frances",
+      "origin": "From the Latin name Franciscus, meaning 'Frenchman.'",
+      "meaning": "Free one.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Flynn",
+      "origin": "Of Irish origin, commonly used as a surname and first name.",
+      "meaning": "Ruddy, son of the red-haired one.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Greta",
+      "origin": "Of German origin, often a short form of Margareta.",
+      "meaning": "Pearl.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Holden",
+      "origin": "English origin, becoming more recognized as a first name recently.",
+      "meaning": "Hollow valley.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Simone",
+      "origin": "French origin, feminine form of Simon.",
+      "meaning": "He has heard.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Keira",
+      "origin": "Of Irish and Gaelic origins.",
+      "meaning": "Dark-haired, little dark one.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Reginald",
+      "origin": "Of Latin origin, traditional in English-speaking countries.",
+      "meaning": "Ruler's advisor.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Mavis",
+      "origin": "Of Old French origin, often used in literature and song.",
+      "meaning": "Songbird, thrush.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Bradley",
+      "origin": "English origin, popularized in the United States.",
+      "meaning": "Broad meadow.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Gwendolyn",
+      "origin": "Welsh origin, used in English-speaking countries.",
+      "meaning": "White ring.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Quentin",
+      "origin": "Latin origin, popular in the English-speaking world.",
+      "meaning": "Fifth.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Winona",
+      "origin": "Dakota origin, used by Native Americans.",
+      "meaning": "Firstborn daughter.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Lillian",
+      "origin": "Latin origin, widely used in English-speaking countries.",
+      "meaning": "Lily flower.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Cedric",
+      "origin": "Celtic origin, popularized by Sir Walter Scott.",
+      "meaning": "Bounty, loved.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ramona",
+      "origin": "Spanish origin, adopted widely in the United States.",
+      "meaning": "Wise protector.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Theodore",
+      "origin": "Greek origin, used in English-speaking countries.",
+      "meaning": "Gift of God.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Cassidy",
+      "origin": "Irish origin, adaptable in America.",
+      "meaning": "Curly-haired.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Simon",
+      "origin": "Hebrew origin, widely recognized in the U.S.",
+      "meaning": "He has heard.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Brianna",
+      "origin": "Irish origin, popular in the United States.",
+      "meaning": "Noble, strong.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Liliana",
+      "origin": "Latin origin, a floral name inspired by the lily.",
+      "meaning": "Lily flower.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Una",
+      "origin": "Latin and Irish origin, used in America.",
+      "meaning": "One or lamb.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Kendrick",
+      "origin": "Scottish origin, used in various forms in the U.S.",
+      "meaning": "Royal ruler.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Leo",
+      "origin": "Latin origin, popular among English-speaking countries.",
+      "meaning": "Lion.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Ronan",
+      "origin": "Irish origin, gaining popularity in the U.S.",
+      "meaning": "Little seal.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Valerie",
+      "origin": "Latin origin, used in many Western countries.",
+      "meaning": "Strength, health.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Alexander",
+      "origin": "Greek tradition, commonly used in the US.",
+      "meaning": "Defender of men.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Caden",
+      "origin": "American origin, believed to derive from Irish roots.",
+      "meaning": "Battle; fighter.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Delaney",
+      "origin": "Irish surname origin, adopted as first name in the US.",
+      "meaning": "Off the alder grove.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Garrett",
+      "origin": "Old English origin, variant of Gerald.",
+      "meaning": "Spear strength.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Nathaniel",
+      "origin": "Hebrew origin, used extensively in the US.",
+      "meaning": "Gift of God.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Peyton",
+      "origin": "Old English origin, initially a surname.",
+      "meaning": "Fighter's estate.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Seth",
+      "origin": "Hebrew origin, noted in the Bible.",
+      "meaning": "Appointed, placed.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Taylor",
+      "origin": "Occupational surname turned popular first name.",
+      "meaning": "Tailor; clothing maker.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Yvette",
+      "origin": "French origin, used in English-speaking countries.",
+      "meaning": "A yew tree.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Annalise",
+      "origin": "Germanic origin, combination of Anna and Lise.",
+      "meaning": "Graced with God's bounty.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Caroline",
+      "origin": "Latin root, commonly used in English-speaking countries.",
+      "meaning": "Free woman.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Davis",
+      "origin": "Welsh origin, used as a first name as well as a surname.",
+      "meaning": "Son of David.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Eva",
+      "origin": "Hebrew origin, popular in English-speaking countries.",
+      "meaning": "Life.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Helena",
+      "origin": "Greek origin, popular in English-speaking countries.",
+      "meaning": "Shining light.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Jeremiah",
+      "origin": "Hebrew origin, biblical origin.",
+      "meaning": "Appointed by God.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Kylie",
+      "origin": "Irish and Australian origin, extensively used in the US.",
+      "meaning": "Boomerang.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Lyla",
+      "origin": "Arabic and Hebrew origin, popular in English-speaking countries.",
+      "meaning": "Night.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Otis",
+      "origin": "Germanic origin, commonly used in English-speaking countries.",
+      "meaning": "Wealthy.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Regina",
+      "origin": "Latin root, used widely in English-speaking countries.",
+      "meaning": "Queen.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Veronica",
+      "origin": "Latin and Greek roots, common in English-speaking countries.",
+      "meaning": "She who brings victory.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Luna",
+      "origin": "Roman mythology",
+      "meaning": "Moon",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ian",
+      "origin": "Scottish Gaelic form of John",
+      "meaning": "God is gracious",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Marcus",
+      "origin": "Latin heritage",
+      "meaning": "Dedicated to Mars",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Clara",
+      "origin": "Latin origin",
+      "meaning": "Clear, bright, famous",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Duncan",
+      "origin": "Scottish heritage",
+      "meaning": "Dark warrior",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Rhett",
+      "origin": "English surname adaptation",
+      "meaning": "Counsel, advice",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Brynn",
+      "origin": "Welsh tradition",
+      "meaning": "Hill",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ada",
+      "origin": "Germanic tradition",
+      "meaning": "Noble, nobility",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Pierce",
+      "origin": "English surname adaptation",
+      "meaning": "Rock",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Harlan",
+      "origin": "English and Germanic roots",
+      "meaning": "Army land",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Zelda",
+      "origin": "Yiddish and Germanic roots",
+      "meaning": "Blessed; happy",
+      "gender": "F",
       "era": "modern"
     }
   ]

@@ -1,8 +1,8 @@
 {
   "country": "Italy",
-  "generated_at": "2026-05-27T07:26:21.904Z",
-  "model": "gpt-4o-mini",
-  "count": 217,
+  "generated_at": "2026-05-28T16:14:42.569Z",
+  "model": "gpt-4o",
+  "count": 339,
   "names": [
     {
       "name": "Marco",
@@ -1522,6 +1522,860 @@
       "meaning": "Beautiful and heavenly, symbolizing grace.",
       "gender": "F",
       "era": "contemporary"
+    },
+    {
+      "name": "Bruna",
+      "origin": "Derived from the Italian adjective for 'brown'.",
+      "meaning": "Dark-haired or brown",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Daniele",
+      "origin": "Italian form of the Hebrew name Daniel.",
+      "meaning": "God is my judge",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Enzo",
+      "origin": "A short form of Italian names ending in 'enzo'.",
+      "meaning": "Ruler of the home",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Katia",
+      "origin": "Italian short form of Ekaterina, from Greek.",
+      "meaning": "Pure",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Leone",
+      "origin": "Italian word for 'lion'.",
+      "meaning": "Lion",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Nadia",
+      "origin": "Derived from the Russian diminutive Nadezhda.",
+      "meaning": "Hope",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Orlando",
+      "origin": "Italian variation of Roland.",
+      "meaning": "Famous throughout the land",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Vincenza",
+      "origin": "Feminine form of Vincenzo.",
+      "meaning": "To conquer",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Corrado",
+      "origin": "Italian form of Conrad.",
+      "meaning": "Bold advisor",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Elettra",
+      "origin": "Derived from Greek mythology.",
+      "meaning": "Amber or shining light",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Giustina",
+      "origin": "Derived from the Latin name Justina.",
+      "meaning": "Fair or righteous",
+      "gender": "F",
+      "era": "classic"
+    },
+    {
+      "name": "Ivano",
+      "origin": "Italian form of John.",
+      "meaning": "God is gracious",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Lamberto",
+      "origin": "From the Germanic name Landberht.",
+      "meaning": "Bright land",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Olivia",
+      "origin": "Derived from the Latin 'Oliva'.",
+      "meaning": "Olive or olive tree",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Pasquale",
+      "origin": "Derived from the Latin 'Paschalis'.",
+      "meaning": "Associated with Easter",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Zaccaria",
+      "origin": "Italian form of Zechariah.",
+      "meaning": "The Lord has remembered",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Amerigo",
+      "origin": "Of Germanic origin, root meaning 'work'.",
+      "meaning": "Powerful ruler",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Brigida",
+      "origin": "Italian form of Brigid or Bridget.",
+      "meaning": "Exalted one",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Cassiopea",
+      "origin": "Derived from Greek mythology.",
+      "meaning": "Cassiopeia, queen and consort of Cepheus",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Diletta",
+      "origin": "Italian for 'beloved'.",
+      "meaning": "Beloved",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Elio",
+      "origin": "Italian form from the Greek 'Helios'.",
+      "meaning": "Sun",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Gaetano",
+      "origin": "Derived from the town of Gaeta.",
+      "meaning": "From Gaeta",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Marcella",
+      "origin": "Feminine form of Marcello.",
+      "meaning": "Warlike",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Vittorio",
+      "origin": "Derived from the Latin name 'Victor' meaning conqueror.",
+      "meaning": "Conqueror",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Priscilla",
+      "origin": "Roman name derived from the Latin priscus meaning ancient.",
+      "meaning": "Ancient",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Giacomo",
+      "origin": "Italian form of Jacob, meaning holder of the heel.",
+      "meaning": "Holder of the heel",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Orazio",
+      "origin": "Italian form of Horatius, a Roman clan name.",
+      "meaning": "Timekeeper",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Simona",
+      "origin": "Italian feminine form of Simon, meaning he has heard.",
+      "meaning": "He has heard",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Franco",
+      "origin": "Diminutive of Franciscus, meaning Frenchman or free one.",
+      "meaning": "Frenchman, free one",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Carlotta",
+      "origin": "Italian form of Charlotte, meaning free man.",
+      "meaning": "Free man",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Adriana",
+      "origin": "Feminine form of Adrian, meaning from Hadria.",
+      "meaning": "From Hadria",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Felicita",
+      "origin": "Derived from the Latin Felicitas, meaning happiness or good fortune.",
+      "meaning": "Happiness, good fortune",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Giuliano",
+      "origin": "Italian form of Julian, from Latin meaning youthful.",
+      "meaning": "Youthful",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Costanza",
+      "origin": "From the Latin name Constantia, meaning constant or steadfast.",
+      "meaning": "Constant, steadfast",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Enrica",
+      "origin": "Feminine form of Enrico, meaning home ruler.",
+      "meaning": "Home ruler",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Leopoldo",
+      "origin": "Derived from the Germanic name Leopold, meaning bold people.",
+      "meaning": "Bold people",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Ludovica",
+      "origin": "Feminine form of Ludwig, meaning famous warrior.",
+      "meaning": "Famous warrior",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Carolina",
+      "origin": "Italian form of Caroline, derived from Charles meaning free man.",
+      "meaning": "Free man",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Alfredo",
+      "origin": "Italian form of Alfred, meaning wise counselor.",
+      "meaning": "Wise counselor",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Annalisa",
+      "origin": "Italian combination of Anna and Lisa.",
+      "meaning": "Grace and pledged to God",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Vito",
+      "origin": "From the Latin Vitus, meaning life.",
+      "meaning": "Life",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Silvana",
+      "origin": "Feminine form of Silvano, from Latin meaning of the forest.",
+      "meaning": "Of the forest",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Ines",
+      "origin": "Italian form of Agnes, from Greek meaning pure or holy.",
+      "meaning": "Pure, holy",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Gianni",
+      "origin": "Diminutive of Giovanni, meaning God is gracious.",
+      "meaning": "God is gracious",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Fiorella",
+      "origin": "Derived from the Italian word fiore meaning flower.",
+      "meaning": "Little flower",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Yara",
+      "origin": "A name adopted in Italy with Arabic roots meaning small butterfly.",
+      "meaning": "Small butterfly",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Giordana",
+      "origin": "Feminine form of Giordano, meaning descending, like the river Jordan.",
+      "meaning": "Descending",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Stella",
+      "origin": "Italian name with Latin roots.",
+      "meaning": "Star.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Enea",
+      "origin": "Italian form of the Latin name Aeneas.",
+      "meaning": "Laudable, praised.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Fausto",
+      "origin": "Italian name from Latin Faustus.",
+      "meaning": "Fortunate, favorable.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Nora",
+      "origin": "Short form for Italian Eleonora.",
+      "meaning": "Honor, light.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Rosalia",
+      "origin": "Italian, meaning rose or garden of roses.",
+      "meaning": "Rose.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Alfonso",
+      "origin": "Italian, from the Visigothic name 'Adefonsus'.",
+      "meaning": "Noble and ready.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Laura",
+      "origin": "Italian name derived from Latin 'Laurus'.",
+      "meaning": "Laurel.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Aurora",
+      "origin": "Italian name of Latin origin.",
+      "meaning": "Dawn.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Natalia",
+      "origin": "Italian name from Latin 'Natalis'.",
+      "meaning": "Christmas day.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Mariella",
+      "origin": "Italian diminutive of Maria.",
+      "meaning": "Drop of the sea, bitter, beloved.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Giulio",
+      "origin": "Italian form of the Roman family name Julius.",
+      "meaning": "Youthful, downy.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Rita",
+      "origin": "Italian diminutive of Margarita.",
+      "meaning": "Pearl.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Aurelio",
+      "origin": "Of Latin origin, common in Roman times.",
+      "meaning": "Golden or gilded.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Donatella",
+      "origin": "Italian, diminutive of Donata.",
+      "meaning": "Given by God.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Evelina",
+      "origin": "Derived from Hebrew origins with widespread use in Italy.",
+      "meaning": "Life or lively.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ivan",
+      "origin": "Italian variant of the Slavic name Ivan.",
+      "meaning": "God is gracious.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Mauro",
+      "origin": "Italian with Latin roots.",
+      "meaning": "Dark skinned, Moorish.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Patrizio",
+      "origin": "Italian with Latin roots, related to patrician class.",
+      "meaning": "Noble, patrician.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Tiberio",
+      "origin": "Of Roman origin, related to the Tiber river.",
+      "meaning": "Of the Tiber.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Amalia",
+      "origin": "Italian form with Germanic roots.",
+      "meaning": "Work or industrious.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Beppe",
+      "origin": "Italian diminutive of Giuseppe.",
+      "meaning": "He will add (from Joseph).",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Fortunato",
+      "origin": "Italian, derived from Latin roots.",
+      "meaning": "Fortunate, lucky.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Martino",
+      "origin": "Italian form of Martinus, of Latin origin.",
+      "meaning": "Of Mars, warlike.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Nando",
+      "origin": "Italian diminutive of Fernando.",
+      "meaning": "Bold voyager.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Odilia",
+      "origin": "Germanic roots and used in medieval Italy.",
+      "meaning": "Wealthy or fortunate.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Rosalba",
+      "origin": "Italian, a combination of Rosa and Alba.",
+      "meaning": "White rose.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Sanzio",
+      "origin": "Name from Renaissance Italy, associated with Raphael Sanzio.",
+      "meaning": "From the Sancia family.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Tullio",
+      "origin": "Derived from the Roman family name Tullius.",
+      "meaning": "From the Tullus family.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Baldassare",
+      "origin": "Italian form of the name Balthazar.",
+      "meaning": "Baal protects the king.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Clarissa",
+      "origin": "Italian form with Latin roots.",
+      "meaning": "Clear, bright, famous.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Dino",
+      "origin": "Italian diminutive of Aldino.",
+      "meaning": "Little noble.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Emanuele",
+      "origin": "Italian form of Emmanuel.",
+      "meaning": "God is with us.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Giacinta",
+      "origin": "Italian form of Hyacinth.",
+      "meaning": "Beautiful like the hyacinth flower.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Piera",
+      "origin": "Italian feminine form of Peter.",
+      "meaning": "Rock, stone.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Fiorenzo",
+      "origin": "Italian name with Latin roots, common in the medieval era.",
+      "meaning": "Flowering",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Piero",
+      "origin": "An Italian variant of the Latin 'Petrus', consistently popular.",
+      "meaning": "Stone, rock",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Giulietta",
+      "origin": "Italian diminutive of 'Giulia', made famous by literature.",
+      "meaning": "Youthful",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Violetta",
+      "origin": "Popularized from the Latin 'Viola', the name resonates with Roman and later periods.",
+      "meaning": "Little violet",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Fiamma",
+      "origin": "Derived from the Italian for flame, more poetic in nature.",
+      "meaning": "Flame",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Nino",
+      "origin": "Short form of 'Giovannino' or 'Antonino', mixed origins in Italian tradition.",
+      "meaning": "Little child",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Romina",
+      "origin": "Became widely used due to associations with Rome.",
+      "meaning": "Roman",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Gennaro",
+      "origin": "Associated with 'January' from Roman deity, strong regional connection to Naples.",
+      "meaning": "January",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Carmela",
+      "origin": "Linked to 'Carmel', from Hebrew origin with religious significance.",
+      "meaning": "Garden",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Pasquino",
+      "origin": "Derived from Latin 'Pascha', connected to Easter traditions.",
+      "meaning": "Easter child",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Patrizia",
+      "origin": "From Latin 'Patricius', recalling connections to nobility.",
+      "meaning": "Noble",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Sandro",
+      "origin": "Shortened form of 'Alessandro', became independently popular in modern Italy.",
+      "meaning": "Defender of men",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Lucilla",
+      "origin": "Derived from Latin 'Lucillus', an affectionate diminutive of Lucia.",
+      "meaning": "Light",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Artemisio",
+      "origin": "Rooted in the Greek god 'Artemis', used in various historical settings.",
+      "meaning": "Related to Artemis",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Claudia",
+      "origin": "Derived from the Roman 'Claudius', retaining classical heritage.",
+      "meaning": "Lame",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Gioia",
+      "origin": "From the Italian word 'gioia' meaning 'joy'.",
+      "meaning": "Joy",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Elisa",
+      "origin": "Short form of Elisabetta, from Elizabeth.",
+      "meaning": "God is my oath",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Saverio",
+      "origin": "Italian version of Xavier, from the Basque place-name Etxeberria.",
+      "meaning": "New house",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Anita",
+      "origin": "A diminutive of Ana, used in Italy as an independent name.",
+      "meaning": "Graceful",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Matilda",
+      "origin": "From Old German, means 'mighty in battle'.",
+      "meaning": "Mighty in battle",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Liliana",
+      "origin": "Italian form of Lillian, from the Latin 'lilium'.",
+      "meaning": "Lily",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Angela",
+      "origin": "Derived from the Latin 'angelus', meaning 'messenger'.",
+      "meaning": "Messenger",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Manfredi",
+      "origin": "From the Germanic name Manfred, meaning 'strong peace'.",
+      "meaning": "Strong peace",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Lorena",
+      "origin": "Modern Italian version of Lorraine.",
+      "meaning": "From Lorraine (a region in France)",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Concetta",
+      "origin": "From the Italian 'concetto', meaning 'concept'.",
+      "meaning": "Conception",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Bartolomeo",
+      "origin": "Italian form of Bartholomew, of Aramaic origin.",
+      "meaning": "Son of Talmai",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Fiammetta",
+      "origin": "Italian, diminutive form of Fiamma",
+      "meaning": "little flame",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Jolanda",
+      "origin": "Italian, from Greek Iolanthe",
+      "meaning": "violet flower",
+      "gender": "F",
+      "era": "classic"
+    },
+    {
+      "name": "Cristiano",
+      "origin": "Italian, from Latin Christianus",
+      "meaning": "follower of Christ",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Viola",
+      "origin": "Italian, from Latin",
+      "meaning": "violet",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Bettina",
+      "origin": "Italian diminutive of Elisabetta.",
+      "meaning": "My God is an oath.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Niccolo",
+      "origin": "Italian variation of Nicholas, from Greek.",
+      "meaning": "Victory of the people.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Gaia",
+      "origin": "Italian, from Greek mythology.",
+      "meaning": "Earth goddess.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Zara",
+      "origin": "Arabic origin, adapted in Italian.",
+      "meaning": "Princess.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Tabita",
+      "origin": "Aramaic origin, used in Italian.",
+      "meaning": "Gazelle.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Celestina",
+      "origin": "Italian, derived from Latin.",
+      "meaning": "Heavenly.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Eugenio",
+      "origin": "Italian, from Greek Eugenios.",
+      "meaning": "Well born, noble.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Luciana",
+      "origin": "Italian feminine form of Luciano.",
+      "meaning": "Light.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Pierina",
+      "origin": "Italian diminutive of Piera.",
+      "meaning": "Rock, stone.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Alberta",
+      "origin": "Italian, feminine form of Albert.",
+      "meaning": "Noble, bright.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Stefania",
+      "origin": "Italian feminine form of Stefano.",
+      "meaning": "Crown, garland.",
+      "gender": "F",
+      "era": "modern"
     }
   ]
 }

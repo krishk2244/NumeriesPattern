@@ -59,7 +59,7 @@ export default function Home() {
               numeral="III"
               eyebrow="The Foundry"
               title="Name the company you are forming."
-              copy="Describe your structure, industry, founders, and tone. The agent drafts company names whose letters reduce to your target."
+              copy="Describe your structure, industry, and tone. The agent drafts company names whose letters reduce to your target."
               cta="Open the foundry"
               href="/foundry"
             />

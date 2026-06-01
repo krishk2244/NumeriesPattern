@@ -74,7 +74,6 @@ interface ApiResponse {
 export function CompanySuggester() {
   const [structure, setStructure] = useState<string>('Pvt Ltd')
   const [industry, setIndustry] = useState<string>('')
-  const [founders, setFounders] = useState<string>('')
   const [mustInclude, setMustInclude] = useState<string>('')
   const [keywords, setKeywords] = useState<string>('')
   const [targetNumber, setTargetNumber] = useState<number>(8)
@@ -106,7 +105,6 @@ export function CompanySuggester() {
           system,
           structure,
           industry: industry.trim(),
-          founders: founders.trim() || undefined,
           mustInclude: mustInclude.trim() || undefined,
           keywords: keywords.trim() || undefined,
           count: 20,
@@ -166,32 +164,21 @@ export function CompanySuggester() {
               <textarea
                 value={industry}
                 onChange={(e) => setIndustry(e.target.value)}
-                placeholder="e.g. boutique digital consultancy advising mid-market retail brands on data platforms; founders are former bankers"
+                placeholder="e.g. boutique digital consultancy advising mid-market retail brands on data platforms"
                 rows={3}
                 style={{ ...inputStyle, resize: 'vertical', minHeight: 84 }}
               />
             </Field>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-              <Field label="Founders (optional)">
-                <input
-                  type="text"
-                  value={founders}
-                  onChange={(e) => setFounders(e.target.value)}
-                  placeholder="initials, surnames, or family-house intent"
-                  style={inputStyle}
-                />
-              </Field>
-              <Field label="Vibe Keywords (optional)">
-                <input
-                  type="text"
-                  value={keywords}
-                  onChange={(e) => setKeywords(e.target.value)}
-                  placeholder="e.g. minimal, trustworthy, mythic"
-                  style={inputStyle}
-                />
-              </Field>
-            </div>
+            <Field label="Vibe Keywords (optional)">
+              <input
+                type="text"
+                value={keywords}
+                onChange={(e) => setKeywords(e.target.value)}
+                placeholder="e.g. minimal, trustworthy, mythic"
+                style={inputStyle}
+              />
+            </Field>
 
             <Field label="Must Include (optional)">
               <input

@@ -112,12 +112,15 @@ function matchesMustInclude(name: string, fragment: string | undefined): boolean
 
 /* ──────────────────────  OpenAI top-up  ────────────────────── */
 
+// origin/gender/era are optional with defaults so the lean composition
+// path (which returns only name + meaning, to fit many more candidates in
+// the token budget) parses cleanly.
 const NameCandidateSchema = z.object({
   name: z.string(),
-  origin: z.string(),
-  meaning: z.string(),
-  gender: z.string(),
-  era: z.string(),
+  origin: z.string().optional().default(''),
+  meaning: z.string().optional().default(''),
+  gender: z.string().optional().default('U'),
+  era: z.string().optional().default('contemporary'),
 })
 
 const NameResponseSchema = z.object({
@@ -139,21 +142,44 @@ async function generateFromOpenAI(opts: {
   // 9.5s wall-clock cap, NO retries. gpt-4o-mini needs ~9s for structured
   // JSON output; tighter timeouts caused all calls to fail. Total route
   // latency ~10s on narrowed queries; plain queries skip OpenAI entirely.
-  const client = new OpenAI({ apiKey, timeout: 9_500, maxRetries: 0 })
+  // Must-include composition needs a wider candidate pool, so allow more
+  // wall-clock when it's active.
+  const timeout = opts.mustInclude ? 14_000 : 9_500
+  const client = new OpenAI({ apiKey, timeout, maxRetries: 0 })
 
   const constraints: string[] = []
   if (opts.country) constraints.push(`country / cultural tradition: ${opts.country}`)
   if (opts.keywords) constraints.push(`keywords (theme, gender, era): ${opts.keywords}`)
-  if (opts.mustInclude)
+  if (opts.mustInclude) {
+    const kw = opts.keywords
+      ? ` The parts you add should thematically relate to the keywords: "${opts.keywords}".`
+      : ''
     constraints.push(
-      `EVERY name MUST contain the substring "${opts.mustInclude}" (case-insensitive). This is non-negotiable.`
+      `COMPOSITION RULE — the substring "${opts.mustInclude}" is a FIXED CORE that must appear verbatim (case-insensitive) in EVERY name. Build complete, pronounceable names by adding letters or name-elements BEFORE and/or AFTER this core. The core may sit at the start, middle, or end. Example: for core "ar" you might produce Arman, Maara, Omar, Aravind, Tarun.${kw} Vary the added parts and total length widely so the server can find spellings that reduce to the target. Composed/blended names are allowed here even if uncommon, as long as they are pronounceable and the core "${opts.mustInclude}" is present.`
     )
+  }
   if (opts.selection === 'both')
     constraints.push(
       'Names will be filtered to those whose letters reduce to the target under BOTH Pythagorean and Chaldean systems — this is a tight intersection. Favor short to medium-length names, mix common letters, and submit a wide variety so the server can find matches.'
     )
 
-  const systemPrompt = `You are NUMERIS Atelier — a cross-cultural name advisor. Generate a wide variety of culturally authentic real first names matching the user's constraints.
+  // Composition path uses a LEAN schema (name + short meaning only). Each
+  // full entry costs ~70 tokens; a lean one ~18. That lets us fit ~40
+  // candidates in the budget instead of ~15 — critical because only ~11%
+  // of composed names reduce to a single target (≈1% under 'both').
+  const lean = Boolean(opts.mustInclude)
+
+  const systemPrompt = lean
+    ? `You are NUMERIS Atelier — a name composer. Build a wide variety of pronounceable first names around a required core substring.
+
+For each name provide ONLY:
+- name: the full composed name in plain Latin letters (no diacritics)
+- meaning: 3-6 words on its sense/theme
+
+Composed/blended names are fine — they need only be pronounceable and contain the required core. Vary length and the parts you add. No duplicates.
+
+Return JSON only, no prose.`
+    : `You are NUMERIS Atelier — a cross-cultural name advisor. Generate a wide variety of culturally authentic real first names matching the user's constraints.
 
 For each name provide:
 - name: standard Latin transliteration of the given name (strip diacritics)
@@ -163,7 +189,7 @@ For each name provide:
 - era: "classical", "modern", or "contemporary"
 
 Diversity matters: vary across gender (unless specified), era, region, and length.
-Authenticity matters: only real names actually used in any culture; no portmanteaus, no fictional-only names.
+Authenticity matters: only real names actually used in some culture; no portmanteaus, no fictional-only names.
 No duplicates or spelling variants of the same name.
 
 Return JSON only, no prose.`
@@ -181,6 +207,10 @@ Return JSON only, no prose.`
     "\nThe server verifies each name's numerology value; you do not need to compute it. Submit a varied pool."
   )
 
+  const shape = lean
+    ? '{"names":[{"name","meaning"}, ...]}'
+    : '{"names":[{"name","origin","meaning","gender","era"}, ...]}'
+
   try {
     // Plain JSON mode (not strict structured outputs / `.parse()`) — the
     // latter runs OpenAI's per-token schema-validation grammar which adds
@@ -189,14 +219,14 @@ Return JSON only, no prose.`
     // about.
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
-      max_tokens: 900,
+      max_tokens: lean ? 1500 : 900,
       messages: [
         { role: 'system', content: systemPrompt },
         {
           role: 'user',
           content:
             userMsgLines.join('\n') +
-            '\n\nReturn ONLY a JSON object of shape {"names":[{"name","origin","meaning","gender","era"}, ...]} with no markdown fencing.',
+            `\n\nReturn ONLY a JSON object of shape ${shape} with no markdown fencing.`,
         },
       ],
       response_format: { type: 'json_object' },
@@ -286,23 +316,45 @@ export async function POST(req: Request) {
     (Boolean(keywords) && filteredPool.length < Math.max(3, Math.ceil(count / 3)))
   if (userNarrowedSearch && filteredPool.length < count) {
     modelAttempted = true
-    const remaining = count - filteredPool.length
-    const askFor =
-      selection === 'both' ? Math.min(12, remaining * 3) : Math.min(12, remaining * 2)
-    const exclude = filteredPool.map((n) => n.name).slice(0, 60)
+    // Must-include composition has a low pass-rate (the full spelling must
+    // both contain the core AND reduce to target). The lean schema lets us
+    // ask for a big batch so enough survive the numerology filter.
+    const askFor = mustInclude
+      ? selection === 'both'
+        ? 50
+        : 40
+      : selection === 'both'
+        ? Math.min(12, (count - filteredPool.length) * 3)
+        : Math.min(12, (count - filteredPool.length) * 2)
 
-    const generated = await generateFromOpenAI({
-      targetNumber,
-      selection,
-      country,
-      keywords,
-      mustInclude,
-      count: askFor,
-      exclude,
-    })
-    if (!generated) {
-      modelError = 'OpenAI call timed out or unavailable'
-    } else {
+    // Tight combos (must-include, especially with 'both') hit ~1-11% per
+    // candidate, so a single pass often yields very few. Run several passes,
+    // accumulating verified hits and excluding what we've already seen, until
+    // we reach `count` or exhaust the pass budget.
+    const maxPasses = mustInclude ? (selection === 'both' ? 4 : 3) : 1
+    for (let pass = 0; pass < maxPasses; pass++) {
+      if (filteredPool.length + fromModel.length >= count) break
+      const exclude = [
+        ...filteredPool.map((n) => n.name),
+        ...fromModel.map((n) => n.name),
+      ].slice(-60)
+
+      const generated = await generateFromOpenAI({
+        targetNumber,
+        selection,
+        country,
+        keywords,
+        mustInclude,
+        count: askFor,
+        exclude,
+      })
+      if (!generated) {
+        // Only surface an error if no pass has produced anything.
+        if (fromModel.length === 0)
+          modelError = 'OpenAI call timed out or unavailable'
+        break
+      }
+      let addedThisPass = 0
       for (const cand of generated) {
         const key = cand.name.toLowerCase().trim()
         if (seenNames.has(key)) continue
@@ -310,7 +362,11 @@ export async function POST(req: Request) {
         if (!matchesAllSystems(cand.name, activeSystems, targetNumber)) continue
         fromModel.push(cand)
         seenNames.add(key)
+        addedThisPass++
+        if (filteredPool.length + fromModel.length >= count) break
       }
+      // If a whole pass added nothing, another is unlikely to help much.
+      if (addedThisPass === 0 && pass > 0) break
     }
   }
 

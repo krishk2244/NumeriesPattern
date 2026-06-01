@@ -8,7 +8,10 @@ import {
   SystemSelection,
   expandSelection,
 } from '@/types/numerology'
-import { COMPANY_SUGGESTIONS_SYSTEM_PROMPT } from '@/lib/company-suggestions-prompt'
+import {
+  COMPANY_SUGGESTIONS_SYSTEM_PROMPT,
+  COMPANY_COMPOSITION_SYSTEM_PROMPT,
+} from '@/lib/company-suggestions-prompt'
 import { getPool, scoreCompany, shuffle } from '@/lib/company-pool'
 import { isFoundryEnabled } from '@/lib/features'
 
@@ -20,7 +23,6 @@ const RequestSchema = z.object({
   structure: z.string().min(1).max(80),
   industry: z.string().min(1).max(800),
   country: z.string().min(1).max(120).optional(),
-  founders: z.string().max(800).optional(),
   keywords: z.string().max(400).optional(),
   // User-supplied required substring (case-insensitive). Every suggested
   // company name must contain this fragment.
@@ -38,11 +40,37 @@ const ARCHETYPES = [
   'abstract',
 ] as const
 
+// Curated brand-word vocabulary for DETERMINISTIC composition. When a
+// must-include fragment is long (e.g. a place name) and the system filter is
+// tight, the model rarely lands a real-looking hit by chance. Pairing the
+// fragment with these words (before AND after) and keeping only target-
+// matching combos guarantees we surface every valid option that exists,
+// reliably — instead of 0-1 by luck.
+const BRAND_WORDS = [
+  'Vale', 'Crest', 'Forge', 'Atlas', 'Haven', 'North', 'South', 'East',
+  'West', 'Aurora', 'Stone', 'Vault', 'Grove', 'Ridge', 'Bay', 'Harbor',
+  'Quay', 'Court', 'Park', 'Gate', 'Hill', 'Field', 'Lane', 'Bridge',
+  'Arch', 'Pillar', 'Anchor', 'Beacon', 'Summit', 'Peak', 'Terra', 'Nova',
+  'Lux', 'Apex', 'Crown', 'Royal', 'Prime', 'Core', 'Edge', 'Pulse',
+  'Wave', 'Tide', 'Bloom', 'Sage', 'Oak', 'Cedar', 'Birch', 'Ash',
+  'Ember', 'Flint', 'Sterling', 'Noble', 'Vista', 'Lumen', 'Solace',
+  'Echo', 'Halo', 'Onyx', 'Ivory', 'Pearl', 'Amber', 'Coral', 'Jade',
+  'Slate', 'Cove', 'Dale', 'Mead', 'Brook', 'Wells', 'Banks', 'Reef',
+  'Marsh', 'Glen', 'Cliff', 'Shore', 'Vance', 'Reign', 'Realm', 'Domain',
+  'Estate', 'Manor', 'Villa', 'Casa', 'House', 'Works', 'Labs', 'Studio',
+  'Atelier', 'Foundry', 'Guild', 'Union', 'League', 'Circle', 'Collective',
+  'Partners', 'Holdings', 'Capital', 'Ventures', 'Standard', 'Meridian',
+  'Horizon', 'Compass', 'Keystone', 'Cornerstone', 'Frontier', 'Vantage',
+] as const
+
+// archetype/pronunciation_hint are optional with defaults so the lean
+// composition path (name + short rationale only) parses cleanly — that
+// path needs to fit ~30 candidates in the token budget without timing out.
 const CandidateSchema = z.object({
   name: z.string(),
-  archetype: z.enum(ARCHETYPES),
-  rationale: z.string(),
-  pronunciation_hint: z.string(),
+  archetype: z.string().optional().default('coined'),
+  rationale: z.string().optional().default(''),
+  pronunciation_hint: z.string().optional().default(''),
 })
 
 const ResponseSchema = z.object({
@@ -60,10 +88,12 @@ const OVERSAMPLE_FACTOR = 1.5
 const MAX_GENERATED = 12
 // When mustInclude narrows the model's vocabulary heavily, we need to
 // generate a wider candidate pool so at least some pass the numerology
-// filter. The longer timeout (14s) makes this feasible.
-const MAX_GENERATED_MUST_INCLUDE = 20
+// filter. The lean schema (name + short rationale) keeps this fast.
+const MAX_GENERATED_MUST_INCLUDE = 40
 const MAX_OUTPUT_TOKENS = 700
-const MAX_OUTPUT_TOKENS_MUST_INCLUDE = 1200
+// Lean candidates (~18 tokens each) → 40 fit in ~900. Headroom for the
+// model to occasionally produce a slightly longer rationale.
+const MAX_OUTPUT_TOKENS_MUST_INCLUDE = 1300
 // 9.5s — gpt-4o-mini's actual time-to-completion for ~700 tokens of JSON.
 // 6.5s was too tight (call always timed out). Total route latency ~10s.
 const OPENAI_TIMEOUT_MS = 9_500
@@ -122,7 +152,6 @@ export async function POST(req: Request) {
     structure,
     industry,
     country,
-    founders,
     keywords,
     mustInclude,
     count,
@@ -146,10 +175,11 @@ export async function POST(req: Request) {
     )
   }
 
-  // Bump timeout when mustInclude is set — the substring constraint
-  // narrows the model's vocabulary, so we'd rather wait an extra few
-  // seconds than fall back to the offline pool which has thin coverage.
-  const timeout = mustInclude ? 14_000 : OPENAI_TIMEOUT_MS
+  // "Both" mode and must-include need a wider candidate pool to survive
+  // the tight numerology filter (~1-3% pass rate vs ~11% single-system).
+  // The lean schema kicks in for both; same generous timeout.
+  const wideCandidatesMode = selection === 'both' || Boolean(mustInclude)
+  const timeout = wideCandidatesMode ? 14_000 : OPENAI_TIMEOUT_MS
   const client = new OpenAI({
     apiKey,
     timeout,
@@ -162,23 +192,19 @@ export async function POST(req: Request) {
     structure,
     industry,
     country: country ?? 'international',
-    founders: founders || null,
     keywords: keywords || null,
     must_include: mustInclude
-      ? `Every name MUST contain the substring "${mustInclude}" (case-insensitive). Names without this substring will be discarded.`
+      ? `COMPOSITION RULE — the substring "${mustInclude}" is a FIXED CORE that must appear verbatim (case-insensitive) in EVERY brand name. Build complete brand names by adding letters or words BEFORE and/or AFTER this core (e.g. for core "lux": Luxora, Brightlux, Luxhaven, Aurelux). The core may sit at the start, middle, or end.${keywords ? ` The parts you add should thematically relate to the keywords: "${keywords}".` : ''} Vary placement and length widely so the server can find spellings that reduce to the target number. Coined/blended brand names are encouraged here as long as they are pronounceable and contain the core.`
       : null,
     intersection_filter:
       selection === 'both'
         ? 'Names will be filtered to those whose letters reduce to the target under BOTH Pythagorean and Chaldean systems. This is a tight intersection — favor short to medium length, varied letters, and a wide pool.'
         : null,
-    // When intersection-filtering (both systems) OR mustInclude is set,
-    // the natural hit-rate drops sharply (≈1%–2% vs ≈11% single-system),
-    // so we ask the model for more candidates.
-    count: mustInclude
+    // When the wide-candidates path is active (both systems OR must-include),
+    // we use the lean schema and can fit many more candidates per call.
+    count: wideCandidatesMode
       ? MAX_GENERATED_MUST_INCLUDE
-      : selection === 'both'
-        ? Math.min(Math.ceil(count * OVERSAMPLE_FACTOR * 2.5), MAX_GENERATED)
-        : Math.min(Math.ceil(count * OVERSAMPLE_FACTOR), MAX_GENERATED),
+      : Math.min(Math.ceil(count * OVERSAMPLE_FACTOR), MAX_GENERATED),
   }
 
   // Substring filter (case-insensitive contains)
@@ -240,16 +266,28 @@ export async function POST(req: Request) {
       // parse is dramatically faster.
       const completion = await client.chat.completions.create({
         model: MODEL,
-        max_tokens: mustInclude
+        max_tokens: wideCandidatesMode
           ? MAX_OUTPUT_TOKENS_MUST_INCLUDE
           : MAX_OUTPUT_TOKENS,
         messages: [
-          { role: 'system', content: COMPANY_SUGGESTIONS_SYSTEM_PROMPT },
+          {
+            role: 'system',
+            content: wideCandidatesMode
+              ? COMPANY_COMPOSITION_SYSTEM_PROMPT
+              : COMPANY_SUGGESTIONS_SYSTEM_PROMPT,
+          },
           {
             role: 'user',
             content:
               JSON.stringify(payload) +
-              '\n\nReturn ONLY a JSON object of shape {"candidates":[{"name","archetype","rationale","pronunciation_hint"}, ...], "notes": null} with no markdown.',
+              (wideCandidatesMode
+                ? // Lean shape — fewer fields per candidate means many more
+                  // candidates fit in the budget, so enough survive the
+                  // numerology filter without the call timing out. The
+                  // explicit count line is load-bearing: without it the
+                  // model under-delivers (~9 names when 32 were asked).
+                  `\n\nReturn EXACTLY ${payload.count} candidate brand names. Quantity matters — submit the full count. Format: JSON object of shape {"candidates":[{"name","rationale"}, ...], "notes": null} with no markdown. Keep each rationale to 3-6 words. Do NOT pre-filter for numerology; the server does the math.`
+                : '\n\nReturn ONLY a JSON object of shape {"candidates":[{"name","archetype","rationale","pronunciation_hint"}, ...], "notes": null} with no markdown.'),
           },
         ],
         response_format: { type: 'json_object' },
@@ -286,53 +324,160 @@ export async function POST(req: Request) {
   let modelSkipped = false
 
   const earlyPoolPreview = buildPoolResult('pool')
-  // If the pool already covers a third of what the user asked for, that's a
-  // good signal we don't need to spend 9.5s on the model. Return pool-only.
-  const skipModel = earlyPoolPreview.length >= Math.max(5, Math.ceil(count / 3))
+  // Skip the model when:
+  //  (a) the pool fully satisfies the request — model adds nothing,
+  //  (b) 'both' mode without must-include — the deterministic word-pair
+  //      composer downstream produces ~100 valid pairs per target reliably,
+  //      so the model's ~0.4% pass rate is wasted wall-clock.
+  const skipModel =
+    earlyPoolPreview.length >= count ||
+    (selection === 'both' && !mustInclude)
 
   if (skipModel) {
     modelSkipped = true
   } else {
-    const exclude = verifiedFromModel.map((v) => v.name)
-    const result = await callModelPass(exclude)
-    if ('error' in result) {
-      modelError = result.error
-    } else {
-      rawGenerated += result.raw_count
-      for (const c of result.parsed.candidates) {
-        const cleanName = stripLegalSuffix(c.name)
-        if (!cleanName) continue
-        const key = cleanName.toLowerCase().trim()
-        if (seen.has(key)) continue
-        seen.add(key)
-        if (!passesMustInclude(cleanName)) continue
-        if (!matchesAllSystems(cleanName)) continue
-        const primary = activeSystems[0]
-        const primaryCalc = calculateName(cleanName, primary)
-        verifiedFromModel.push({
-          name: cleanName,
-          archetype: normalizeArchetype(c.archetype),
-          rationale: c.rationale,
-          pronunciation_hint: c.pronunciation_hint,
-          expected_value: targetNumber,
-          actual_value: primaryCalc.finalNumber,
-          sum: primaryCalc.sum,
-          reduction_steps: primaryCalc.reductionSteps,
-          verified: true,
-          source: 'model',
-        })
-        if (verifiedFromModel.length >= count) break
+    // Hit rates per candidate: single system ≈ 11%, 'both' ≈ 0.4-3%.
+    // Composition (core+word for must-include, word+word for 'both') always
+    // fills any remaining slots, so a single batch is enough — wide on
+    // parallel calls, no sequential retry. Keeps wall-clock under ~12s.
+    const parallel = mustInclude ? 4 : 1
+    const maxBatches = 1
+
+    batchLoop: for (let b = 0; b < maxBatches; b++) {
+      if (verifiedFromModel.length >= count) break
+
+      // Rotate the exclusion window across parallel calls so each model
+      // call sees a slightly different "already seen" list — encourages
+      // diversity instead of every call returning the same brands.
+      const excludeBase = verifiedFromModel.map((v) => v.name)
+      const calls = Array.from({ length: parallel }, (_, i) => {
+        const offset = i * 5
+        return callModelPass(excludeBase.slice(offset, offset + 50))
+      })
+      const results = await Promise.all(calls)
+
+      let addedThisBatch = 0
+      for (const result of results) {
+        if ('error' in result) {
+          // Only surface an error if NO call across all batches has produced
+          // anything — a single transient timeout shouldn't poison the run.
+          if (verifiedFromModel.length === 0 && !modelError)
+            modelError = result.error
+          continue
+        }
+        rawGenerated += result.raw_count
+        for (const c of result.parsed.candidates) {
+          const cleanName = stripLegalSuffix(c.name)
+          if (!cleanName) continue
+          const key = cleanName.toLowerCase().trim()
+          if (seen.has(key)) continue
+          seen.add(key)
+          if (!passesMustInclude(cleanName)) continue
+          if (!matchesAllSystems(cleanName)) continue
+          const primary = activeSystems[0]
+          const primaryCalc = calculateName(cleanName, primary)
+          verifiedFromModel.push({
+            name: cleanName,
+            archetype: normalizeArchetype(c.archetype),
+            rationale: c.rationale,
+            pronunciation_hint: c.pronunciation_hint,
+            expected_value: targetNumber,
+            actual_value: primaryCalc.finalNumber,
+            sum: primaryCalc.sum,
+            reduction_steps: primaryCalc.reductionSteps,
+            verified: true,
+            source: 'model',
+          })
+          addedThisBatch++
+          if (verifiedFromModel.length >= count) break batchLoop
+        }
       }
+      // If a full batch (10+ calls) added nothing, another won't either.
+      if (addedThisBatch === 0) break
     }
   }
 
-  // Slice model results to count (may be 0 if model errored or returned no
-  // verified hits). Pool top-up + relaxed fallback below handles both cases.
-  const modelSliced = verifiedFromModel.slice(0, count)
+  type ComposedEntry = Omit<VerifiedModelEntry, 'source'> & {
+    source: 'composed'
+  }
+
+  // Deterministic composition floor. Two strategies, both compute in <50ms:
+  //
+  //  (a) MUST-INCLUDE: pair the user's fragment with every brand word
+  //      (before and after). Surfaces "Melbourne Wells", "Wells Melbourne".
+  //
+  //  (b) BOTH-SYSTEMS without must-include: pair every brand word with
+  //      every other brand word — 100×100 ≈ 10,000 candidates, of which
+  //      ~1% hit the target under both systems = ~100 valid real-looking
+  //      names ("Aurora Capital", "North Forge", "Bay Sterling"). Without
+  //      this, the model alone yields only 1-5 hits at any plausible cost
+  //      because the dual-system pass rate is ~0.4%.
+  //
+  // Both strategies guarantee real brand names, no API cost, instant.
+  const composed: ComposedEntry[] = []
+  const pushComposed = (name: string, rationale: string) => {
+    const key = name.toLowerCase().trim()
+    if (seen.has(key)) return false
+    if (!matchesAllSystems(name)) return false
+    seen.add(key)
+    const primary = activeSystems[0]
+    const calc = calculateName(name, primary)
+    composed.push({
+      name,
+      archetype: 'compound',
+      rationale,
+      pronunciation_hint: '',
+      expected_value: targetNumber,
+      actual_value: calc.finalNumber,
+      sum: calc.sum,
+      reduction_steps: calc.reductionSteps,
+      verified: true,
+      source: 'composed',
+    })
+    return true
+  }
+  const enough = () => verifiedFromModel.length + composed.length >= count
+
+  if (mustInclude && !enough()) {
+    const core = mustInclude.trim()
+    const coreTitle = core.charAt(0).toUpperCase() + core.slice(1).toLowerCase()
+    for (const w of BRAND_WORDS) {
+      if (enough()) break
+      for (const name of [`${coreTitle} ${w}`, `${w} ${coreTitle}`]) {
+        pushComposed(name, `“${coreTitle}” paired with “${w}”`)
+        if (enough()) break
+      }
+    }
+  } else if (!mustInclude && !enough()) {
+    // Pair every word with every other word, shuffled so successive runs
+    // don't always return the same brands at the top. Works for both
+    // single-system and 'both'; the matchesAllSystems check handles either.
+    const pairs: [string, string][] = []
+    for (let i = 0; i < BRAND_WORDS.length; i++)
+      for (let j = 0; j < BRAND_WORDS.length; j++)
+        if (i !== j) pairs.push([BRAND_WORDS[i], BRAND_WORDS[j]])
+    // Fisher-Yates shuffle for run-to-run variety
+    for (let i = pairs.length - 1; i > 0; i--) {
+      const k = Math.floor(Math.random() * (i + 1))
+      ;[pairs[i], pairs[k]] = [pairs[k], pairs[i]]
+    }
+    for (const [a, b] of pairs) {
+      if (enough()) break
+      pushComposed(`${a} ${b}`, `${a} + ${b} compound`)
+    }
+  }
+
+  // Slice model + composed results to count (may be 0 if model errored or
+  // returned no verified hits). Pool top-up + relaxed fallback handle gaps.
+  const modelSliced = [...verifiedFromModel, ...composed].slice(0, count)
 
   type PoolEntry = ReturnType<typeof buildPoolResult>[number]
   type RelaxedPoolEntry = Omit<PoolEntry, 'source'> & { source: 'relaxed-pool' }
-  type SuggestionEntry = VerifiedModelEntry | PoolEntry | RelaxedPoolEntry
+  type SuggestionEntry =
+    | VerifiedModelEntry
+    | ComposedEntry
+    | PoolEntry
+    | RelaxedPoolEntry
 
   // Top up from offline pool if model didn't produce enough verified hits
   let suggestions: SuggestionEntry[] = modelSliced

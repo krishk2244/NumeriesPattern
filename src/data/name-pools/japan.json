@@ -1,8 +1,8 @@
 {
   "country": "Japan",
-  "generated_at": "2026-05-27T08:06:41.395Z",
-  "model": "gpt-4o-mini",
-  "count": 135,
+  "generated_at": "2026-05-28T16:17:54.066Z",
+  "model": "gpt-4o",
+  "count": 312,
   "names": [
     {
       "name": "Haruto",
@@ -947,6 +947,1245 @@
       "origin": "Japanese; 'Katsu' meaning to win and 'ya' meaning valley.",
       "meaning": "Valley of victory.",
       "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Eiji",
+      "origin": "Japanese",
+      "meaning": "Prosperous second son",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Gen",
+      "origin": "Japanese",
+      "meaning": "Origin or source",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Jiro",
+      "origin": "Japanese",
+      "meaning": "Second son",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Kana",
+      "origin": "Japanese",
+      "meaning": "Music or sound",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Miku",
+      "origin": "Japanese",
+      "meaning": "Beautiful sky",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Nori",
+      "origin": "Japanese",
+      "meaning": "Belief or ceremony",
+      "gender": "U",
+      "era": "classical"
+    },
+    {
+      "name": "Rina",
+      "origin": "Japanese",
+      "meaning": "Jasmine",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Satoshi",
+      "origin": "Japanese",
+      "meaning": "Wise, fast learner",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Yuta",
+      "origin": "Japanese",
+      "meaning": "Gentle",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ayaka",
+      "origin": "Japanese",
+      "meaning": "Colorful flower",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Chinatsu",
+      "origin": "Japanese",
+      "meaning": "Summer thousand",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Fusako",
+      "origin": "Japanese",
+      "meaning": "Whole, complete child",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Goro",
+      "origin": "Japanese",
+      "meaning": "Fifth son",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Izumi",
+      "origin": "Japanese",
+      "meaning": "Spring or fountain",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Koji",
+      "origin": "Japanese",
+      "meaning": "Little child",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Masa",
+      "origin": "Japanese",
+      "meaning": "Just or true",
+      "gender": "U",
+      "era": "classical"
+    },
+    {
+      "name": "Toru",
+      "origin": "Japanese",
+      "meaning": "Clear or transparent; also to govern",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Yumemi",
+      "origin": "Japanese",
+      "meaning": "To dream or envision",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Akihiro",
+      "origin": "Japanese",
+      "meaning": "Bright, shining",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Chiaki",
+      "origin": "Japanese",
+      "meaning": "Thousand autumns",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Heizo",
+      "origin": "Japanese",
+      "meaning": "Peaceful three",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Kumiko",
+      "origin": "Japanese",
+      "meaning": "Companion child",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Masaaki",
+      "origin": "Japanese",
+      "meaning": "True bright",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Saeko",
+      "origin": "Japanese",
+      "meaning": "Serene child",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Shigeo",
+      "origin": "Japanese",
+      "meaning": "Luxuriant man",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Tama",
+      "origin": "Japanese",
+      "meaning": "Jewel",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Yoshio",
+      "origin": "Japanese",
+      "meaning": "Joyful man",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Atsushi",
+      "origin": "Japanese",
+      "meaning": "Industrious",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Chiya",
+      "origin": "Japanese",
+      "meaning": "Thousand nights",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Etsuko",
+      "origin": "Japanese",
+      "meaning": "Joyous child",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Haru",
+      "origin": "Japanese",
+      "meaning": "Spring",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Kaori",
+      "origin": "Japanese",
+      "meaning": "Fragrance",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Michio",
+      "origin": "Japanese",
+      "meaning": "Strong man",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Naoya",
+      "origin": "Japanese",
+      "meaning": "Straight arrow; honest",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ryo",
+      "origin": "Japanese",
+      "meaning": "Refresh or cool",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Shingo",
+      "origin": "Japanese",
+      "meaning": "Realistic, genuine",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Toshiko",
+      "origin": "Japanese",
+      "meaning": "Clever child",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Umeko",
+      "origin": "Japanese",
+      "meaning": "Plum blossom child",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Taro",
+      "origin": "Japanese",
+      "meaning": "First son",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Yui",
+      "origin": "Japanese",
+      "meaning": "Bind or tie",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ryu",
+      "origin": "Japanese",
+      "meaning": "Dragon",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Koki",
+      "origin": "Japanese",
+      "meaning": "Light and radiance",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Yoshie",
+      "origin": "Japanese",
+      "meaning": "Beautiful stream",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Hiroki",
+      "origin": "Japanese",
+      "meaning": "Abundant joy",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ryoko",
+      "origin": "Japanese",
+      "meaning": "Refreshing child",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Koharu",
+      "origin": "Japanese",
+      "meaning": "Small spring",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Makoto",
+      "origin": "Japanese",
+      "meaning": "Sincerity",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Tsubaki",
+      "origin": "Japanese",
+      "meaning": "Camellia flower",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Fujiko",
+      "origin": "Japanese",
+      "meaning": "Wisteria child",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Junichi",
+      "origin": "Japanese",
+      "meaning": "Obedient one",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Erika",
+      "origin": "Japanese",
+      "meaning": "Flower",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Yukio",
+      "origin": "Japanese",
+      "meaning": "He gets what he wants",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Hisako",
+      "origin": "Japanese",
+      "meaning": "Long-lasting child",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Kiyoshi",
+      "origin": "Japanese",
+      "meaning": "Pure, bright",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ryohei",
+      "origin": "Japanese",
+      "meaning": "Cool and flat",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Yuriko",
+      "origin": "Japanese",
+      "meaning": "Lily child",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Misaki",
+      "origin": "Japanese",
+      "meaning": "Beautiful blossom",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Izuki",
+      "origin": "Japanese",
+      "meaning": "Fountain or spring",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Natsumi",
+      "origin": "Japanese",
+      "meaning": "Beautiful summer",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Sueko",
+      "origin": "Japanese",
+      "meaning": "End child",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Yuji",
+      "origin": "Japanese",
+      "meaning": "Courageous second son",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Benjirou",
+      "origin": "Stemming from traditional Japanese, often used in the Edo period.",
+      "meaning": "Son of the changing times.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Chiharu",
+      "origin": "Derived from combining 'chi' meaning thousand, and 'haru' meaning spring.",
+      "meaning": "Thousand springs.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Fujio",
+      "origin": "A classical name often associated with the wisteria plant.",
+      "meaning": "Wisteria man.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Ginko",
+      "origin": "A name often used in older Japanese literature.",
+      "meaning": "Silver child.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Kazuya",
+      "origin": "A masculine name often linked with peace.",
+      "meaning": "Peaceful one.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Lina",
+      "origin": "A modern adoption, often reflecting creativeness.",
+      "meaning": "A delicate tune.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Nobuko",
+      "origin": "Combines elements meaning believe and child.",
+      "meaning": "Faithful child.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Ran",
+      "origin": "A name invoking images of wildness and freedom, often related to orchids.",
+      "meaning": "Orchid.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Setsuko",
+      "origin": "A traditional name often associated with seasons.",
+      "meaning": "Child of the seasons.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Yoshinori",
+      "origin": "A classical name associated with justice.",
+      "meaning": "Righteous law.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Yukari",
+      "origin": "Karai elements, meaning bond.",
+      "meaning": "Affinity, bond.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Aimi",
+      "origin": "A contemporary name created from combining love and beauty.",
+      "meaning": "Loved beauty.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Bakuto",
+      "origin": "A masculine name emphasizing strength.",
+      "meaning": "Fighting man.",
+      "gender": "M",
+      "era": "classic"
+    },
+    {
+      "name": "Eiko",
+      "origin": "A name from post-war Japan, highlighting glory.",
+      "meaning": "Prosperous, glory.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Madoka",
+      "origin": "Represents a tranquil and harmonious circle.",
+      "meaning": "Circle, round.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Miki",
+      "origin": "An enchanting name with roots in beauty and affection.",
+      "meaning": "Who is like God, beautiful tree.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Nao",
+      "origin": "A versatile name often tied to the concepts of rectitude or honesty.",
+      "meaning": "Straight, honesty.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Umeyo",
+      "origin": "Derived from older vocabulary linked to plums, reflecting the beloved flora.",
+      "meaning": "Plum child.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Wakana",
+      "origin": "A gentle yet expressive name reflecting harmonious sounds.",
+      "meaning": "Harmonious music.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Yoshi",
+      "origin": "A simple yet impactful name relaying righteousness.",
+      "meaning": "Righteousness, good luck.",
+      "gender": "U",
+      "era": "classical"
+    },
+    {
+      "name": "Yurina",
+      "origin": "Derived from delicate flowing elements associated with existence.",
+      "meaning": "Graceful lily.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Azumi",
+      "origin": "Related to safe haven or a protected home.",
+      "meaning": "Safe space, residence.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Benno",
+      "origin": "A classical name part of regional epics.",
+      "meaning": "Bearer of peace.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Chise",
+      "origin": "Contemporary adoption reflecting wisdom.",
+      "meaning": "Thousand currents, wisdom.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Dai",
+      "origin": "Drawn from historical periods, with meanings implying greatness.",
+      "meaning": "Great, large.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Ema",
+      "origin": "Frequently occurring in classic literatures often linked with reality or paintings.",
+      "meaning": "Favor, benefit.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Inari",
+      "origin": "A name often associated with deities and mythological structures.",
+      "meaning": "Rice load and crops’ guardian.",
+      "gender": "U",
+      "era": "classical"
+    },
+    {
+      "name": "Hinata",
+      "origin": "Modern with high popularity, reflecting sunny places.",
+      "meaning": "Sunny place.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Shion",
+      "origin": "Japanese, can be written with the kanji for 'purple' and 'sound'.",
+      "meaning": "purple sound",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Kazuko",
+      "origin": "Japanese, combining 'kazu' meaning 'peace' and 'ko' meaning 'child'.",
+      "meaning": "child of peace",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Sayaka",
+      "origin": "Japanese, combining 'sa' indicating 'saintly' with 'yake' meaning 'brilliant'.",
+      "meaning": "brilliant saint",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Shinji",
+      "origin": "Japanese, often derived from 'shin' meaning 'truth' and 'ji' meaning 'second'.",
+      "meaning": "second truth",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Haruki",
+      "origin": "Japanese, combining 'haru' meaning 'spring' and 'ki' meaning 'brightness'.",
+      "meaning": "spring brightness",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Erina",
+      "origin": "Japanese, possibly a blend from Western influence meaning peace or wisdom.",
+      "meaning": "peace",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Hisashi",
+      "origin": "Japanese, from 'hisa' meaning 'long' and 'shi' meaning 'history'.",
+      "meaning": "long history",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Yurika",
+      "origin": "Japanese, combining 'yuri' meaning 'lily' and 'ka' meaning 'flower'.",
+      "meaning": "lily flower",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Eri",
+      "origin": "Japanese, can be derived from 'e' meaning 'blessing' and 'ri' meaning 'reason'.",
+      "meaning": "blessed reason",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Kohaku",
+      "origin": "Japanese, literally meaning 'amber', a cherished gem.",
+      "meaning": "amber",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Hinako",
+      "origin": "Japanese, derived from 'hina' meaning 'chick' and 'ko' meaning 'child'.",
+      "meaning": "chick child",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Mio",
+      "origin": "Japanese, possibly from 'mi' meaning 'beautiful' or 'cherry blossom' and 'o' meaning 'thread'.",
+      "meaning": "beautiful thread",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ryunosuke",
+      "origin": "Japanese, combining 'ryu' meaning 'dragon' and 'nosuke', a traditional suffix for male names.",
+      "meaning": "dragon's spirit",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Junya",
+      "origin": "Japanese, from 'jun' meaning 'pure' and 'ya' indicating 'character'.",
+      "meaning": "pure character",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Shizuka",
+      "origin": "Japanese, from 'shizu' meaning 'quiet' and 'ka' implying 'summer'.",
+      "meaning": "quiet summer",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Yukiko",
+      "origin": "Japanese, combining 'yuki' meaning 'snow' and 'ko' meaning 'child'.",
+      "meaning": "snow child",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Kanon",
+      "origin": "Japanese, using 'kanon' meaning 'flower sound'. Also considered derived from 'canon' (standard).",
+      "meaning": "flower sound",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Kaede",
+      "origin": "Japanese, meaning 'maple'.",
+      "meaning": "maple",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Kichiro",
+      "origin": "Kichiro has roots in Japanese culture.",
+      "meaning": "It translates to 'lucky son'.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Tomohiro",
+      "origin": "Tomohiro originates from traditional Japanese.",
+      "meaning": "It means 'wide wisdom' or 'ample wisdom'.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Mei",
+      "origin": "Mei is used in Japanese language, often with borrowed Chinese characters.",
+      "meaning": "It conveys 'bud' or 'noted', depending on the characters used.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Hikari",
+      "origin": "Hikari is a name rooted in Japanese tradition.",
+      "meaning": "It means 'light' or 'radiance'.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Kazuma",
+      "origin": "Kazuma originates from Japanese culture.",
+      "meaning": "It denotes 'true harmony'.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Miyu",
+      "origin": "Miyu originates from the Japanese language.",
+      "meaning": "It signifies 'superior' or 'gentle beauty'.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Ren",
+      "origin": "Ren is a versatile Japanese name.",
+      "meaning": "It means 'lotus' or 'love'.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Momoko",
+      "origin": "Momoko is rooted in Japanese tradition.",
+      "meaning": "It means 'peach child'.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Haruhiro",
+      "origin": "Haruhiro originates from Japanese culture.",
+      "meaning": "It denotes 'extensive spring'.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Nozomi",
+      "origin": "Nozomi is a traditional Japanese name.",
+      "meaning": "It means 'hope' or 'wish'.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Riko",
+      "origin": "Riko originates from the Japanese lexicon.",
+      "meaning": "It means 'child of truth'.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Takashi",
+      "origin": "Takashi has roots in Japanese traditions.",
+      "meaning": "It means 'prosperity' or 'noble'.",
+      "gender": "M",
+      "era": "classic"
+    },
+    {
+      "name": "Nanako",
+      "origin": "Nanako comes from traditional Japanese.",
+      "meaning": "It means 'seven children'.",
+      "gender": "F",
+      "era": "classic"
+    },
+    {
+      "name": "Yuna",
+      "origin": "Yuna is a modern Japanese name.",
+      "meaning": "It signifies 'gentle' or 'kind' depending on kanji use.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Aoi",
+      "origin": "Aoi is rooted in Japanese tradition.",
+      "meaning": "It means 'blue' or 'hollyhock'.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Kei",
+      "origin": "Kei has Japanese roots and kanji usage.",
+      "meaning": "It means 'blessing' or 'wise'.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Ruri",
+      "origin": "Ruri stems from Japanese tradition.",
+      "meaning": "It signifies 'emerald' or 'lapis lazuli'.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Hina",
+      "origin": "Hina is a contemporary Japanese name.",
+      "meaning": "It translates to 'sun' or 'greens'.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Kengo",
+      "origin": "Kengo is rooted in classical Japanese culture.",
+      "meaning": "It means 'strong' or 'firm'.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Toshio",
+      "origin": "Toshio is a traditional Japanese name.",
+      "meaning": "It denotes 'genius leader' or 'seasoned man'.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Sou",
+      "origin": "Sou is rooted in Japanese tradition.",
+      "meaning": "It signifies 'strong' or 'spirited','gender':'M','era':'classic'",
+      "gender": "M",
+      "era": "classic"
+    },
+    {
+      "name": "Maki",
+      "origin": "Maki originates from classic Japanese.",
+      "meaning": "It means 'true hope' or 'real'.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Botan",
+      "origin": "Based on Japanese kanji for the peony flower.",
+      "meaning": "Peony flower.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Eimi",
+      "origin": "Derived from kanji characters meaning 'blessing' and 'beautiful'.",
+      "meaning": "Blessed beauty.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Lisa",
+      "origin": "Adopted from Western influences, adapted with kanji meaning 'pear'.",
+      "meaning": "Pear or contextually 'beautiful sand'.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Manabu",
+      "origin": "Takes root in kanji for 'learning' and 'study'.",
+      "meaning": "Study or learning.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Utako",
+      "origin": "Made from kanji for 'song' and 'child'.",
+      "meaning": "Child of song.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Wataru",
+      "origin": "From kanji meaning 'cross' or 'navigate'.",
+      "meaning": "Navigation or crossing.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Zento",
+      "origin": "Combines kanji for 'all' and 'person'.",
+      "meaning": "Complete person.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Chisato",
+      "origin": "Formed from kanji for 'thousand' and 'village'.",
+      "meaning": "Village of a thousand.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Fujita",
+      "origin": "Contains kanji for 'wisteria' and 'field'.",
+      "meaning": "Field of wisteria.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Haruaki",
+      "origin": "Based on kanji for 'spring' and 'radiance'.",
+      "meaning": "Radiant spring.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Mikio",
+      "origin": "Combines 'tree' and 'strength' kanji.",
+      "meaning": "Strong tree.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Kazuto",
+      "origin": "Combines kanji for 'harmony' and 'person'.",
+      "meaning": "Harmonious person.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Iori",
+      "origin": "An uncommon name using kanji for 'anchor' or 'shelter'.",
+      "meaning": "Shelter or anchorage.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Sachio",
+      "origin": "Formed from kanji meaning 'happiness' and 'man'.",
+      "meaning": "Happy man.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Sena",
+      "origin": "Often written with kanji meaning 'star' and 'academy'.",
+      "meaning": "Star academy.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Yoshinobu",
+      "origin": "Involves kanji for 'goodness' and 'trust'.",
+      "meaning": "Trustworthy and good.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Zuki",
+      "origin": "Derived from kanji referencing 'moon'.",
+      "meaning": "Moon or moonlight.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Rikka",
+      "origin": "Translates to 'standing flowers'.",
+      "meaning": "Standing flowers.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Yumi",
+      "origin": "Combines kanji for 'archery bow' or 'beauty'.",
+      "meaning": "Bow or beautiful.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Fumi",
+      "origin": "Often used in Japan, originating from 'fumi' (history, letter).",
+      "meaning": "History or letter.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Iku",
+      "origin": "Traditional Japanese, used historically across eras.",
+      "meaning": "Nourishing or nurturing.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Katsu",
+      "origin": "Japanese name, often related to achievement or victory.",
+      "meaning": "Victory or win.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Naozumi",
+      "origin": "Classical Japanese name, a mix of 'nao' (straight, honest) and 'zumi' (clear).",
+      "meaning": "Straight and clear.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Pikachu",
+      "origin": "A name from contemporary Japanese pop culture, not a traditional personal name.",
+      "meaning": "The sound of spark and squeak.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Saburo",
+      "origin": "A common Japanese name for third-born sons.",
+      "meaning": "Third son.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Tamiko",
+      "origin": "Of Japanese origin, meaning child of many beauties.",
+      "meaning": "Many beautiful children.",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Ume",
+      "origin": "Japanese origin, often associated with plums and beauty.",
+      "meaning": "Plum blossom.",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Vitaru",
+      "origin": "Though not common, it uses Romanji transliteration of potential Japanese phonetics.",
+      "meaning": "Vital or life-giving.",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Yori",
+      "origin": "Derived from Japanese, often signifies dependability.",
+      "meaning": "Trustworthy, reliable.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Zenji",
+      "origin": "Of Japanese origin, relating to meditation and intellect.",
+      "meaning": "Meditation second son.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Fuyuki",
+      "origin": "Japanese name seasonal in essence.",
+      "meaning": "Wintry tree.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Nobu",
+      "origin": "A Japanese name that signifies faith or prolongation.",
+      "meaning": "Faithful or prolonged.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Otoha",
+      "origin": "Modern Japanese, pertaining to melody.",
+      "meaning": "Sound of a feather.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Taichi",
+      "origin": "Derived from ‘Tai’ (thick) and ‘Chi’ (one).",
+      "meaning": "Thick one, referring to beginnings.",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Yuito",
+      "origin": "Japanese contemporary name likely incorporating 'yu' (linking).",
+      "meaning": "Bound together.",
+      "gender": "M",
+      "era": "contemporary"
+    },
+    {
+      "name": "Zensuke",
+      "origin": "Traditional Japanese name from Edo period.",
+      "meaning": "Little prince of Zen, good son.",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Himari",
+      "origin": "A popular contemporary Japanese name.",
+      "meaning": "Sunflower or beauty of the sun.",
+      "gender": "F",
+      "era": "contemporary"
+    },
+    {
+      "name": "Zen",
+      "origin": "Unisex name commonly used in Japan signifying meditation and peace.",
+      "meaning": "Meditation or calm.",
+      "gender": "U",
+      "era": "modern"
+    },
+    {
+      "name": "Shinobu",
+      "origin": "Japanese, derived from traditional virtue concepts.",
+      "meaning": "Endurance",
+      "gender": "U",
+      "era": "classical"
+    },
+    {
+      "name": "Miyako",
+      "origin": "Japanese, historical and literary name.",
+      "meaning": "Beautiful night child",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Kenshin",
+      "origin": "Japanese, often linked with famous samurais.",
+      "meaning": "Modest truth",
+      "gender": "M",
+      "era": "classical"
+    },
+    {
+      "name": "Haruna",
+      "origin": "Japanese, incorporates natural elements in naming.",
+      "meaning": "Spring tree",
+      "gender": "F",
+      "era": "modern"
+    },
+    {
+      "name": "Teru",
+      "origin": "Japanese, symbolizes light and brightness.",
+      "meaning": "Shine",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Miwa",
+      "origin": "Japanese, traditional given name framework.",
+      "meaning": "Beautiful harmony",
+      "gender": "F",
+      "era": "classical"
+    },
+    {
+      "name": "Umi",
+      "origin": "Japanese, connects deeply to geographical nature.",
+      "meaning": "Sea",
+      "gender": "U",
+      "era": "contemporary"
+    },
+    {
+      "name": "Yoshihiro",
+      "origin": "Japanese, with influences from ancient heroic narratives.",
+      "meaning": "Widespread goodness",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Koichi",
+      "origin": "Japanese, typically found among strongest warrior names.",
+      "meaning": "Happiness together",
+      "gender": "M",
+      "era": "modern"
+    },
+    {
+      "name": "Tomo",
+      "origin": "Japanese, frequently showcases the theme of friendship.",
+      "meaning": "Friend",
+      "gender": "U",
       "era": "modern"
     }
   ]

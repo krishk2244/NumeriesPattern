@@ -28,10 +28,13 @@ const COUNTRIES = [
   'Japan',
 ] as const
 
-const PASSES_PER_COUNTRY = 5
+const PASSES_PER_COUNTRY = 8
 const NAMES_PER_PASS = 50
-const MODEL = 'gpt-4o-mini'
-const MAX_OUTPUT_TOKENS = 3000
+// gpt-4o has a far richer name vocabulary than gpt-4o-mini, so each pass
+// yields more *unique* names before the model starts repeating itself —
+// which is exactly what we need to grow the dual-system ('both') hit rate.
+const MODEL = 'gpt-4o'
+const MAX_OUTPUT_TOKENS = 4000
 // Exclude list cap — sending 200+ names becomes prompt-bloat. The 100 most
 // recently added are the strongest dedupe signal anyway.
 const EXCLUDE_CAP = 100
