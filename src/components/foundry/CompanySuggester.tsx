@@ -109,7 +109,7 @@ export function CompanySuggester() {
           founders: founders.trim() || undefined,
           mustInclude: mustInclude.trim() || undefined,
           keywords: keywords.trim() || undefined,
-          count: 20,
+          count: 40,
         }),
       })
       const data = await res.json()
@@ -241,8 +241,8 @@ export function CompanySuggester() {
                 }}
               >
                 {meta.verified_count >= meta.requested_count
-                  ? `${meta.verified_count} candidate name${meta.verified_count === 1 ? '' : 's'} that reduce to ${meta.target_number} for a ${meta.structure}`
-                  : `Only ${meta.verified_count} candidate${meta.verified_count === 1 ? '' : 's'} reduced to ${meta.target_number} · try a different target number or remove “Must Include”`}
+                  ? `${meta.verified_count} name${meta.verified_count === 1 ? '' : 's'} with vibration ${meta.target_number} · for a ${meta.structure}`
+                  : `${meta.verified_count} name${meta.verified_count === 1 ? '' : 's'} found with vibration ${meta.target_number} · try a different target or remove “Must Include” for more`}
               </p>
             )}
             {meta && meta.verified_count === 0 && (

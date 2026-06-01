@@ -10,6 +10,7 @@ import {
 } from '@/types/numerology'
 import { COMPANY_SUGGESTIONS_SYSTEM_PROMPT } from '@/lib/company-suggestions-prompt'
 import { getPool, scoreCompany, shuffle } from '@/lib/company-pool'
+import { BUSINESS_WORDS } from '@/lib/business-words'
 import { isFoundryEnabled } from '@/lib/features'
 
 export const runtime = 'nodejs'
@@ -25,7 +26,7 @@ const RequestSchema = z.object({
   // User-supplied required substring (case-insensitive). Every suggested
   // company name must contain this fragment.
   mustInclude: z.string().min(1).max(40).optional(),
-  count: z.number().int().min(3).max(30).optional().default(20),
+  count: z.number().int().min(3).max(50).optional().default(20),
 })
 
 const ARCHETYPES = [
@@ -60,10 +61,13 @@ const OVERSAMPLE_FACTOR = 1.5
 const MAX_GENERATED = 12
 // When mustInclude narrows the model's vocabulary heavily, we need to
 // generate a wider candidate pool so at least some pass the numerology
-// filter. The longer timeout (14s) makes this feasible.
-const MAX_GENERATED_MUST_INCLUDE = 20
+// filter. The longer timeout (14s) makes this feasible. When combined
+// with 'both' systems (~1% hit rate), we ask for even more candidates.
+const MAX_GENERATED_MUST_INCLUDE = 25
+const MAX_GENERATED_MUST_INCLUDE_BOTH = 40
 const MAX_OUTPUT_TOKENS = 700
 const MAX_OUTPUT_TOKENS_MUST_INCLUDE = 1200
+const MAX_OUTPUT_TOKENS_MUST_INCLUDE_BOTH = 2000
 // 9.5s — gpt-4o-mini's actual time-to-completion for ~700 tokens of JSON.
 // 6.5s was too tight (call always timed out). Total route latency ~10s.
 const OPENAI_TIMEOUT_MS = 9_500
@@ -149,9 +153,16 @@ export async function POST(req: Request) {
   // Bump timeout when mustInclude is set — the substring constraint
   // narrows the model's vocabulary, so we'd rather wait an extra few
   // seconds than fall back to the offline pool which has thin coverage.
-  const timeout = mustInclude ? 14_000 : OPENAI_TIMEOUT_MS
+  // mustInclude+both asks for 40 candidates (2000 tokens) → needs ~22s.
+  const timeout =
+    mustInclude && selection === 'both'
+      ? 24_000
+      : mustInclude
+        ? 16_000
+        : OPENAI_TIMEOUT_MS
   const client = new OpenAI({
     apiKey,
+    baseURL: process.env.OPENAI_BASE_URL || undefined,
     timeout,
     maxRetries: 0,
   })
@@ -174,9 +185,11 @@ export async function POST(req: Request) {
     // When intersection-filtering (both systems) OR mustInclude is set,
     // the natural hit-rate drops sharply (≈1%–2% vs ≈11% single-system),
     // so we ask the model for more candidates.
-    count: mustInclude
-      ? MAX_GENERATED_MUST_INCLUDE
-      : selection === 'both'
+    count: mustInclude && selection === 'both'
+      ? MAX_GENERATED_MUST_INCLUDE_BOTH
+      : mustInclude
+        ? MAX_GENERATED_MUST_INCLUDE
+        : selection === 'both'
         ? Math.min(Math.ceil(count * OVERSAMPLE_FACTOR * 2.5), MAX_GENERATED)
         : Math.min(Math.ceil(count * OVERSAMPLE_FACTOR), MAX_GENERATED),
   }
@@ -240,9 +253,11 @@ export async function POST(req: Request) {
       // parse is dramatically faster.
       const completion = await client.chat.completions.create({
         model: MODEL,
-        max_tokens: mustInclude
-          ? MAX_OUTPUT_TOKENS_MUST_INCLUDE
-          : MAX_OUTPUT_TOKENS,
+        max_tokens: mustInclude && selection === 'both'
+          ? MAX_OUTPUT_TOKENS_MUST_INCLUDE_BOTH
+          : mustInclude
+            ? MAX_OUTPUT_TOKENS_MUST_INCLUDE
+            : MAX_OUTPUT_TOKENS,
         messages: [
           { role: 'system', content: COMPANY_SUGGESTIONS_SYSTEM_PROMPT },
           {
@@ -281,6 +296,11 @@ export async function POST(req: Request) {
   // call adds latency for no benefit when the pool is sufficient.
   const seen = new Set<string>()
   const verifiedFromModel: VerifiedModelEntry[] = []
+  // Candidates from the model that pass mustInclude but may not pass all
+  // systems. Saved so the relaxed fallback can re-check against individual
+  // systems without a second model call.
+  type ModelCandidate = { name: string; archetype: string; rationale: string; pronunciation_hint: string }
+  const modelSubstringMatches: ModelCandidate[] = []
   let modelError: string | null = null
   let rawGenerated = 0
   let modelSkipped = false
@@ -306,6 +326,12 @@ export async function POST(req: Request) {
         if (seen.has(key)) continue
         seen.add(key)
         if (!passesMustInclude(cleanName)) continue
+        modelSubstringMatches.push({
+          name: cleanName,
+          archetype: c.archetype,
+          rationale: c.rationale,
+          pronunciation_hint: c.pronunciation_hint,
+        })
         if (!matchesAllSystems(cleanName)) continue
         const primary = activeSystems[0]
         const primaryCalc = calculateName(cleanName, primary)
@@ -326,12 +352,49 @@ export async function POST(req: Request) {
     }
   }
 
+  // Word-list seeding: when mustInclude is set, try "fragment + word" and
+  // "word + fragment" combinations from the business-word bank. Runs in <1ms
+  // and deterministically fills the candidate pool when the model falls short.
+  if (mustInclude) {
+    const display =
+      mustInclude.charAt(0).toUpperCase() + mustInclude.slice(1).toLowerCase()
+    for (const [word, meaning] of BUSINESS_WORDS) {
+      for (const name of [`${display} ${word}`, `${word} ${display}`]) {
+        if (!name.toLowerCase().includes(mustInclude.toLowerCase())) continue
+        const key = name.toLowerCase().trim()
+        if (seen.has(key)) continue
+        seen.add(key)
+        const rationale = `A composed brand grounding ${display}'s identity in ${meaning}.`
+        const pronunciation_hint = name.toLowerCase()
+        // Always save for the relaxed single-system fallback
+        modelSubstringMatches.push({ name, archetype: 'place', rationale, pronunciation_hint })
+        // Also promote to verified if it passes every active system
+        if (matchesAllSystems(name) && verifiedFromModel.length < count) {
+          const primary = activeSystems[0]
+          const primaryCalc = calculateName(name, primary)
+          verifiedFromModel.push({
+            name,
+            archetype: normalizeArchetype('place'),
+            rationale,
+            pronunciation_hint,
+            expected_value: targetNumber,
+            actual_value: primaryCalc.finalNumber,
+            sum: primaryCalc.sum,
+            reduction_steps: primaryCalc.reductionSteps,
+            verified: true,
+            source: 'model',
+          })
+        }
+      }
+    }
+  }
+
   // Slice model results to count (may be 0 if model errored or returned no
   // verified hits). Pool top-up + relaxed fallback below handles both cases.
   const modelSliced = verifiedFromModel.slice(0, count)
 
   type PoolEntry = ReturnType<typeof buildPoolResult>[number]
-  type RelaxedPoolEntry = Omit<PoolEntry, 'source'> & { source: 'relaxed-pool' }
+  type RelaxedPoolEntry = Omit<PoolEntry, 'source'> & { source: 'relaxed-pool' | 'relaxed-model' }
   type SuggestionEntry = VerifiedModelEntry | PoolEntry | RelaxedPoolEntry
 
   // Top up from offline pool if model didn't produce enough verified hits
@@ -414,6 +477,61 @@ export async function POST(req: Request) {
     }
   }
 
+  // Model-candidate top-up: when we have fewer results than requested and
+  // mustInclude is set, fill up by checking modelSubstringMatches against
+  // individual systems. This fires even when we already have some dual-system
+  // results — it appends single-system matches to reach the target count.
+  const dualSystemCount = suggestions.length
+  if (suggestions.length < count && mustInclude && modelSubstringMatches.length > 0) {
+    const alreadyShown = new Set(suggestions.map((s) => s.name.toLowerCase()))
+    let bestSystem: NumerologySystem | null = null
+    let bestMatches: ModelCandidate[] = []
+
+    for (const sys of ['pythagorean', 'chaldean'] as const) {
+      const matches = modelSubstringMatches.filter(
+        (c) =>
+          !alreadyShown.has(c.name.toLowerCase()) &&
+          calculateName(c.name, sys).finalNumber === targetNumber
+      )
+      if (matches.length > bestMatches.length) {
+        bestMatches = matches
+        bestSystem = sys
+      }
+    }
+
+    if (bestMatches.length > 0 && bestSystem) {
+      const deduped = new Set(alreadyShown)
+      const topUp = bestMatches
+        .filter((c) => {
+          const k = c.name.toLowerCase()
+          if (deduped.has(k)) return false
+          deduped.add(k)
+          return true
+        })
+        .slice(0, count - suggestions.length)
+        .map((c) => {
+          const calc = calculateName(c.name, bestSystem!)
+          return {
+            name: c.name,
+            archetype: normalizeArchetype(c.archetype),
+            rationale: c.rationale,
+            pronunciation_hint: c.pronunciation_hint,
+            expected_value: targetNumber,
+            actual_value: calc.finalNumber,
+            sum: calc.sum,
+            reduction_steps: calc.reductionSteps,
+            verified: true,
+            source: 'relaxed-model' as const,
+          }
+        })
+      if (topUp.length > 0) {
+        suggestions = [...suggestions, ...topUp]
+        relaxedFallback = true
+        relaxedSystem = bestSystem
+      }
+    }
+  }
+
   // Must-include is preserved in the relaxed fallback (never dropped).
   // Industry/keywords are soft filters that we *do* relax.
   const droppedFilters: string[] = []
@@ -432,8 +550,10 @@ export async function POST(req: Request) {
           : `No invented company names in our pool reduce to ${targetNumber} under ${selection === 'both' ? 'either system' : selection}. Try a different target number — most targets have 5-15 candidates.`
         : relaxedFallback
           ? relaxedSystem
-            ? `No pool names reduce to ${targetNumber} under BOTH systems — the dual-system intersection is sparse in our 86-name company pool. Showing names that reduce to ${targetNumber} under ${relaxedSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only${droppedFilters.length > 1 ? ` (also dropped: ${droppedFilters.filter((f) => f !== 'dual-system match').join(', ')})` : ''}.`
-            : `No company names matched your ${droppedFilters.join(' / ') || 'filters'} AND target ${targetNumber}. Showing pool names that reduce to ${targetNumber} — relax or remove ${droppedFilters.join(' / ') || 'filters'} to narrow these further.`
+            ? dualSystemCount > 0
+              ? `${dualSystemCount} name${dualSystemCount === 1 ? '' : 's'} reduce to ${targetNumber} under both systems. The rest reduce to ${targetNumber} under ${relaxedSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only.`
+              : `No names reduce to ${targetNumber} under both systems — showing names that reduce to ${targetNumber} under ${relaxedSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only.`
+            : `No company names matched your ${droppedFilters.join(' / ') || 'filters'} AND target ${targetNumber}. Showing names that reduce to ${targetNumber} — relax or remove ${droppedFilters.join(' / ') || 'filters'} to narrow these further.`
           : topUpUsed
             ? `Model returned ${modelSliced.length} matching name${modelSliced.length === 1 ? '' : 's'}; topped up with offline-pool candidates to reach your requested count.`
             : null,
