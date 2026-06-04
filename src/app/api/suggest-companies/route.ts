@@ -395,6 +395,15 @@ export async function POST(req: Request) {
   //
   // Both strategies guarantee real brand names, no API cost, instant.
   const composed: ComposedEntry[] = []
+  // Wordset dedupe: "Tech Media" and "Media Tech" share the same wordset, so
+  // we only ever emit one of them. Keyed on sorted lowercased word tokens.
+  const wordsetSeen = new Set<string>()
+  const wordsetKey = (parts: string[]) =>
+    parts
+      .map((p) => p.toLowerCase().replace(/[^a-z0-9]/g, ''))
+      .filter(Boolean)
+      .sort()
+      .join('|')
   const pushComposed = (
     name: string,
     rationale: string,
@@ -403,7 +412,10 @@ export async function POST(req: Request) {
     const key = name.toLowerCase().trim()
     if (seen.has(key)) return false
     if (!matchesAllSystems(name)) return false
+    const wk = wordsetKey(name.split(/\s+/))
+    if (wordsetSeen.has(wk)) return false
     seen.add(key)
+    wordsetSeen.add(wk)
     const primary = activeSystems[0]
     const calc = calculateName(name, primary)
     composed.push({
@@ -426,7 +438,9 @@ export async function POST(req: Request) {
     const core = mustInclude.trim()
     const coreTitle =
       core.charAt(0).toUpperCase() + core.slice(1).toLowerCase()
-    // Pass 1: simple core + word and word + core.
+    // Only two-word combinations (core + word, word + core). The wordset
+    // dedupe in pushComposed ensures we don't emit both orderings of the
+    // same pair.
     for (const [word, meaning] of BUSINESS_WORDS) {
       if (enough()) break
       for (const name of [`${coreTitle} ${word}`, `${word} ${coreTitle}`]) {
@@ -436,34 +450,6 @@ export async function POST(req: Request) {
           'place'
         )
         if (enough()) break
-      }
-    }
-    // Pass 2: triple compositions when simple pairs don't fill — the
-    // dual-system intersection narrows must-include + both to ~1% of
-    // candidates, so 500 pairs yield only ~5 hits. Triples expand the
-    // candidate space to ~187k → reliably 40+ valid brands.
-    if (!enough()) {
-      const wordList = BUSINESS_WORDS.map(([w]) => w)
-      // Shuffle once so successive runs return different triples first.
-      const shuffled = [...wordList]
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const k = Math.floor(Math.random() * (i + 1))
-        ;[shuffled[i], shuffled[k]] = [shuffled[k], shuffled[i]]
-      }
-      const coreLower = coreTitle.toLowerCase()
-      outer: for (const a of shuffled) {
-        if (a.toLowerCase() === coreLower) continue
-        for (const b of shuffled) {
-          if (a === b || b.toLowerCase() === coreLower) continue
-          for (const name of [
-            `${coreTitle} ${a} ${b}`,
-            `${a} ${coreTitle} ${b}`,
-            `${a} ${b} ${coreTitle}`,
-          ]) {
-            pushComposed(name, `${coreTitle} fused with ${a} + ${b}`, 'compound')
-            if (enough()) break outer
-          }
-        }
       }
     }
   } else if (!mustInclude && !enough()) {
