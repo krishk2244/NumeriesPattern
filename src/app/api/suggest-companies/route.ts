@@ -434,13 +434,18 @@ export async function POST(req: Request) {
   }
   const enough = () => verifiedFromModel.length + composed.length >= count
 
+  // Track how many results genuinely matched ALL active systems (vs the
+  // single-system top-up below). Used for the "N match both, rest match
+  // {system} only" note.
+  let dualSystemComposedCount = 0
+  let relaxedTopUpSystem: NumerologySystem | null = null
+
   if (mustInclude && !enough()) {
     const core = mustInclude.trim()
     const coreTitle =
       core.charAt(0).toUpperCase() + core.slice(1).toLowerCase()
-    // Only two-word combinations (core + word, word + core). The wordset
-    // dedupe in pushComposed ensures we don't emit both orderings of the
-    // same pair.
+    // Strict pass — must match every active system (Both = intersection).
+    // Wordset dedupe in pushComposed prevents reversed pairs from appearing.
     for (const [word, meaning] of BUSINESS_WORDS) {
       if (enough()) break
       for (const name of [`${coreTitle} ${word}`, `${word} ${coreTitle}`]) {
@@ -450,6 +455,61 @@ export async function POST(req: Request) {
           'place'
         )
         if (enough()) break
+      }
+    }
+    dualSystemComposedCount = composed.length
+
+    // Single-system top-up: when the user picked Both AND must-include AND
+    // the strict intersection runs dry early, fill the rest with names
+    // matching whichever single system has more 2-word hits. Without this,
+    // tight combos return 2-5 results; with it, the user reliably gets 20+.
+    if (selection === 'both' && !enough()) {
+      // Try each system; pick the one with more available hits first.
+      const tryBySystem = (sys: NumerologySystem) => {
+        const seenLocal = new Set<string>()
+        const candidates: { name: string; meaning: string }[] = []
+        for (const [word, meaning] of BUSINESS_WORDS) {
+          for (const name of [`${coreTitle} ${word}`, `${word} ${coreTitle}`]) {
+            const k = name.toLowerCase().trim()
+            if (seen.has(k) || seenLocal.has(k)) continue
+            if (calculateName(name, sys).finalNumber !== targetNumber) continue
+            const wk = wordsetKey(name.split(/\s+/))
+            if (wordsetSeen.has(wk)) continue
+            seenLocal.add(k)
+            candidates.push({ name, meaning })
+          }
+        }
+        return candidates
+      }
+      const pythHits = tryBySystem('pythagorean')
+      const chalHits = tryBySystem('chaldean')
+      const pick = pythHits.length >= chalHits.length ? pythHits : chalHits
+      const pickSys: NumerologySystem =
+        pythHits.length >= chalHits.length ? 'pythagorean' : 'chaldean'
+      relaxedTopUpSystem = pickSys
+      for (const { name, meaning } of pick) {
+        if (enough()) break
+        // Push with single-system calculation (matchesAllSystems would
+        // reject). Inline a relaxed pushComposed equivalent.
+        const k = name.toLowerCase().trim()
+        if (seen.has(k)) continue
+        const wk = wordsetKey(name.split(/\s+/))
+        if (wordsetSeen.has(wk)) continue
+        seen.add(k)
+        wordsetSeen.add(wk)
+        const calc = calculateName(name, pickSys)
+        composed.push({
+          name,
+          archetype: 'place',
+          rationale: `A composed brand grounding ${coreTitle}'s identity in ${meaning}.`,
+          pronunciation_hint: '',
+          expected_value: targetNumber,
+          actual_value: calc.finalNumber,
+          sum: calc.sum,
+          reduction_steps: calc.reductionSteps,
+          verified: true,
+          source: 'composed',
+        })
       }
     }
   } else if (!mustInclude && !enough()) {
@@ -582,13 +642,15 @@ export async function POST(req: Request) {
         ? mustInclude
           ? `No company names containing “${mustInclude}” reduce to ${targetNumber} under ${selection === 'both' ? 'either system' : selection}. Try a shorter / different fragment, a different target number, or remove the Must Include filter.`
           : `No invented company names in our pool reduce to ${targetNumber} under ${selection === 'both' ? 'either system' : selection}. Try a different target number — most targets have 5-15 candidates.`
-        : relaxedFallback
-          ? relaxedSystem
-            ? `No names reduce to ${targetNumber} under both systems — showing names that reduce to ${targetNumber} under ${relaxedSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only${droppedFilters.length > 1 ? ` (also dropped: ${droppedFilters.filter((f) => f !== 'dual-system match').join(', ')})` : ''}.`
-            : `No company names matched your ${droppedFilters.join(' / ') || 'filters'} AND target ${targetNumber}. Showing names that reduce to ${targetNumber} — relax or remove ${droppedFilters.join(' / ') || 'filters'} to narrow these further.`
-          : topUpUsed
-            ? `Model returned ${modelSliced.length} matching name${modelSliced.length === 1 ? '' : 's'}; topped up with offline-pool candidates to reach your requested count.`
-            : null,
+        : relaxedTopUpSystem && dualSystemComposedCount < suggestions.length
+          ? `${dualSystemComposedCount} name${dualSystemComposedCount === 1 ? '' : 's'} reduce to ${targetNumber} under both systems. The rest reduce under ${relaxedTopUpSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only.`
+          : relaxedFallback
+            ? relaxedSystem
+              ? `No names reduce to ${targetNumber} under both systems — showing names that reduce to ${targetNumber} under ${relaxedSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only${droppedFilters.length > 1 ? ` (also dropped: ${droppedFilters.filter((f) => f !== 'dual-system match').join(', ')})` : ''}.`
+              : `No company names matched your ${droppedFilters.join(' / ') || 'filters'} AND target ${targetNumber}. Showing names that reduce to ${targetNumber} — relax or remove ${droppedFilters.join(' / ') || 'filters'} to narrow these further.`
+            : topUpUsed
+              ? `Model returned ${modelSliced.length} matching name${modelSliced.length === 1 ? '' : 's'}; topped up with offline-pool candidates to reach your requested count.`
+              : null,
     meta: {
       requested_count: count,
       generated_count: rawGenerated,
