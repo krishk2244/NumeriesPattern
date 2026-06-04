@@ -51,7 +51,7 @@ export default function Home() {
               numeral="II"
               eyebrow="Name Atelier"
               title="Find a name that matches your number."
-              copy="Pick a target vibration, country, and any keywords. The agent verifies every calculation before suggesting personal names."
+              copy="Pick a target vibration and any keywords. The agent composes personal names — and the server verifies every calculation before they reach you."
               cta="Open the atelier"
               href="/suggest"
             />

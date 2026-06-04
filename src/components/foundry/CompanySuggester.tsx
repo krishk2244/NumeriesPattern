@@ -67,6 +67,8 @@ interface ApiResponse {
     target_number: number
     system: string
     structure: string
+    dual_system_count?: number
+    relaxed_system?: 'pythagorean' | 'chaldean' | null
     model: string
   }
 }
@@ -227,9 +229,8 @@ export function CompanySuggester() {
                   lineHeight: 1.5,
                 }}
               >
-                {meta.verified_count >= meta.requested_count
-                  ? `${meta.verified_count} name${meta.verified_count === 1 ? '' : 's'} with vibration ${meta.target_number} · for a ${meta.structure}`
-                  : `${meta.verified_count} name${meta.verified_count === 1 ? '' : 's'} found with vibration ${meta.target_number} · try a different target or remove “Must Include” for more`}
+                {meta.verified_count} name{meta.verified_count === 1 ? '' : 's'}{' '}
+                · vibration {meta.target_number} · for a {meta.structure}
               </p>
             )}
             {meta && meta.verified_count === 0 && (
@@ -283,30 +284,12 @@ export function CompanySuggester() {
                 transition={{ duration: 0.4, ease: EASE }}
                 className="flex flex-col gap-6"
               >
-                {notes && (
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-ui)',
-                      fontSize: '13px',
-                      fontStyle: 'italic',
-                      color: 'var(--champagne)',
-                      opacity: 0.7,
-                      textAlign: 'center',
-                      lineHeight: 1.6,
-                    }}
-                  >
-                    {notes}
-                  </p>
-                )}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-                  {results.map((s, i) => (
-                    <CompanyCard
-                      key={s.name + i}
-                      suggestion={s}
-                      delay={i * 0.06}
-                    />
-                  ))}
-                </div>
+                <ResultsBody
+                  results={results}
+                  dualCount={meta?.dual_system_count ?? results.length}
+                  relaxedSystem={meta?.relaxed_system ?? null}
+                  notes={notes}
+                />
               </motion.div>
             )}
           </AnimatePresence>
@@ -386,7 +369,7 @@ function NumberPicker({
           opacity: 0.7,
         }}
       >
-        {value} — {hint}
+        {hint}
       </span>
     </div>
   )
@@ -578,5 +561,157 @@ function CompanyCard({
         {suggestion.rationale}
       </p>
     </motion.div>
+  )
+}
+
+/**
+ * Renders the results grid. When a single-system top-up filled the request,
+ * splits results into two labeled groups (dual-system first, relaxed second)
+ * with a small ornament between them — so users see at a glance which names
+ * are strict matches vs the top-up.
+ */
+function ResultsBody({
+  results,
+  dualCount,
+  relaxedSystem,
+  notes,
+}: {
+  results: Suggestion[]
+  dualCount: number
+  relaxedSystem: 'pythagorean' | 'chaldean' | null
+  notes: string | null
+}) {
+  const splitActive =
+    relaxedSystem !== null && dualCount > 0 && dualCount < results.length
+  const strict = splitActive ? results.slice(0, dualCount) : results
+  const relaxed = splitActive ? results.slice(dualCount) : []
+
+  return (
+    <>
+      {splitActive ? (
+        <>
+          <GroupHeading
+            eyebrow={`Match both systems · ${dualCount}`}
+            sub="reduce to your target under Pythagorean and Chaldean"
+          />
+          <ResultsGrid cards={strict} startDelay={0} />
+          <GroupOrnament />
+          <GroupHeading
+            eyebrow={`${relaxedSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only · ${relaxed.length}`}
+            sub="strict-match candidates are exhausted — these reduce under one system to fill your count"
+          />
+          <ResultsGrid cards={relaxed} startDelay={strict.length * 0.04} />
+        </>
+      ) : (
+        <>
+          {notes && <ResultsNote text={notes} />}
+          <ResultsGrid cards={results} startDelay={0} />
+        </>
+      )}
+    </>
+  )
+}
+
+function ResultsGrid({
+  cards,
+  startDelay,
+}: {
+  cards: Suggestion[]
+  startDelay: number
+}) {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+      {cards.map((s, i) => (
+        <CompanyCard
+          key={s.name + i}
+          suggestion={s}
+          delay={startDelay + i * 0.04}
+        />
+      ))}
+    </div>
+  )
+}
+
+function GroupHeading({ eyebrow, sub }: { eyebrow: string; sub: string }) {
+  return (
+    <div className="flex flex-col items-center gap-1 mt-2">
+      <span
+        style={{
+          fontFamily: 'var(--font-ui)',
+          fontSize: '11px',
+          fontWeight: 600,
+          letterSpacing: '0.18em',
+          textTransform: 'uppercase',
+          color: 'var(--gold-primary)',
+        }}
+      >
+        {eyebrow}
+      </span>
+      <span
+        style={{
+          fontFamily: 'var(--font-ui)',
+          fontSize: '11px',
+          fontStyle: 'italic',
+          letterSpacing: '0.04em',
+          color: 'var(--champagne)',
+          opacity: 0.6,
+        }}
+      >
+        {sub}
+      </span>
+    </div>
+  )
+}
+
+function GroupOrnament() {
+  return (
+    <div
+      aria-hidden="true"
+      className="flex items-center gap-3 mt-4 mb-2 w-full"
+      style={{ opacity: 0.5 }}
+    >
+      <span
+        style={{
+          flex: 1,
+          height: '0.5px',
+          backgroundColor: 'var(--noir-border)',
+        }}
+      />
+      <span
+        style={{
+          fontFamily: 'var(--font-display)',
+          fontSize: '11px',
+          letterSpacing: '0.2em',
+          color: 'var(--gilt-primary)',
+        }}
+      >
+        ◇
+      </span>
+      <span
+        style={{
+          flex: 1,
+          height: '0.5px',
+          backgroundColor: 'var(--noir-border)',
+        }}
+      />
+    </div>
+  )
+}
+
+function ResultsNote({ text }: { text: string }) {
+  return (
+    <p
+      style={{
+        fontFamily: 'var(--font-ui)',
+        fontSize: '13px',
+        fontStyle: 'italic',
+        color: 'var(--champagne)',
+        opacity: 0.7,
+        textAlign: 'center',
+        lineHeight: 1.6,
+      }}
+    >
+      {text}
+    </p>
   )
 }

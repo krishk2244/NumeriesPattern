@@ -73,8 +73,9 @@ export default function SuggestPage() {
               maxWidth: '52ch',
             }}
           >
-            Choose a target vibration, a country of origin, and any keywords.
-            Every suggestion is verified server-side before it reaches you.
+            Choose a target vibration, add any keywords, and the agent
+            composes names whose letters reduce to your number — every
+            calculation verified server-side before it reaches you.
           </p>
         </div>
       </section>

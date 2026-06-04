@@ -73,9 +73,9 @@ export default function FoundryPage() {
               maxWidth: '56ch',
             }}
           >
-            Describe the structure, industry, and tone of your venture. The
-            agent drafts candidate names; the server verifies every numerology
-            calculation and discards mismatches.
+            Describe the structure, industry, and tone of your venture.
+            The agent drafts candidate brand names — every numerology
+            calculation verified server-side before it reaches you.
           </p>
         </div>
       </section>

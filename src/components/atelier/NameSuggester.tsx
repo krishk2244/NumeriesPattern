@@ -148,9 +148,11 @@ export function NameSuggester() {
                   lineHeight: 1.5,
                 }}
               >
-                {meta.returned_count >= meta.requested_count
-                  ? `${meta.returned_count} names match · drawn from a pool of ${meta.pool_size} cross-cultural names`
-                  : `Only ${meta.returned_count} name${meta.returned_count === 1 ? '' : 's'} in our pool of ${meta.pool_size} match your filters · try broader keywords or a different target number`}
+                {meta.returned_count} name
+                {meta.returned_count === 1 ? '' : 's'} · vibration {targetNumber}
+                {meta.returned_count < meta.requested_count
+                  ? ' · broaden keywords or remove “Must Include” for more'
+                  : ''}
               </p>
             )}
             {meta && meta.returned_count === 0 && (

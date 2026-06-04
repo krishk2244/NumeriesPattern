@@ -637,20 +637,27 @@ export async function POST(req: Request) {
 
   return NextResponse.json({
     suggestions,
-    notes:
-      suggestions.length === 0
-        ? mustInclude
+    notes: (() => {
+      if (suggestions.length === 0) {
+        return mustInclude
           ? `No company names containing “${mustInclude}” reduce to ${targetNumber} under ${selection === 'both' ? 'either system' : selection}. Try a shorter / different fragment, a different target number, or remove the Must Include filter.`
           : `No invented company names in our pool reduce to ${targetNumber} under ${selection === 'both' ? 'either system' : selection}. Try a different target number — most targets have 5-15 candidates.`
-        : relaxedTopUpSystem && dualSystemComposedCount < suggestions.length
-          ? `${dualSystemComposedCount} name${dualSystemComposedCount === 1 ? '' : 's'} reduce to ${targetNumber} under both systems. The rest reduce under ${relaxedTopUpSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only.`
-          : relaxedFallback
-            ? relaxedSystem
-              ? `No names reduce to ${targetNumber} under both systems — showing names that reduce to ${targetNumber} under ${relaxedSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only${droppedFilters.length > 1 ? ` (also dropped: ${droppedFilters.filter((f) => f !== 'dual-system match').join(', ')})` : ''}.`
-              : `No company names matched your ${droppedFilters.join(' / ') || 'filters'} AND target ${targetNumber}. Showing names that reduce to ${targetNumber} — relax or remove ${droppedFilters.join(' / ') || 'filters'} to narrow these further.`
-            : topUpUsed
-              ? `Model returned ${modelSliced.length} matching name${modelSliced.length === 1 ? '' : 's'}; topped up with offline-pool candidates to reach your requested count.`
-              : null,
+      }
+      const totalDual =
+        verifiedFromModel.length + dualSystemComposedCount
+      if (relaxedTopUpSystem && totalDual < suggestions.length) {
+        return `${totalDual} name${totalDual === 1 ? '' : 's'} reduce to ${targetNumber} under both systems. The rest reduce under ${relaxedTopUpSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only.`
+      }
+      if (relaxedFallback) {
+        return relaxedSystem
+          ? `No names reduce to ${targetNumber} under both systems — showing names that reduce to ${targetNumber} under ${relaxedSystem === 'pythagorean' ? 'Pythagorean' : 'Chaldean'} only${droppedFilters.length > 1 ? ` (also dropped: ${droppedFilters.filter((f) => f !== 'dual-system match').join(', ')})` : ''}.`
+          : `No company names matched your ${droppedFilters.join(' / ') || 'filters'} AND target ${targetNumber}. Showing names that reduce to ${targetNumber} — relax or remove ${droppedFilters.join(' / ') || 'filters'} to narrow these further.`
+      }
+      if (topUpUsed) {
+        return `Model returned ${modelSliced.length} matching name${modelSliced.length === 1 ? '' : 's'}; topped up with offline-pool candidates to reach your requested count.`
+      }
+      return null
+    })(),
     meta: {
       requested_count: count,
       generated_count: rawGenerated,
@@ -660,6 +667,12 @@ export async function POST(req: Request) {
       target_number: targetNumber,
       system,
       structure,
+      // Count of results that satisfy EVERY active system (vs the
+      // relaxed single-system top-up). The UI uses this to render a
+      // labeled divider between strict and relaxed matches.
+      dual_system_count:
+        verifiedFromModel.length + dualSystemComposedCount,
+      relaxed_system: relaxedTopUpSystem,
       model: modelSkipped ? 'offline-pool (fast path)' : MODEL,
       model_error: modelError,
       model_skipped: modelSkipped,
